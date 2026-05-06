@@ -66,8 +66,9 @@
         #suggestions {
             position: absolute; top: 100%; left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 2000; max-height: 250px; overflow-y: auto; display: none;
+            z-index: 2000; max-height: 250px; overflow-y: auto; 
             border-radius: 0 0 10px 10px;
+            display: none; /* Add this to ensure it's hidden by default */
         }
         .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; }
         .suggestion-item:hover { background: #2a2a2a; color: var(--neon-green); }
@@ -89,8 +90,8 @@
     <div class="top-meta">
         <div class="credit">PROJECT BY "Henry P"</div>
         <div class="weather-info">
-            <div class="weather-line-1">Min: 75°F | Max: 88°F | Wind: 5-12 mph</div>
-            <div class="weather-line-2">Miami, FL, Sunny, 82°F</div>
+            <div class="weather-line-1" id="weatherMinMaxWind">Min: 75°F | Max: 88°F | Wind: 5-12 mph</div>
+            <div class="weather-line-2" id="weatherCityTemp">Miami, FL, Sunny, 82°F</div>
             <div class="weather-date" id="currentDate">monday 05/06/26</div>
         </div>
     </div>
@@ -150,6 +151,8 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
     const preview = document.getElementById('selectionPreview');
+    const weatherMinMaxWind = document.getElementById('weatherMinMaxWind');
+    const weatherCityTemp = document.getElementById('weatherCityTemp');
 
     // Cargar Fecha Real formateada como quieres
     function setDate() {
@@ -162,6 +165,86 @@
         document.getElementById('currentDate').innerText = `${dayName} ${parts[0]}/${parts[1]}/${parts[2]}`;
     }
     setDate();
+
+    // Obtener clima basado en la ubicación
+    async function getWeather(latitude, longitude) {
+        // Usando Open-Meteo para un ejemplo simple y gratuito
+        const weatherApiUrl = `[api.open-meteo.com](https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&daily=temperature_2m_max,temperature_2m_min&timezone=America/New_York)`;
+
+        try {
+            const response = await fetch(weatherApiUrl);
+            const data = await response.json();
+            
+            if (data && data.current_weather && data.daily) {
+                const currentWeather = data.current_weather;
+                const dailyWeather = data.daily;
+
+                const currentTemp = Math.round(currentWeather.temperature);
+                const windSpeed = Math.round(currentWeather.windspeed);
+                const maxTemp = Math.round(dailyWeather.temperature_2m_max[0]);
+                const minTemp = Math.round(dailyWeather.temperature_2m_min[0]);
+
+                let weatherDescription = "Clear"; // Placeholder, Open-Meteo doesn't provide detailed descriptions for free
+                if (currentWeather.weathercode !== undefined) {
+                    // You might want to map weather codes to descriptions for better user experience
+                    // For now, let's keep it simple.
+                    weatherDescription = getWeatherDescriptionFromCode(currentWeather.weathercode);
+                }
+
+                // Reverse geocoding for city name (using Nominatim as a free option)
+                const geoApiUrl = `[nominatim.openstreetmap.org](https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude})`;
+                const geoResponse = await fetch(geoApiUrl);
+                const geoData = await geoResponse.json();
+                
+                let city = "Unknown";
+                if (geoData && geoData.address) {
+                    city = geoData.address.city || geoData.address.town || geoData.address.village || "Unknown";
+                    if (geoData.address.state) city += `, ${geoData.address.state}`;
+                }
+
+                weatherMinMaxWind.innerText = `Min: ${minTemp}°F | Max: ${maxTemp}°F | Wind: ${windSpeed} mph`;
+                weatherCityTemp.innerText = `${city}, ${weatherDescription}, ${currentTemp}°F`;
+            } else {
+                setMiamiWeather(); // Fallback if data is not as expected
+            }
+        } catch (error) {
+            console.error("Error fetching weather:", error);
+            setMiamiWeather();
+        }
+    }
+
+    function getWeatherDescriptionFromCode(code) {
+        // Simplified mapping, you can expand this
+        if (code === 0) return "Clear sky";
+        if (code > 0 && code < 4) return "Partly cloudy";
+        if (code >= 51 && code <= 67) return "Rainy";
+        if (code >= 71 && code <= 77) return "Snowy";
+        if (code >= 95 && code <= 99) return "Thunderstorm";
+        return "Weather";
+    }
+
+    function setMiamiWeather() {
+        weatherMinMaxWind.innerText = "Min: 75°F | Max: 88°F | Wind: 5-12 mph";
+        weatherCityTemp.innerText = "Miami, FL, Sunny, 82°F";
+    }
+
+    function getLocationAndWeather() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    getWeather(position.coords.latitude, position.coords.longitude);
+                },
+                (error) => {
+                    console.warn("Geolocation denied or error:", error);
+                    setMiamiWeather(); // Fallback if geolocation fails or is denied
+                }
+            );
+        } else {
+            console.warn("Geolocation not supported by this browser.");
+            setMiamiWeather(); // Fallback
+        }
+    }
+
 
     async function loadData() {
         try {
@@ -203,7 +286,9 @@
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
         } else { sugBox.style.display = "none"; }
-        performSearch();
+        
+        // Remove performSearch() from here, it will be called by applySug or when input is cleared
+        // This ensures applySug has a chance to run before search is triggered by input
     });
 
     function applySug(nombre) {
@@ -213,7 +298,8 @@
         plantInput.value = procesarAbreviacion(nombreLimpio);
         sugBox.style.display = "none";
         performSearch();
-        setTimeout(() => { plantInput.blur(); preview.style.color = "var(--text-dim)"; }, 300);
+        // Removed the setTimeout for blur and color reset.
+        // The color can reset on subsequent interaction or when a new search clears the preview.
     }
 
     function performSearch() {
@@ -225,7 +311,8 @@
         resultsHeader.style.display = "grid";
         const queryWords = q.split(/\s+/).filter(Boolean);
         const filtered = plantDB.filter(item => {
-            const mN = queryWords.every(w => item.name.toUpperCase().includes(w));
+            // Simplified condition if q is empty, it should match all names for other filters
+            const mN = q === "" || queryWords.every(w => item.name.toUpperCase().includes(w));
             const mV = v === "any" || item.company === v;
             const mS = s === "any" || item.size.toUpperCase().includes(s.toUpperCase());
             return mN && mV && mS;
@@ -242,14 +329,27 @@
     function resetSearch() {
         plantInput.value = ""; vendorFilter.value = "any"; sizeFilter.value = "any";
         sugBox.style.display = "none"; preview.innerText = "Waiting for selection...";
-        performSearch();
+        preview.style.color = "var(--text-dim)"; // Reset the preview color
+        performSearch(); // Trigger a search to clear results
     }
 
+    // Add an event listener to the plantInput to handle clearing the search field directly
+    plantInput.addEventListener('keyup', (e) => {
+        if (e.key === 'Escape' || plantInput.value.length < 2) {
+            sugBox.style.display = "none";
+        }
+        performSearch(); // Perform search on every keyup (except when clearing suggestions)
+    });
+
     document.addEventListener('mousedown', (e) => {
-        if (!sugBox.contains(e.target) && e.target !== plantInput) sugBox.style.display = "none";
+        // Check if the click is outside the plantInput and suggestions box
+        if (!sugBox.contains(e.target) && e.target !== plantInput) {
+            sugBox.style.display = "none";
+        }
     });
 
     loadData();
+    getLocationAndWeather(); // Call this to get weather on load
 </script>
 </body>
 </html>
