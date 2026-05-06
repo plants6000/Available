@@ -31,13 +31,13 @@
             border-radius: 20px;
             border: 2px solid var(--neon-green); 
             box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
-            margin-bottom: 40px; /* Más espacio abajo para sugerencias */
+            margin-bottom: 40px;
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        .search-area { display: flex; gap: 25px; align-items: flex-start; }
+        .search-area { display: flex; gap: 25px; align-items: flex-end; }
         .main-search-box { flex: 3; position: relative; }
         
         .input-group label { 
@@ -53,25 +53,25 @@
 
         #suggestions {
             position: absolute; 
-            top: calc(100% + 5px); /* Ahora bajan normalmente para mejor visibilidad móvil */
+            top: calc(100% + 5px); 
             left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 1001; max-height: 200px; overflow-y: auto; display: none;
+            z-index: 1001; max-height: 250px; overflow-y: auto; display: none;
             border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .suggestion-item { 
-            padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #333; 
+            padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #333; 
             display: flex; flex-direction: column; gap: 2px;
         }
+        .suggestion-item:hover { background: #2a2a2a; }
         
-        /* Letras más pequeñas en sugerencias como pediste */
         .sug-botanic { font-weight: 700; font-size: 0.85rem; color: #fff; }
         .sug-common { font-size: 0.75rem; color: var(--text-dim); font-style: italic; }
 
-        .filters-column { flex: 0.8; display: flex; flex-direction: column; gap: 15px; }
+        .filters-column { flex: 1; }
         select { 
             background: #222; color: white; border: 2px solid var(--border-color); 
-            padding: 10px; border-radius: 8px; font-size: 0.9rem; cursor: pointer; width: 100%;
+            padding: 14px; border-radius: 8px; font-size: 0.9rem; cursor: pointer; width: 100%;
         }
 
         .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); }
@@ -81,14 +81,12 @@
         .btn-new { 
             background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
             padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600;
-            width: fit-content; transition: 0.3s;
+            width: fit-content; transition: 0.3s; margin-bottom: 10px;
         }
         .btn-new:hover { background: rgba(57, 255, 20, 0.1); }
 
         @media (max-width: 768px) {
-            .search-area { flex-direction: column; }
-            .filters-column { flex-direction: row; width: 100%; }
-            .search-panel { margin-bottom: 20px; }
+            .search-area { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
@@ -98,44 +96,32 @@
 
 <div class="container">
     <div class="search-panel">
-        <!-- Botón movido dentro del panel para que no flote solo -->
         <button class="btn-new" onclick="resetSearch()">New Search</button>
         
         <div class="search-area">
             <div class="main-search-box">
                 <div class="input-group">
                     <label>Search Botanic Name or SKU</label>
-                    <input type="text" id="plantInput" placeholder="Cargando datos..." disabled autocomplete="off">
+                    <input type="text" id="plantInput" placeholder="Loading data..." disabled autocomplete="off">
                     <div id="suggestions"></div>
                 </div>
             </div>
 
             <div class="filters-column">
-                <div class="input-group" style="flex: 1;">
+                <div class="input-group">
                     <label>Size</label>
-                    <select id="sizeFilter">
+                    <select id="sizeFilter" onchange="performSearch()">
                         <option value="any">Any Size</option>
-                        <option value="01">01G</option><option value="02">02G</option>
-                        <option value="05">05G</option><option value="07">07G</option>
-                        <option value="10">10G</option><option value="15">15G</option>
-                        <option value="24">24"</option><option value="25">25G</option>
+                        <option value="01">01G</option>
+                        <option value="02">02G</option>
+                        <option value="03">03G</option>
+                        <option value="05">05G</option>
+                        <option value="07">07G</option>
+                        <option value="10">10G</option>
+                        <option value="15">15G</option>
+                        <option value="24">24"</option>
+                        <option value="25">25G</option>
                         <option value="36">36"</option>
-                    </select>
-                </div>
-                <div class="input-group" style="flex: 1;">
-                    <label>Form</label>
-                    <select id="formFilter">
-                        <option value="any">Any Form</option>
-                        <option value="SHRUB">Shrub</option>
-                        <option value="TREE">Tree</option>
-                        <option value="STK">Staked</option>
-                        <option value="PATIO">Patio</option>
-                        <option value="COLUMN">Column</option>
-                        <option value="DWF">Dwarf</option>
-                        <option value="SD">Semi Dwarf</option>
-                        <option value="STD">Std</option>
-                        <option value="MULTI">Multi</option>
-                        <option value="TOP">Topiary</option>
                     </select>
                 </div>
             </div>
@@ -156,12 +142,10 @@
 
     const plantInput = document.getElementById('plantInput');
     const sizeFilter = document.getElementById('sizeFilter');
-    const formFilter = document.getElementById('formFilter');
     const sugBox = document.getElementById('suggestions');
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
 
-    // Palabras de "forma" que debemos ignorar en la abreviación
     const formasAIgnorar = ["SHRUB", "TREE", "STK", "PATIO", "COLUMN", "DWF", "SD", "STD", "MULTI", "TOP"];
 
     async function loadData() {
@@ -175,7 +159,7 @@
             plantInput.disabled = false;
             plantInput.placeholder = "Enter Name or SKU...";
         } catch (error) {
-            plantInput.placeholder = "Error al cargar datos.";
+            plantInput.placeholder = "Error loading data.";
         }
     }
 
@@ -183,26 +167,20 @@
 
     function limpiarInput(texto) { return texto.replace(/[.*+?^${}()|[\]\\]/g, ""); }
 
-    // --- LÓGICA DE ABREVIACIÓN ---
     function procesarAbreviacion(texto) {
-        // 1. Quitar paréntesis
         let limpio = texto.replace(/\(.*?\)/g, '').trim();
-        
-        // 2. Buscar comillas simples
         const comillasMatch = limpio.match(/'(.*?)'/g);
         let primeraPalabra = limpio.split(' ')[0].substring(0, 3);
         
         if (comillasMatch) {
-            // Regla comillas: primera y última encontrada
             let contenido = comillasMatch[0].replace(/'/g, '').trim().split(' ');
             if (contenido.length >= 2) {
                 return `${primeraPalabra} ${contenido[0].substring(0, 2)} ${contenido[contenido.length-1].substring(0, 3)}`.toLowerCase();
             }
             return `${primeraPalabra} ${contenido[0].substring(0, 3)}`.toLowerCase();
         } else {
-            // Regla sin comillas: Primera palabra (3) + Última palabra (3) que no sea número ni forma
             let palabras = limpio.split(' ').filter(p => {
-                return isNaN(p) && !formasAIgnorar.includes(p.toUpperCase());
+                return p.length > 0 && isNaN(p) && !formasAIgnorar.includes(p.toUpperCase());
             });
             if (palabras.length > 1) {
                 return `${primeraPalabra} ${palabras[palabras.length - 1].substring(0, 3)}`.toLowerCase();
@@ -214,25 +192,19 @@
     plantInput.addEventListener('input', () => {
         let val = limpiarInput(plantInput.value).toUpperCase().trim();
         
-        // Reiniciar combos si es una búsqueda nueva (borró y empezó a escribir)
-        if (val.length === 1) {
-            sizeFilter.value = "any";
-            formFilter.value = "any";
-            sizeFilter.classList.remove('active-filter');
-            formFilter.classList.remove('active-filter');
-        }
-
         if (val.length >= 2) {
-            const isSearchingSKU = /^\d+$/.test(val); // Detecta si el usuario escribe solo números
+            const isSearchingSKU = /^\d+$/.test(val);
+            const queryWords = val.split(/\s+/); // Divide la búsqueda en palabras
 
             let matches = suggestionsDB.filter(s => {
-                const nameMatch = (s.display_name || "").toUpperCase().includes(val);
-                const skuMatch = (s.variantes || "").toUpperCase().includes(val);
-                return nameMatch || skuMatch;
+                const name = (s.display_name || "").toUpperCase();
+                const sku = (s.variantes || "").toUpperCase();
+                // Búsqueda progresiva: cada palabra escrita debe estar en el nombre o sku
+                return queryWords.every(word => name.includes(word) || sku.includes(word));
             });
 
             if (matches.length > 0) {
-                sugBox.innerHTML = matches.slice(0, 12).map(m => `
+                sugBox.innerHTML = matches.slice(0, 15).map(m => `
                     <div class="suggestion-item" onclick="applySug('${m.display_name}')">
                         <span class="sug-botanic">${m.display_name}</span>
                         ${isSearchingSKU ? `<span class="sug-common">${m.variantes}</span>` : ''}
@@ -246,7 +218,6 @@
     });
 
     function applySug(nombreSeleccionado) {
-        // Aplicamos la lógica de abreviación al hacer clic
         plantInput.value = procesarAbreviacion(nombreSeleccionado);
         sugBox.style.display = "none";
         performSearch();
@@ -254,32 +225,37 @@
     }
 
     function performSearch() {
-        const queryText = limpiarInput(plantInput.value).toUpperCase();
+        const queryText = limpiarInput(plantInput.value).toUpperCase().trim();
         const sizeQuery = sizeFilter.value;
-        const formQuery = formFilter.value;
 
-        if (!queryText && sizeQuery === "any" && formQuery === "any") {
+        // Si no hay texto ni filtro de tamaño, limpiar resultados
+        if (!queryText && sizeQuery === "any") {
             resultsBody.innerHTML = "";
             resultsHeader.style.display = "none";
             return;
         }
 
         resultsHeader.style.display = "grid";
+        const queryWords = queryText.split(/\s+/).filter(w => w.length > 0);
+
         const filtered = plantDB.filter(item => {
             const itemName = (item.name || "").toUpperCase();
             const itemSizeField = (item.size || "").toUpperCase();
-            const words = queryText.split(/\s+/);
-            const matchText = words.every(w => itemName.includes(w) || itemSizeField.includes(w));
+            
+            // Si hay palabras en el buscador, aplicar lógica progresiva (AND)
+            const matchText = queryWords.length === 0 || queryWords.every(w => itemName.includes(w) || itemSizeField.includes(w));
+            
+            // Filtro de tamaño
             const matchSize = sizeQuery === 'any' || itemSizeField.includes(sizeQuery);
-            const matchForm = (formQuery === 'any') ? true : (itemName + " " + itemSizeField).includes(formQuery);
-            return matchText && matchSize && matchForm;
+            
+            return matchText && matchSize;
         });
 
         resultsBody.innerHTML = filtered.slice(0, 100).map(item => `
             <div class="row">
                 <div class="vendor">${item.company || '---'}</div>
                 <div class="plant-name-cell">${item.name}</div>
-                <div class="size-val ${sizeQuery !== 'any' ? 'highlight-size' : ''}">${item.size}</div>
+                <div class="size-val">${item.size}</div>
             </div>
         `).join('');
     }
@@ -287,7 +263,6 @@
     function resetSearch() {
         plantInput.value = "";
         sizeFilter.value = "any";
-        formFilter.value = "any";
         sugBox.style.display = "none";
         performSearch();
     }
