@@ -3,169 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Inventory System - Henry P Edition</title>
+    <title>Plant Inventory System - Henry P</title>
     <style>
         :root { 
             --bg-dark: #0f0f0f; 
             --card-bg: #181818; 
             --text-main: #e0e0e0; 
             --text-dim: #a0a0a0;
-            --botanical-green: #4c7c4e; 
             --neon-green: #39FF14; 
-            --border-color: #2a2a2a;
+            --botanical-green: #4c7c4e;
+            --border: #2a2a2a;
         }
         
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg-dark); 
-            color: var(--text-main); 
-            margin: 0; padding: 15px; 
+            font-family: -apple-system, sans-serif; 
+            background: var(--bg-dark); color: var(--text-main); 
+            margin: 0; padding: 10px; 
         }
 
-        /* Header de Bienvenida y Clima */
-        .top-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1100px;
-            margin: 0 auto 10px auto;
-            padding: 0 10px;
-        }
-        .welcome-msg { font-size: 1.2rem; font-weight: bold; color: var(--neon-green); }
-        .weather-info { font-size: 0.9rem; color: var(--text-dim); }
-
-        .credit { font-size: 0.7rem; color: var(--text-dim); font-weight: 600; letter-spacing: 1px; margin-bottom: 20px; text-align: center; }
+        /* Header Layout */
+        .top-meta { display: flex; justify-content: space-between; align-items: flex-start; max-width: 1100px; margin: 0 auto 20px; }
+        .credit { font-size: 0.7rem; color: var(--text-dim); font-weight: bold; }
         
-        .container { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; position: relative; }
+        .weather-info { text-align: right; font-size: 0.8rem; color: var(--text-dim); line-height: 1.4; }
+        .weather-line-1 { font-weight: 500; }
+        .weather-line-2 { color: #fff; font-weight: bold; }
+        .weather-date { text-transform: lowercase; }
 
-        /* Filtro Vendor arriba a la derecha */
-        .vendor-top-right {
-            position: absolute;
-            top: 65px;
-            right: 20px;
-            z-index: 10;
-            width: 180px;
-        }
+        .welcome-title { text-align: center; color: var(--neon-green); font-size: 1.8rem; font-weight: 800; margin: 10px 0; }
 
-        .selected-info {
-            font-size: 0.9rem; color: var(--text-dim); font-style: italic;
-            margin-bottom: 8px; min-height: 1.2em;
-        }
+        .container { max-width: 1100px; margin: 0 auto; }
 
         .search-panel {
-            background: var(--card-bg); padding: 25px; border-radius: 20px;
-            border: 2px solid var(--neon-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
-            margin-bottom: 25px; display: flex; flex-direction: column; gap: 15px;
+            background: var(--card-bg); padding: 20px; border-radius: 15px;
+            border: 2px solid var(--neon-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.1);
+            margin-bottom: 20px;
         }
 
-        .search-area { display: grid; grid-template-columns: 1fr 150px; gap: 15px; align-items: flex-end; }
-        .main-search-box { position: relative; }
+        /* Nueva fila para botones y filtros superiores */
+        .top-controls { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; gap: 10px; }
         
-        .input-group label { 
-            font-size: 0.75rem; color: var(--neon-green); 
-            font-weight: 700; margin-bottom: 8px; display: block; text-transform: uppercase;
+        .btn-new { 
+            background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
+            padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; 
+            height: 40px; white-space: nowrap;
         }
-        
-        #plantInput, select {
-            width: 100%; padding: 14px; border: 2px solid var(--border-color); border-radius: 10px;
-            font-size: 1rem; background: #000; color: #fff; box-sizing: border-box;
+
+        .vendor-box { width: 200px; }
+
+        .selected-preview { text-align: center; font-style: italic; color: var(--text-dim); margin-bottom: 15px; font-size: 0.9rem; min-height: 1.2em; }
+
+        /* Fila de Buscador y Size */
+        .main-search-row { display: grid; grid-template-columns: 1fr 120px; gap: 15px; }
+        .input-group { position: relative; }
+        .input-group label { display: block; font-size: 0.7rem; color: var(--neon-green); font-weight: 700; margin-bottom: 5px; text-transform: uppercase; }
+
+        input, select { 
+            width: 100%; padding: 12px; background: #000; border: 1.5px solid var(--border); 
+            border-radius: 8px; color: #fff; font-size: 1rem; box-sizing: border-box;
         }
 
         #suggestions {
-            position: absolute; top: calc(100% + 5px); left: 0; width: 100%; 
+            position: absolute; top: 100%; left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 2000; max-height: 280px; overflow-y: auto; display: none;
-            border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            z-index: 2000; max-height: 250px; overflow-y: auto; display: none;
+            border-radius: 0 0 10px 10px;
         }
-
-        .suggestion-item { 
-            padding: 14px; cursor: pointer; border-bottom: 1px solid #333; 
-            color: #fff; font-weight: 500;
-        }
+        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; }
         .suggestion-item:hover { background: #2a2a2a; color: var(--neon-green); }
 
-        .results-wrapper {
-            border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);
-            background: #000; max-height: 55vh; overflow-y: auto;
-        }
+        /* Tabla */
+        .results-wrapper { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #000; max-height: 50vh; overflow-y: auto; }
+        .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.8rem; }
+        .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; align-items: center; }
 
-        .header { 
-            background: var(--botanical-green); color: white; display: grid; 
-            grid-template-columns: 1.2fr 2fr 1fr; padding: 12px; font-weight: 700; position: sticky; top: 0;
-        }
-        .row { display: grid; grid-template-columns: 1.2fr 2fr 1fr; padding: 12px; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; }
-
-        .btn-new { 
-            background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
-            padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; width: fit-content; margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .vendor-top-right { position: static; width: 100%; margin-bottom: 15px; }
-            .search-area { grid-template-columns: 1fr; }
-            .header, .row { grid-template-columns: 1fr 1.5fr 0.8fr; font-size: 0.75rem; }
+        @media (max-width: 600px) {
+            .top-controls { flex-direction: row; align-items: flex-end; }
+            .vendor-box { width: 150px; }
+            .main-search-row { grid-template-columns: 1fr 90px; }
         }
     </style>
 </head>
 <body>
 
-<div class="top-bar">
-    <div class="welcome-msg">Bienvenido, Henry P</div>
-    <div class="weather-info" id="weather">Loading Weather...</div>
-</div>
-
-<div class="credit">PROJECT BY "Henry P"</div>
-
-<div class="container">
-    <!-- Vendor movido arriba a la derecha (fuera o dentro del panel según diseño) -->
-    <div class="vendor-top-right">
-        <div class="input-group">
-            <label>Vendor</label>
-            <select id="vendorFilter" onchange="performSearch()">
-                <option value="any">Any Vendor</option>
-            </select>
+    <div class="top-meta">
+        <div class="credit">PROJECT BY "Henry P"</div>
+        <div class="weather-info">
+            <div class="weather-line-1">Min: 75°F | Max: 88°F | Wind: 5-12 mph</div>
+            <div class="weather-line-2">Miami, FL, Sunny, 82°F</div>
+            <div class="weather-date" id="currentDate">monday 05/06/26</div>
         </div>
     </div>
 
-    <div class="search-panel">
-        <button class="btn-new" onclick="resetSearch()">New Search</button>
-        <div id="selectionPreview" class="selected-info">Waiting for selection...</div>
+    <div class="welcome-title">Welcome</div>
 
-        <div class="search-area">
-            <div class="main-search-box">
-                <div class="input-group">
-                    <label>Botanic Name / SKU</label>
-                    <input type="text" id="plantInput" placeholder="Loading..." disabled autocomplete="off">
-                    <div id="suggestions"></div>
+    <div class="container">
+        <div class="search-panel">
+            <div class="top-controls">
+                <button class="btn-new" onclick="resetSearch()">New Search</button>
+                <div class="vendor-box">
+                    <div class="input-group">
+                        <label>Vendor</label>
+                        <select id="vendorFilter" onchange="performSearch()"></select>
+                    </div>
                 </div>
             </div>
 
-            <div class="input-group">
-                <label>Size</label>
-                <select id="sizeFilter" onchange="performSearch()">
-                    <option value="any">Any Size</option>
-                    <option value="01">01G</option>
-                    <option value="02">02G</option>
-                    <option value="03">03G</option>
-                    <option value="05">05G</option>
-                    <option value="07">07G</option>
-                    <option value="10">10G</option>
-                    <option value="15">15G</option>
-                    <option value="24">24"</option>
-                    <option value="25">25G</option>
-                    <option value="36">36"</option>
-                </select>
+            <div id="selectionPreview" class="selected-preview">Waiting for selection...</div>
+
+            <div class="main-search-row">
+                <div class="input-group">
+                    <label>Botanic Name / SKU</label>
+                    <input type="text" id="plantInput" placeholder="Type here..." autocomplete="off" disabled>
+                    <div id="suggestions"></div>
+                </div>
+                <div class="input-group">
+                    <label>Size</label>
+                    <select id="sizeFilter" onchange="performSearch()">
+                        <option value="any">Any</option>
+                        <option value="01">01G</option>
+                        <option value="03">03G</option>
+                        <option value="07">07G</option>
+                        <option value="15">15G</option>
+                    </select>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="results-wrapper">
-        <div id="resultsHeader" class="header" style="display: none;">
-            <div>VENDOR</div><div>BOTANIC NAME</div><div>SIZE</div>
+        <div class="results-wrapper">
+            <div id="resultsHeader" class="header" style="display: none;">
+                <div>VENDOR</div><div>NAME</div><div>SIZE</div>
+            </div>
+            <div id="resultsBody"></div>
         </div>
-        <div id="resultsBody"></div>
     </div>
-</div>
 
 <script>
     let plantDB = [];
@@ -180,74 +151,54 @@
     const resultsHeader = document.getElementById('resultsHeader');
     const preview = document.getElementById('selectionPreview');
 
-    // Función Clima
-    function updateWeather() {
-        // Ejemplo estático, podrías conectar una API real aquí
+    // Cargar Fecha Real formateada como quieres
+    function setDate() {
         const now = new Date();
-        const temp = "78°F";
-        document.getElementById('weather').innerText = `Hoy: Soleado, ${temp} | ${now.toLocaleDateString()}`;
+        const options = { weekday: 'long', month: '2-digit', day: '2-digit', year: '2-digit' };
+        let dateStr = now.toLocaleDateString('en-US', options).toLowerCase();
+        // Ajuste manual para el formato exacto: monday 05/06/26
+        const parts = now.toLocaleDateString('en-US', {month:'2-digit', day:'2-digit', year:'2-digit'}).split('/');
+        const dayName = now.toLocaleDateString('en-US', {weekday:'long'}).toLowerCase();
+        document.getElementById('currentDate').innerText = `${dayName} ${parts[0]}/${parts[1]}/${parts[2]}`;
     }
-    updateWeather();
+    setDate();
 
     async function loadData() {
         try {
-            const [resPlantas, resHome] = await Promise.all([
-                fetch('plantas.json'), fetch('home.json')
-            ]);
-            plantDB = await resPlantas.json();
-            suggestionsDB = await resHome.json();
-            populateVendors();
+            const [resP, resH] = await Promise.all([fetch('plantas.json'), fetch('home.json')]);
+            plantDB = await resP.json();
+            suggestionsDB = await resH.json();
+            
+            const vendors = [...new Set(plantDB.map(i => i.company))].filter(Boolean).sort();
+            vendorFilter.innerHTML = '<option value="any">Any Vendor</option>' + vendors.map(v => `<option value="${v}">${v}</option>`).join('');
+            
             plantInput.disabled = false;
-            plantInput.placeholder = "Type to search...";
-        } catch (e) { plantInput.placeholder = "Error loading data."; }
+        } catch (e) { plantInput.placeholder = "Error loading..."; }
     }
 
-    function populateVendors() {
-        const vendors = [...new Set(plantDB.map(item => item.company))].filter(Boolean).sort();
-        vendors.forEach(v => {
-            const opt = document.createElement('option');
-            opt.value = v; opt.textContent = v;
-            vendorFilter.appendChild(opt);
-        });
-    }
-
-    // Reglas de Abreviación
-    function procesarAbreviacion(textoCompleto) {
-        let soloNombre = textoCompleto.split('(')[0].trim();
+    function procesarAbreviacion(texto) {
+        let soloNombre = texto.split('(')[0].trim();
         const comillasMatch = soloNombre.match(/'(.*?)'/);
-        let palabrasBase = soloNombre.split(/\s+/);
-        let primeraPalabra = palabrasBase[0].substring(0, 3);
+        let primera = soloNombre.split(' ')[0].substring(0, 3);
 
         if (comillasMatch) {
             let dentro = comillasMatch[1].trim().split(/\s+/);
-            if (dentro.length >= 2) {
-                return `${primeraPalabra} ${dentro[0][0]} ${dentro[dentro.length-1].substring(0,4)}`.toLowerCase();
-            }
-            return `${primeraPalabra} ${dentro[0].substring(0,4)}`.toLowerCase();
+            if (dentro.length >= 2) return `${primera} ${dentro[0][0]} ${dentro[dentro.length-1].substring(0,4)}`.toLowerCase();
+            return `${primera} ${dentro[0].substring(0,4)}`.toLowerCase();
         }
-
-        let palabrasFiltradas = palabrasBase.filter(p => !formasAIgnorar.includes(p.toUpperCase()));
-        if (palabrasFiltradas.length > 1) {
-            return `${primeraPalabra} ${palabrasFiltradas[palabrasFiltradas.length-1].substring(0,4)}`.toLowerCase();
-        }
+        let palabras = soloNombre.split(/\s+/).filter(p => !formasAIgnorar.includes(p.toUpperCase()));
+        if (palabras.length > 1) return `${primera} ${palabras[palabras.length-1].substring(0,4)}`.toLowerCase();
         return soloNombre.substring(0, 8).toLowerCase();
     }
 
     plantInput.addEventListener('input', () => {
-        vendorFilter.value = "any";
-        sizeFilter.value = "any";
         let val = plantInput.value.toUpperCase().trim();
         if (val.length >= 2) {
-            const queryWords = val.split(/\s+/);
-            const matches = suggestionsDB.filter(s => {
-                const name = (s.display_name || "").toUpperCase();
-                return queryWords.every(word => name.includes(word));
-            });
-
+            const matches = suggestionsDB.filter(s => s.display_name.toUpperCase().includes(val));
             if (matches.length > 0) {
                 sugBox.innerHTML = matches.slice(0, 15).map(m => {
-                    const safeName = m.display_name.replace(/'/g, "&#39;");
-                    return `<div class="suggestion-item" onmousedown="applySug('${safeName}')">${m.display_name}</div>`;
+                    const safe = m.display_name.replace(/'/g, "&#39;");
+                    return `<div class="suggestion-item" onmousedown="applySug('${safe}')">${m.display_name}</div>`;
                 }).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
@@ -255,59 +206,37 @@
         performSearch();
     });
 
-    // Esta función ahora sí traslada el texto con las reglas
     function applySug(nombre) {
         const nombreLimpio = nombre.replace(/&#39;/g, "'");
         preview.innerText = nombreLimpio;
         preview.style.color = "var(--neon-green)";
-        
-        // Aplicamos la abreviación al cuadro de búsqueda
         plantInput.value = procesarAbreviacion(nombreLimpio);
-        
         sugBox.style.display = "none";
         performSearch();
-        
-        // Ocultar teclado en móvil tras seleccionar
-        setTimeout(() => { 
-            plantInput.blur();
-            preview.style.color = "var(--text-dim)"; 
-        }, 300);
+        setTimeout(() => { plantInput.blur(); preview.style.color = "var(--text-dim)"; }, 300);
     }
 
-    plantInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            sugBox.style.display = 'none';
-            plantInput.blur();
-        }
-    });
-
     function performSearch() {
-        const query = plantInput.value.toUpperCase().trim();
-        const vQ = vendorFilter.value;
-        const sQ = sizeFilter.value;
-
-        if (!query && vQ === "any" && sQ === "any") {
-            resultsBody.innerHTML = ""; resultsHeader.style.display = "none"; return;
-        }
+        const q = plantInput.value.toUpperCase().trim();
+        const v = vendorFilter.value;
+        const s = sizeFilter.value;
+        if (!q && v === "any" && s === "any") { resultsBody.innerHTML = ""; resultsHeader.style.display = "none"; return; }
 
         resultsHeader.style.display = "grid";
-        const queryWords = query.split(/\s+/).filter(Boolean);
-
+        const queryWords = q.split(/\s+/).filter(Boolean);
         const filtered = plantDB.filter(item => {
-            const n = item.name.toUpperCase();
-            const nameMatch = queryWords.every(w => n.includes(w));
-            const vMatch = vQ === "any" || item.company === vQ;
-            const sMatch = sQ === "any" || item.size.toUpperCase().includes(sQ.toUpperCase());
-            return nameMatch && vMatch && sMatch;
+            const mN = queryWords.every(w => item.name.toUpperCase().includes(w));
+            const mV = v === "any" || item.company === v;
+            const mS = s === "any" || item.size.toUpperCase().includes(s.toUpperCase());
+            return mN && mV && mS;
         });
 
-        resultsBody.innerHTML = filtered.slice(0, 100).map(item => `
+        resultsBody.innerHTML = filtered.slice(0, 100).map(i => `
             <div class="row">
-                <div>${item.company}</div>
-                <div>${item.name}</div>
-                <div>${item.size}</div>
-            </div>
-        `).join('');
+                <div>${i.company}</div>
+                <div>${i.name}</div>
+                <div>${i.size}</div>
+            </div>`).join('');
     }
 
     function resetSearch() {
@@ -316,15 +245,11 @@
         performSearch();
     }
 
-    // Cerrar si se toca fuera
     document.addEventListener('mousedown', (e) => {
-        if (!sugBox.contains(e.target) && e.target !== plantInput) {
-            sugBox.style.display = "none";
-        }
+        if (!sugBox.contains(e.target) && e.target !== plantInput) sugBox.style.display = "none";
     });
 
     loadData();
 </script>
-
 </body>
 </html>
