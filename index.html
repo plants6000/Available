@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Inventory System - Henry P</title>
+    <title>Plant Inventory System</title>
     <style>
         :root { 
             --bg-dark: #0f0f0f; 
@@ -21,39 +21,33 @@
             margin: 0; padding: 10px; 
         }
 
-        /* Header Layout */
-        .top-meta { display: flex; justify-content: space-between; align-items: flex-start; max-width: 1100px; margin: 0 auto 20px; }
-        .credit { font-size: 0.7rem; color: var(--text-dim); font-weight: bold; }
-        
-        .weather-info { text-align: right; font-size: 0.8rem; color: var(--text-dim); line-height: 1.4; }
-        .weather-line-1 { font-weight: 500; }
-        .weather-line-2 { color: #fff; font-weight: bold; }
-        .weather-date { text-transform: lowercase; }
-
-        .welcome-title { text-align: center; color: var(--neon-green); font-size: 1.8rem; font-weight: 800; margin: 10px 0; }
+        .top-meta { text-align: center; margin-bottom: 15px; }
+        .welcome-title { color: var(--neon-green); font-size: 1.2rem; font-weight: 800; margin: 5px 0; }
+        .current-date { font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase; }
 
         .container { max-width: 1100px; margin: 0 auto; }
 
         .search-panel {
             background: var(--card-bg); padding: 20px; border-radius: 15px;
-            border: 2px solid var(--neon-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.1);
-            margin-bottom: 20px;
+            border: 2px solid var(--neon-green); margin-bottom: 20px;
         }
 
-        /* Nueva fila para botones y filtros superiores */
         .top-controls { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; gap: 10px; }
         
         .btn-new { 
             background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
             padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; 
-            height: 40px; white-space: nowrap;
         }
 
         .vendor-box { width: 200px; }
 
-        .selected-preview { text-align: center; font-style: italic; color: var(--text-dim); margin-bottom: 15px; font-size: 0.9rem; min-height: 1.2em; }
+        /* Estilo del visualizador de nombre seleccionado */
+        #selectionPreview { 
+            text-align: center; font-weight: bold; color: var(--text-dim); 
+            margin-bottom: 15px; font-size: 1rem; min-height: 1.2em;
+            padding: 5px; border-bottom: 1px dashed #333;
+        }
 
-        /* Fila de Buscador y Size */
         .main-search-row { display: grid; grid-template-columns: 1fr 120px; gap: 15px; }
         .input-group { position: relative; }
         .input-group label { display: block; font-size: 0.7rem; color: var(--neon-green); font-weight: 700; margin-bottom: 5px; text-transform: uppercase; }
@@ -66,21 +60,18 @@
         #suggestions {
             position: absolute; top: 100%; left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 2000; max-height: 250px; overflow-y: auto; 
-            border-radius: 0 0 10px 10px;
-            display: none; /* Add this to ensure it's hidden by default */
+            z-index: 2000; max-height: 250px; overflow-y: auto; border-radius: 0 0 10px 10px;
+            display: none;
         }
-        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; }
+        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; user-select: none; }
         .suggestion-item:hover { background: #2a2a2a; color: var(--neon-green); }
-	.suggestion-item {padding: 12px;cursor: pointer;border-bottom: 1px solid #333;/* Añade esto para evitar que el touch elija texto en vez de clickear */user-select: none; -webkit-tap-highlight-color: transparent;}
-        /* Tabla */
+
         .results-wrapper { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #000; max-height: 50vh; overflow-y: auto; }
         .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.8rem; }
-        .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; align-items: center; }
+        .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; }
 
         @media (max-width: 600px) {
-            .top-controls { flex-direction: row; align-items: flex-end; }
-            .vendor-box { width: 150px; }
+            .vendor-box { width: 140px; }
             .main-search-row { grid-template-columns: 1fr 90px; }
         }
     </style>
@@ -88,15 +79,9 @@
 <body>
 
     <div class="top-meta">
-        <div class="credit">PROJECT BY "Henry P"</div>
-        <div class="weather-info">
-            <div class="weather-line-1" id="weatherMinMaxWind">Min: 75°F | Max: 88°F | Wind: 5-12 mph</div>
-            <div class="weather-line-2" id="weatherCityTemp">Miami, FL, Sunny, 82°F</div>
-            <div class="weather-date" id="currentDate">monday 05/06/26</div>
-        </div>
+        <div class="welcome-title">WELCOME</div>
+        <div class="current-date" id="currentDate"></div>
     </div>
-
-    <div class="welcome-title">Welcome</div>
 
     <div class="container">
         <div class="search-panel">
@@ -110,12 +95,13 @@
                 </div>
             </div>
 
-            <div id="selectionPreview" class="selected-preview">Waiting for selection...</div>
+            <!-- Paso 3: El texto seleccionado cae aquí primero -->
+            <div id="selectionPreview">Select a plant...</div>
 
             <div class="main-search-row">
                 <div class="input-group">
                     <label>Botanic Name / SKU</label>
-                    <input type="text" id="plantInput" placeholder="Type here..." autocomplete="off" disabled>
+                    <input type="text" id="plantInput" placeholder="Type to search..." autocomplete="off">
                     <div id="suggestions"></div>
                 </div>
                 <div class="input-group">
@@ -151,112 +137,25 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
     const preview = document.getElementById('selectionPreview');
-    const weatherMinMaxWind = document.getElementById('weatherMinMaxWind');
-    const weatherCityTemp = document.getElementById('weatherCityTemp');
 
-    // Cargar Fecha Real formateada como quieres
+    // 2. Fecha en formato corto
     function setDate() {
         const now = new Date();
-        const options = { weekday: 'long', month: '2-digit', day: '2-digit', year: '2-digit' };
-        let dateStr = now.toLocaleDateString('en-US', options).toLowerCase();
-        // Ajuste manual para el formato exacto: monday 05/06/26
-        const parts = now.toLocaleDateString('en-US', {month:'2-digit', day:'2-digit', year:'2-digit'}).split('/');
-        const dayName = now.toLocaleDateString('en-US', {weekday:'long'}).toLowerCase();
-        document.getElementById('currentDate').innerText = `${dayName} ${parts[0]}/${parts[1]}/${parts[2]}`;
+        const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        const dayName = days[now.getDay()];
+        const dateStr = now.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: '2-digit' });
+        document.getElementById('currentDate').innerText = `${dayName} ${dateStr}`;
     }
     setDate();
-
-    // Obtener clima basado en la ubicación
-    async function getWeather(latitude, longitude) {
-        // Usando Open-Meteo para un ejemplo simple y gratuito
-        const weatherApiUrl = `[api.open-meteo.com](https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&daily=temperature_2m_max,temperature_2m_min&timezone=America/New_York)`;
-
-        try {
-            const response = await fetch(weatherApiUrl);
-            const data = await response.json();
-            
-            if (data && data.current_weather && data.daily) {
-                const currentWeather = data.current_weather;
-                const dailyWeather = data.daily;
-
-                const currentTemp = Math.round(currentWeather.temperature);
-                const windSpeed = Math.round(currentWeather.windspeed);
-                const maxTemp = Math.round(dailyWeather.temperature_2m_max[0]);
-                const minTemp = Math.round(dailyWeather.temperature_2m_min[0]);
-
-                let weatherDescription = "Clear"; // Placeholder, Open-Meteo doesn't provide detailed descriptions for free
-                if (currentWeather.weathercode !== undefined) {
-                    // You might want to map weather codes to descriptions for better user experience
-                    // For now, let's keep it simple.
-                    weatherDescription = getWeatherDescriptionFromCode(currentWeather.weathercode);
-                }
-
-                // Reverse geocoding for city name (using Nominatim as a free option)
-                const geoApiUrl = `[nominatim.openstreetmap.org](https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude})`;
-                const geoResponse = await fetch(geoApiUrl);
-                const geoData = await geoResponse.json();
-                
-                let city = "Unknown";
-                if (geoData && geoData.address) {
-                    city = geoData.address.city || geoData.address.town || geoData.address.village || "Unknown";
-                    if (geoData.address.state) city += `, ${geoData.address.state}`;
-                }
-
-                weatherMinMaxWind.innerText = `Min: ${minTemp}°F | Max: ${maxTemp}°F | Wind: ${windSpeed} mph`;
-                weatherCityTemp.innerText = `${city}, ${weatherDescription}, ${currentTemp}°F`;
-            } else {
-                setMiamiWeather(); // Fallback if data is not as expected
-            }
-        } catch (error) {
-            console.error("Error fetching weather:", error);
-            setMiamiWeather();
-        }
-    }
-
-    function getWeatherDescriptionFromCode(code) {
-        // Simplified mapping, you can expand this
-        if (code === 0) return "Clear sky";
-        if (code > 0 && code < 4) return "Partly cloudy";
-        if (code >= 51 && code <= 67) return "Rainy";
-        if (code >= 71 && code <= 77) return "Snowy";
-        if (code >= 95 && code <= 99) return "Thunderstorm";
-        return "Weather";
-    }
-
-    function setMiamiWeather() {
-        weatherMinMaxWind.innerText = "Min: 75°F | Max: 88°F | Wind: 5-12 mph";
-        weatherCityTemp.innerText = "Miami, FL, Sunny, 82°F";
-    }
-
-    function getLocationAndWeather() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    getWeather(position.coords.latitude, position.coords.longitude);
-                },
-                (error) => {
-                    console.warn("Geolocation denied or error:", error);
-                    setMiamiWeather(); // Fallback if geolocation fails or is denied
-                }
-            );
-        } else {
-            console.warn("Geolocation not supported by this browser.");
-            setMiamiWeather(); // Fallback
-        }
-    }
-
 
     async function loadData() {
         try {
             const [resP, resH] = await Promise.all([fetch('plantas.json'), fetch('home.json')]);
             plantDB = await resP.json();
             suggestionsDB = await resH.json();
-            
             const vendors = [...new Set(plantDB.map(i => i.company))].filter(Boolean).sort();
             vendorFilter.innerHTML = '<option value="any">Any Vendor</option>' + vendors.map(v => `<option value="${v}">${v}</option>`).join('');
-            
-            plantInput.disabled = false;
-        } catch (e) { plantInput.placeholder = "Error loading..."; }
+        } catch (e) { console.error("Error loading data"); }
     }
 
     function procesarAbreviacion(texto) {
@@ -274,6 +173,7 @@
         return soloNombre.substring(0, 8).toLowerCase();
     }
 
+    // Evento Input para sugerencias
     plantInput.addEventListener('input', () => {
         let val = plantInput.value.toUpperCase().trim();
         if (val.length >= 2) {
@@ -281,46 +181,48 @@
             if (matches.length > 0) {
                 sugBox.innerHTML = matches.slice(0, 15).map(m => {
                     const safe = m.display_name.replace(/'/g, "&#39;");
-                    return `<div class="suggestion-item" onmousedown="applySug('${safe}')">${m.display_name}</div>`;
+                    return `<div class="suggestion-item" onmousedown="selectPlant('${safe}')">${m.display_name}</div>`;
                 }).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
-        } else { sugBox.style.display = "none"; }
-        
-        // Remove performSearch() from here, it will be called by applySug or when input is cleared
-        // This ensures applySug has a chance to run before search is triggered by input
+        } else { 
+            sugBox.style.display = "none";
+            performSearch();
+        }
     });
 
-function applySug(nombre) {
-    // 1. Limpiamos entidades de texto
-    const nombreLimpio = nombre.replace(/&#39;/g, "'");
-    
-    // 2. Actualizamos el preview visual
-    preview.innerText = nombreLimpio;
-    preview.style.color = "var(--neon-green)";
-    
-    // 3. Insertamos la abreviación en el cuadro de búsqueda
-    const abreviacion = procesarAbreviacion(nombreLimpio);
-    plantInput.value = abreviacion; 
-    
-    // 4. Ocultamos la caja y disparamos la búsqueda
-    sugBox.style.display = "none";
-    performSearch(); 
-    
-    // 5. IMPORTANTE: Devolver el foco al input para que el sistema reconozca el cambio
-    plantInput.focus();
-}
+    // 3. Click en sugerencia solo actualiza el preview
+    function selectPlant(nombre) {
+        const nombreLimpio = nombre.replace(/&#39;/g, "'");
+        preview.innerText = nombreLimpio;
+        preview.style.color = "var(--neon-green)";
+        sugBox.style.display = "none";
+        
+        // 4. Disparar el observador del preview
+        preview.dispatchEvent(new Event('change'));
+    }
+
+    // 4. El preview procesa el cambio y llena el buscador
+    preview.addEventListener('change', function() {
+        const abreviacion = procesarAbreviacion(this.innerText);
+        plantInput.value = abreviacion;
+        performSearch();
+    });
 
     function performSearch() {
         const q = plantInput.value.toUpperCase().trim();
         const v = vendorFilter.value;
         const s = sizeFilter.value;
-        if (!q && v === "any" && s === "any") { resultsBody.innerHTML = ""; resultsHeader.style.display = "none"; return; }
+        
+        if (!q && v === "any" && s === "any") { 
+            resultsBody.innerHTML = ""; 
+            resultsHeader.style.display = "none"; 
+            return; 
+        }
 
         resultsHeader.style.display = "grid";
         const queryWords = q.split(/\s+/).filter(Boolean);
         const filtered = plantDB.filter(item => {
-            // Simplified condition if q is empty, it should match all names for other filters
             const mN = q === "" || queryWords.every(w => item.name.toUpperCase().includes(w));
             const mV = v === "any" || item.company === v;
             const mS = s === "any" || item.size.toUpperCase().includes(s.toUpperCase());
@@ -336,29 +238,22 @@ function applySug(nombre) {
     }
 
     function resetSearch() {
-        plantInput.value = ""; vendorFilter.value = "any"; sizeFilter.value = "any";
-        sugBox.style.display = "none"; preview.innerText = "Waiting for selection...";
-        preview.style.color = "var(--text-dim)"; // Reset the preview color
-        performSearch(); // Trigger a search to clear results
+        plantInput.value = ""; 
+        vendorFilter.value = "any"; 
+        sizeFilter.value = "any";
+        preview.innerText = "Select a plant...";
+        preview.style.color = "var(--text-dim)";
+        resultsBody.innerHTML = "";
+        resultsHeader.style.display = "none";
     }
 
-    // Add an event listener to the plantInput to handle clearing the search field directly
-    plantInput.addEventListener('keyup', (e) => {
-        if (e.key === 'Escape' || plantInput.value.length < 2) {
-            sugBox.style.display = "none";
-        }
-        performSearch(); // Perform search on every keyup (except when clearing suggestions)
-    });
-
     document.addEventListener('mousedown', (e) => {
-        // Check if the click is outside the plantInput and suggestions box
         if (!sugBox.contains(e.target) && e.target !== plantInput) {
             sugBox.style.display = "none";
         }
     });
 
     loadData();
-    getLocationAndWeather(); // Call this to get weather on load
 </script>
 </body>
 </html>
