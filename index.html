@@ -31,8 +31,10 @@
             border-radius: 20px;
             border: 2px solid var(--neon-green); 
             box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
-            margin-bottom: 30px;
-            order: 2; /* El panel de búsqueda es lo principal */
+            margin-bottom: 40px; /* Más espacio abajo para sugerencias */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
         .search-area { display: flex; gap: 25px; align-items: flex-start; }
@@ -48,68 +50,45 @@
             font-size: 1rem; background: #000; color: #fff;
             transition: all 0.3s ease; box-sizing: border-box;
         }
-        #plantInput:focus { border-color: var(--neon-green); outline: none; }
 
-        /* CAMBIO CLAVE: Sugerencias hacia ARRIBA */
         #suggestions {
             position: absolute; 
-            bottom: calc(100% + 5px); /* Aparece arriba del input */
+            top: calc(100% + 5px); /* Ahora bajan normalmente para mejor visibilidad móvil */
             left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 1001; max-height: 250px; overflow-y: auto; display: none;
-            border-radius: 10px; box-shadow: 0 -10px 25px rgba(0,0,0,0.5);
+            z-index: 1001; max-height: 200px; overflow-y: auto; display: none;
+            border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .suggestion-item { 
-            padding: 12px 15px; cursor: pointer; border-bottom: 1px solid #333; 
+            padding: 8px 12px; cursor: pointer; border-bottom: 1px solid #333; 
             display: flex; flex-direction: column; gap: 2px;
         }
-        .suggestion-item:hover { background: var(--botanical-green); }
         
-        .sug-botanic { font-weight: 700; font-size: 1rem; color: #fff; letter-spacing: 0.3px; }
-        .sug-common { font-size: 0.8rem; color: var(--text-dim); font-style: italic; }
-        .suggestion-item:hover .sug-common { color: #ddd; }
+        /* Letras más pequeñas en sugerencias como pediste */
+        .sug-botanic { font-weight: 700; font-size: 0.85rem; color: #fff; }
+        .sug-common { font-size: 0.75rem; color: var(--text-dim); font-style: italic; }
 
         .filters-column { flex: 0.8; display: flex; flex-direction: column; gap: 15px; }
         select { 
             background: #222; color: white; border: 2px solid var(--border-color); 
             padding: 10px; border-radius: 8px; font-size: 0.9rem; cursor: pointer; width: 100%;
         }
-        
-        select.active-filter { border-color: var(--neon-green); box-shadow: 0 0 8px rgba(57, 255, 20, 0.3); }
 
-        .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); order: 3; }
+        .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); }
         .header { background: var(--botanical-green); color: white; display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; font-weight: 700; font-size: 0.85rem; }
         .row { display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; border-bottom: 1px solid #1a1a1a; font-size: 0.9rem; align-items: center; }
-        .row:hover { background: #0a0a0a; }
-        
-        .vendor { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; }
-        .plant-name-cell { font-weight: 600; color: #fff; } 
-        .size-val { color: var(--text-dim); }
-        .highlight-size { font-weight: 700; color: var(--neon-green) !important; }
 
         .btn-new { 
-            background: transparent; color: var(--text-dim); border: 1px solid var(--border-color); 
-            padding: 8px 18px; border-radius: 8px; cursor: pointer; margin-bottom: 15px; font-weight: 600;
-            order: 1; align-self: flex-start;
+            background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
+            padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600;
+            width: fit-content; transition: 0.3s;
         }
+        .btn-new:hover { background: rgba(57, 255, 20, 0.1); }
 
-        /* RESPONSIVE: Ajustes para teléfono */
         @media (max-width: 768px) {
-            .search-area {
-                flex-direction: column; /* Apila buscador y filtros */
-            }
-            .filters-column {
-                flex-direction: row; /* Selectores uno al lado del otro */
-                width: 100%;
-            }
-            .btn-new {
-                order: 4; /* El botón de "New Search" se va al final para no estorbar arriba */
-                width: 100%;
-                margin-top: 10px;
-            }
-            .container {
-                margin: 40px auto;
-            }
+            .search-area { flex-direction: column; }
+            .filters-column { flex-direction: row; width: 100%; }
+            .search-panel { margin-bottom: 20px; }
         }
     </style>
 </head>
@@ -118,16 +97,15 @@
 <div class="credit">PROJECT BY "Henry P"</div>
 
 <div class="container">
-    <!-- El orden visual cambiará por el 'order' en CSS y el flex-direction -->
-    <button class="btn-new" onclick="resetSearch()">New Search</button>
-
     <div class="search-panel">
+        <!-- Botón movido dentro del panel para que no flote solo -->
+        <button class="btn-new" onclick="resetSearch()">New Search</button>
+        
         <div class="search-area">
             <div class="main-search-box">
                 <div class="input-group">
                     <label>Search Botanic Name or SKU</label>
                     <input type="text" id="plantInput" placeholder="Cargando datos..." disabled autocomplete="off">
-                    <!-- Ahora este aparecerá hacia arriba -->
                     <div id="suggestions"></div>
                 </div>
             </div>
@@ -173,7 +151,6 @@
 </div>
 
 <script>
-    // Tu lógica se mantiene idéntica
     let plantDB = [];
     let suggestionsDB = [];
 
@@ -184,21 +161,20 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
 
+    // Palabras de "forma" que debemos ignorar en la abreviación
+    const formasAIgnorar = ["SHRUB", "TREE", "STK", "PATIO", "COLUMN", "DWF", "SD", "STD", "MULTI", "TOP"];
+
     async function loadData() {
         try {
             const [resPlantas, resHome] = await Promise.all([
                 fetch('plantas.json'),
                 fetch('home.json')
             ]);
-            
             plantDB = await resPlantas.json();
             suggestionsDB = await resHome.json();
-            
             plantInput.disabled = false;
             plantInput.placeholder = "Enter Name or SKU...";
-            console.log("Datos cargados correctamente");
         } catch (error) {
-            console.error("Error cargando los archivos JSON:", error);
             plantInput.placeholder = "Error al cargar datos.";
         }
     }
@@ -207,25 +183,48 @@
 
     function limpiarInput(texto) { return texto.replace(/[.*+?^${}()|[\]\\]/g, ""); }
 
-    function matchesForm(itemText, itemSize, selectedForm) {
-        if (selectedForm === 'any') return true;
-        const fullText = (itemText + " " + itemSize).toUpperCase();
-        if (selectedForm === 'PATIO') return fullText.includes('PATIO') || fullText.includes('PTR') || fullText.includes(' P.T.');
-        if (selectedForm === 'COLUMN') return fullText.includes('COLUMN') || fullText.includes('COL');
-        return fullText.includes(selectedForm);
+    // --- LÓGICA DE ABREVIACIÓN ---
+    function procesarAbreviacion(texto) {
+        // 1. Quitar paréntesis
+        let limpio = texto.replace(/\(.*?\)/g, '').trim();
+        
+        // 2. Buscar comillas simples
+        const comillasMatch = limpio.match(/'(.*?)'/g);
+        let primeraPalabra = limpio.split(' ')[0].substring(0, 3);
+        
+        if (comillasMatch) {
+            // Regla comillas: primera y última encontrada
+            let contenido = comillasMatch[0].replace(/'/g, '').trim().split(' ');
+            if (contenido.length >= 2) {
+                return `${primeraPalabra} ${contenido[0].substring(0, 2)} ${contenido[contenido.length-1].substring(0, 3)}`.toLowerCase();
+            }
+            return `${primeraPalabra} ${contenido[0].substring(0, 3)}`.toLowerCase();
+        } else {
+            // Regla sin comillas: Primera palabra (3) + Última palabra (3) que no sea número ni forma
+            let palabras = limpio.split(' ').filter(p => {
+                return isNaN(p) && !formasAIgnorar.includes(p.toUpperCase());
+            });
+            if (palabras.length > 1) {
+                return `${primeraPalabra} ${palabras[palabras.length - 1].substring(0, 3)}`.toLowerCase();
+            }
+            return primeraPalabra.toLowerCase();
+        }
     }
-
-    [sizeFilter, formFilter].forEach(el => {
-        el.addEventListener('change', () => {
-            el.classList.toggle('active-filter', el.value !== 'any');
-            performSearch();
-        });
-    });
 
     plantInput.addEventListener('input', () => {
         let val = limpiarInput(plantInput.value).toUpperCase().trim();
         
+        // Reiniciar combos si es una búsqueda nueva (borró y empezó a escribir)
+        if (val.length === 1) {
+            sizeFilter.value = "any";
+            formFilter.value = "any";
+            sizeFilter.classList.remove('active-filter');
+            formFilter.classList.remove('active-filter');
+        }
+
         if (val.length >= 2) {
+            const isSearchingSKU = /^\d+$/.test(val); // Detecta si el usuario escribe solo números
+
             let matches = suggestionsDB.filter(s => {
                 const nameMatch = (s.display_name || "").toUpperCase().includes(val);
                 const skuMatch = (s.variantes || "").toUpperCase().includes(val);
@@ -233,10 +232,10 @@
             });
 
             if (matches.length > 0) {
-                sugBox.innerHTML = matches.slice(0, 10).map(m => `
+                sugBox.innerHTML = matches.slice(0, 12).map(m => `
                     <div class="suggestion-item" onclick="applySug('${m.display_name}')">
                         <span class="sug-botanic">${m.display_name}</span>
-                        <span class="sug-common">${m.variantes}</span>
+                        ${isSearchingSKU ? `<span class="sug-common">${m.variantes}</span>` : ''}
                     </div>
                 `).join('');
                 sugBox.style.display = "block";
@@ -247,40 +246,36 @@
     });
 
     function applySug(nombreSeleccionado) {
-        plantInput.value = nombreSeleccionado;
+        // Aplicamos la lógica de abreviación al hacer clic
+        plantInput.value = procesarAbreviacion(nombreSeleccionado);
         sugBox.style.display = "none";
         performSearch();
         plantInput.focus();
     }
 
     function performSearch() {
-        const rawInput = plantInput.value.trim();
-        const queryText = limpiarInput(rawInput).toUpperCase();
+        const queryText = limpiarInput(plantInput.value).toUpperCase();
         const sizeQuery = sizeFilter.value;
         const formQuery = formFilter.value;
 
-        if (queryText === "" && sizeQuery === "any" && formQuery === "any") {
+        if (!queryText && sizeQuery === "any" && formQuery === "any") {
             resultsBody.innerHTML = "";
             resultsHeader.style.display = "none";
             return;
         }
 
         resultsHeader.style.display = "grid";
-
         const filtered = plantDB.filter(item => {
             const itemName = (item.name || "").toUpperCase();
             const itemSizeField = (item.size || "").toUpperCase();
-            
             const words = queryText.split(/\s+/);
             const matchText = words.every(w => itemName.includes(w) || itemSizeField.includes(w));
-            
             const matchSize = sizeQuery === 'any' || itemSizeField.includes(sizeQuery);
-            const matchForm = matchesForm(itemName, itemSizeField, formQuery);
-            
+            const matchForm = (formQuery === 'any') ? true : (itemName + " " + itemSizeField).includes(formQuery);
             return matchText && matchSize && matchForm;
         });
 
-        resultsBody.innerHTML = filtered.slice(0, 150).map(item => `
+        resultsBody.innerHTML = filtered.slice(0, 100).map(item => `
             <div class="row">
                 <div class="vendor">${item.company || '---'}</div>
                 <div class="plant-name-cell">${item.name}</div>
@@ -293,8 +288,6 @@
         plantInput.value = "";
         sizeFilter.value = "any";
         formFilter.value = "any";
-        sizeFilter.classList.remove('active-filter');
-        formFilter.classList.remove('active-filter');
         sugBox.style.display = "none";
         performSearch();
     }
