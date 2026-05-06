@@ -27,12 +27,13 @@
 
         /* Panel de selección suave arriba del buscador */
         .selected-info {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--text-dim);
             font-style: italic;
             margin-bottom: 8px;
             min-height: 1.2em;
             transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .search-panel {
@@ -59,7 +60,7 @@
             width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 12px;
             font-size: 1.1rem; background: #000; color: #fff;
             transition: all 0.3s ease; box-sizing: border-box;
-            text-transform: lowercase; /* Para mantener consistencia con tus reglas */
+            text-transform: lowercase;
         }
 
         #suggestions {
@@ -108,7 +109,7 @@
     <div class="search-panel">
         <button class="btn-new" onclick="resetSearch()">New Search</button>
         
-        <!-- Panel suave que muestra la selección actual -->
+        <!-- Panel que muestra el nombre completo seleccionado -->
         <div id="selectionPreview" class="selected-info">Waiting for selection...</div>
 
         <div class="search-area">
@@ -160,7 +161,6 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
 
-    // Palabras de forma a ignorar
     const formasAIgnorar = ["PREMIUM", "ASSORTED", "STD", "MULT", "PATIO", "ON", "POLE", "BOWL", "GARDEN", "CLAY", "SHRUB", "TREE", "STK", "COLUMN", "DWF", "SD", "MULTI", "TOP"];
 
     async function loadData() {
@@ -180,53 +180,32 @@
 
     loadData();
 
-    function limpiarCaracteres(texto) {
-        // Elimina caracteres especiales pero mantiene espacios
-        return texto.replace(/[.*+?^${}()|[\]\\]/g, "").trim();
-    }
-
     function procesarAbreviacion(textoCompleto) {
-        // 1. Limpieza inicial: Quitar lo que está en paréntesis para procesar el nombre botánico
         let soloNombre = textoCompleto.split('(')[0].trim();
-        
-        // 2. Buscar comillas simples
         const comillasMatch = soloNombre.match(/'(.*?)'/);
         let primeraPalabra = soloNombre.split(' ')[0].substring(0, 3);
 
-        // --- REGLA DE COMILLAS ---
         if (comillasMatch) {
             let dentro = comillasMatch[1].trim().split(/\s+/);
             if (dentro.length >= 2) {
-                // Inicial de la primera + 4 de la última
                 let inicial = dentro[0].substring(0, 1);
                 let ultima = dentro[dentro.length - 1].substring(0, 4);
                 return `${primeraPalabra} ${inicial} ${ultima}`.toLowerCase();
             } else {
-                // Solo una palabra en comillas: 4 letras
                 return `${primeraPalabra} ${dentro[0].substring(0, 4)}`.toLowerCase();
             }
         }
 
-        // --- REGLA GENERAL (Sin comillas) ---
-        // Limpiar palabras de forma
         let palabras = soloNombre.split(/\s+/).filter(p => {
             let limpia = p.toUpperCase().replace(/[^A-Z]/g, "");
             return limpia.length > 0 && !formasAIgnorar.includes(limpia);
         });
 
-        // Caso palabra única tras limpiar: 5 letras
-        if (palabras.length === 1) {
-            return palabras[0].substring(0, 5).toLowerCase();
-        }
-
-        // Caso múltiple palabras: 3 letras + 4 letras de la última
+        if (palabras.length === 1) return palabras[0].substring(0, 5).toLowerCase();
         if (palabras.length > 1) {
             let ultima = palabras[palabras.length - 1].substring(0, 4);
             return `${primeraPalabra} ${ultima}`.toLowerCase();
         }
-
-        // --- COMODÍN DE SEGURIDAD ---
-        // Si todo falla, devolver todo antes del paréntesis
         return soloNombre.substring(0, 10).toLowerCase();
     }
 
@@ -242,11 +221,15 @@
             });
 
             if (matches.length > 0) {
-                sugBox.innerHTML = matches.slice(0, 15).map(m => `
-                    <div class="suggestion-item" onclick="applySug('${m.display_name.replace(/'/g, "\\'")}')">
-                        <span class="sug-botanic">${m.display_name}</span>
-                    </div>
-                `).join('');
+                sugBox.innerHTML = matches.slice(0, 15).map(m => {
+                    // Reemplazamos comillas simples por entidad HTML para que no rompa el onclick
+                    const safeName = m.display_name.replace(/'/g, "&#39;");
+                    return `
+                        <div class="suggestion-item" onclick="applySug('${safeName}')">
+                            <span class="sug-botanic">${m.display_name}</span>
+                        </div>
+                    `;
+                }).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
         } else { sugBox.style.display = "none"; }
@@ -255,18 +238,23 @@
     });
 
     function applySug(nombreSeleccionado) {
-        // Colocar el nombre completo en el panel suave arriba
-        preview.innerText = nombreSeleccionado;
-        preview.style.color = "var(--neon-green)"; // Resalte momentáneo
+        // Decodificar el nombre (convertir &#39; de nuevo a comilla)
+        const decoder = document.createElement('textarea');
+        decoder.innerHTML = nombreSeleccionado;
+        const nombreLimpio = decoder.value;
 
-        // Aplicar la lógica de abreviación al input
-        plantInput.value = procesarAbreviacion(nombreSeleccionado);
+        // 1. Mostrar nombre COMPLETO arriba del buscador
+        preview.innerText = nombreLimpio;
+        preview.style.color = "var(--neon-green)";
+
+        // 2. Colocar la ABREVIACIÓN en el cuadro de búsqueda
+        plantInput.value = procesarAbreviacion(nombreLimpio);
         
         sugBox.style.display = "none";
         performSearch();
         plantInput.focus();
 
-        // Volver el color del preview a gris suave tras 1 segundo
+        // Estética: volver el color a gris después de 1 segundo
         setTimeout(() => { preview.style.color = "var(--text-dim)"; }, 1000);
     }
 
