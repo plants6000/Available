@@ -3,353 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant Inventory System - Henry P</title>
+    <title>Plant Inventory System - Henry P Edition</title>
     <style>
         :root { 
             --bg-dark: #0f0f0f; 
             --card-bg: #181818; 
             --text-main: #e0e0e0; 
             --text-dim: #a0a0a0;
+            --botanical-green: #4c7c4e; 
             --neon-green: #39FF14; 
-            --botanical-green: #4c7c4e;
-            --border: #2a2a2a;
+            --border-color: #2a2a2a;
         }
         
         body { 
-            font-family: -apple-system, sans-serif; 
-            background: var(--bg-dark); color: var(--text-main); 
-            margin: 0; padding: 10px; 
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-dark); 
+            color: var(--text-main); 
+            margin: 0; padding: 20px; 
         }
 
-        /* Header Layout */
-        .top-meta { display: flex; justify-content: space-between; align-items: flex-start; max-width: 1100px; margin: 0 auto 20px; }
-        .credit { font-size: 0.7rem; color: var(--text-dim); font-weight: bold; }
-        
-        .weather-info { text-align: right; font-size: 0.8rem; color: var(--text-dim); line-height: 1.4; }
-        .weather-line-1 { font-weight: 500; }
-        .weather-line-2 { color: #fff; font-weight: bold; }
-        .weather-date { text-transform: lowercase; }
-
-        .welcome-title { text-align: center; color: var(--neon-green); font-size: 1.8rem; font-weight: 800; margin: 10px 0; }
-
-        .container { max-width: 1100px; margin: 0 auto; }
+        .credit { position: absolute; top: 15px; left: 20px; font-size: 0.7rem; color: var(--text-dim); font-weight: 600; letter-spacing: 1px; }
+        .container { max-width: 1000px; margin: 50px auto; display: flex; flex-direction: column; }
 
         .search-panel {
-            background: var(--card-bg); padding: 20px; border-radius: 15px;
-            border: 2px solid var(--neon-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.1);
-            margin-bottom: 20px;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px solid var(--neon-green); 
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        /* Nueva fila para botones y filtros superiores */
-        .top-controls { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 15px; gap: 10px; }
+        .search-area { display: flex; gap: 25px; align-items: flex-end; }
+        .main-search-box { flex: 3; position: relative; }
         
-        .btn-new { 
-            background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
-            padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; 
-            height: 40px; white-space: nowrap;
+        .input-group label { 
+            font-size: 0.8rem; color: var(--neon-green); 
+            font-weight: 700; margin-bottom: 8px; display: block;
         }
-
-        .vendor-box { width: 200px; }
-
-        .selected-preview { text-align: center; font-style: italic; color: var(--text-dim); margin-bottom: 15px; font-size: 0.9rem; min-height: 1.2em; }
-
-        /* Fila de Buscador y Size */
-        .main-search-row { display: grid; grid-template-columns: 1fr 120px; gap: 15px; }
-        .input-group { position: relative; }
-        .input-group label { display: block; font-size: 0.7rem; color: var(--neon-green); font-weight: 700; margin-bottom: 5px; text-transform: uppercase; }
-
-        input, select { 
-            width: 100%; padding: 12px; background: #000; border: 1.5px solid var(--border); 
-            border-radius: 8px; color: #fff; font-size: 1rem; box-sizing: border-box;
+        
+        #plantInput {
+            width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 12px;
+            font-size: 1rem; background: #000; color: #fff;
+            transition: all 0.3s ease; box-sizing: border-box;
         }
 
         #suggestions {
-            position: absolute; top: 100%; left: 0; width: 100%; 
+            position: absolute; 
+            top: calc(100% + 5px); 
+            left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 2000; max-height: 250px; overflow-y: auto; 
-            border-radius: 0 0 10px 10px;
-            display: none; /* Add this to ensure it's hidden by default */
+            z-index: 1001; max-height: 250px; overflow-y: auto; display: none;
+            border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
-        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; }
-        .suggestion-item:hover { background: #2a2a2a; color: var(--neon-green); }
+        .suggestion-item { 
+            padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #333; 
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .suggestion-item:hover { background: #2a2a2a; }
+        
+        .sug-botanic { font-weight: 700; font-size: 0.85rem; color: #fff; }
+        .sug-common { font-size: 0.75rem; color: var(--text-dim); font-style: italic; }
 
-        /* Tabla */
-        .results-wrapper { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #000; max-height: 50vh; overflow-y: auto; }
-        .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.8rem; }
-        .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; align-items: center; }
+        .filters-column { flex: 1; }
+        select { 
+            background: #222; color: white; border: 2px solid var(--border-color); 
+            padding: 14px; border-radius: 8px; font-size: 0.9rem; cursor: pointer; width: 100%;
+        }
 
-        @media (max-width: 600px) {
-            .top-controls { flex-direction: row; align-items: flex-end; }
-            .vendor-box { width: 150px; }
-            .main-search-row { grid-template-columns: 1fr 90px; }
+        .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); }
+        .header { background: var(--botanical-green); color: white; display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; font-weight: 700; font-size: 0.85rem; }
+        .row { display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; border-bottom: 1px solid #1a1a1a; font-size: 0.9rem; align-items: center; }
+
+        .btn-new { 
+            background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
+            padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600;
+            width: fit-content; transition: 0.3s; margin-bottom: 10px;
+        }
+        .btn-new:hover { background: rgba(57, 255, 20, 0.1); }
+
+        @media (max-width: 768px) {
+            .search-area { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-meta">
-        <div class="credit">PROJECT BY "Henry P"</div>
-        <div class="weather-info">
-            <div class="weather-line-1" id="weatherMinMaxWind">Min: 75°F | Max: 88°F | Wind: 5-12 mph</div>
-            <div class="weather-line-2" id="weatherCityTemp">Miami, FL, Sunny, 82°F</div>
-            <div class="weather-date" id="currentDate">monday 05/06/26</div>
-        </div>
-    </div>
+<div class="credit">PROJECT BY "Henry P"</div>
 
-    <div class="welcome-title">Welcome</div>
-
-    <div class="container">
-        <div class="search-panel">
-            <div class="top-controls">
-                <button class="btn-new" onclick="resetSearch()">New Search</button>
-                <div class="vendor-box">
-                    <div class="input-group">
-                        <label>Vendor</label>
-                        <select id="vendorFilter" onchange="performSearch()"></select>
-                    </div>
+<div class="container">
+    <div class="search-panel">
+        <button class="btn-new" onclick="resetSearch()">New Search</button>
+        
+        <div class="search-area">
+            <div class="main-search-box">
+                <div class="input-group">
+                    <label>Search Botanic Name or SKU</label>
+                    <input type="text" id="plantInput" placeholder="Loading data..." disabled autocomplete="off">
+                    <div id="suggestions"></div>
                 </div>
             </div>
 
-            <div id="selectionPreview" class="selected-preview">Waiting for selection...</div>
-
-            <div class="main-search-row">
-                <div class="input-group">
-                    <label>Botanic Name / SKU</label>
-                    <input type="text" id="plantInput" placeholder="Type here..." autocomplete="off" disabled>
-                    <div id="suggestions"></div>
-                </div>
+            <div class="filters-column">
                 <div class="input-group">
                     <label>Size</label>
                     <select id="sizeFilter" onchange="performSearch()">
-                        <option value="any">Any</option>
+                        <option value="any">Any Size</option>
                         <option value="01">01G</option>
+                        <option value="02">02G</option>
                         <option value="03">03G</option>
+                        <option value="05">05G</option>
                         <option value="07">07G</option>
+                        <option value="10">10G</option>
                         <option value="15">15G</option>
+                        <option value="24">24"</option>
+                        <option value="25">25G</option>
+                        <option value="36">36"</option>
                     </select>
                 </div>
             </div>
         </div>
-
-        <div class="results-wrapper">
-            <div id="resultsHeader" class="header" style="display: none;">
-                <div>VENDOR</div><div>NAME</div><div>SIZE</div>
-            </div>
-            <div id="resultsBody"></div>
-        </div>
     </div>
+
+    <div class="results-container">
+        <div id="resultsHeader" class="header" style="display: none;">
+            <div>VENDOR</div><div>BOTANIC NAME</div><div>SIZE / INFO</div>
+        </div>
+        <div id="resultsBody"></div>
+    </div>
+</div>
 
 <script>
     let plantDB = [];
     let suggestionsDB = [];
-    const formasAIgnorar = ["PREMIUM", "ASSORTED", "STD", "MULT", "PATIO", "ON", "POLE", "BOWL", "GARDEN", "CLAY", "SHRUB", "TREE", "STK", "COLUMN", "DWF", "SD", "MULTI", "TOP"];
 
     const plantInput = document.getElementById('plantInput');
-    const vendorFilter = document.getElementById('vendorFilter');
     const sizeFilter = document.getElementById('sizeFilter');
     const sugBox = document.getElementById('suggestions');
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
-    const preview = document.getElementById('selectionPreview');
-    const weatherMinMaxWind = document.getElementById('weatherMinMaxWind');
-    const weatherCityTemp = document.getElementById('weatherCityTemp');
 
-    // Cargar Fecha Real formateada como quieres
-    function setDate() {
-        const now = new Date();
-        const options = { weekday: 'long', month: '2-digit', day: '2-digit', year: '2-digit' };
-        let dateStr = now.toLocaleDateString('en-US', options).toLowerCase();
-        // Ajuste manual para el formato exacto: monday 05/06/26
-        const parts = now.toLocaleDateString('en-US', {month:'2-digit', day:'2-digit', year:'2-digit'}).split('/');
-        const dayName = now.toLocaleDateString('en-US', {weekday:'long'}).toLowerCase();
-        document.getElementById('currentDate').innerText = `${dayName} ${parts[0]}/${parts[1]}/${parts[2]}`;
-    }
-    setDate();
-
-    // Obtener clima basado en la ubicación
-    async function getWeather(latitude, longitude) {
-        // Usando Open-Meteo para un ejemplo simple y gratuito
-        const weatherApiUrl = `[api.open-meteo.com](https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&daily=temperature_2m_max,temperature_2m_min&timezone=America/New_York)`;
-
-        try {
-            const response = await fetch(weatherApiUrl);
-            const data = await response.json();
-            
-            if (data && data.current_weather && data.daily) {
-                const currentWeather = data.current_weather;
-                const dailyWeather = data.daily;
-
-                const currentTemp = Math.round(currentWeather.temperature);
-                const windSpeed = Math.round(currentWeather.windspeed);
-                const maxTemp = Math.round(dailyWeather.temperature_2m_max[0]);
-                const minTemp = Math.round(dailyWeather.temperature_2m_min[0]);
-
-                let weatherDescription = "Clear"; // Placeholder, Open-Meteo doesn't provide detailed descriptions for free
-                if (currentWeather.weathercode !== undefined) {
-                    // You might want to map weather codes to descriptions for better user experience
-                    // For now, let's keep it simple.
-                    weatherDescription = getWeatherDescriptionFromCode(currentWeather.weathercode);
-                }
-
-                // Reverse geocoding for city name (using Nominatim as a free option)
-                const geoApiUrl = `[nominatim.openstreetmap.org](https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude})`;
-                const geoResponse = await fetch(geoApiUrl);
-                const geoData = await geoResponse.json();
-                
-                let city = "Unknown";
-                if (geoData && geoData.address) {
-                    city = geoData.address.city || geoData.address.town || geoData.address.village || "Unknown";
-                    if (geoData.address.state) city += `, ${geoData.address.state}`;
-                }
-
-                weatherMinMaxWind.innerText = `Min: ${minTemp}°F | Max: ${maxTemp}°F | Wind: ${windSpeed} mph`;
-                weatherCityTemp.innerText = `${city}, ${weatherDescription}, ${currentTemp}°F`;
-            } else {
-                setMiamiWeather(); // Fallback if data is not as expected
-            }
-        } catch (error) {
-            console.error("Error fetching weather:", error);
-            setMiamiWeather();
-        }
-    }
-
-    function getWeatherDescriptionFromCode(code) {
-        // Simplified mapping, you can expand this
-        if (code === 0) return "Clear sky";
-        if (code > 0 && code < 4) return "Partly cloudy";
-        if (code >= 51 && code <= 67) return "Rainy";
-        if (code >= 71 && code <= 77) return "Snowy";
-        if (code >= 95 && code <= 99) return "Thunderstorm";
-        return "Weather";
-    }
-
-    function setMiamiWeather() {
-        weatherMinMaxWind.innerText = "Min: 75°F | Max: 88°F | Wind: 5-12 mph";
-        weatherCityTemp.innerText = "Miami, FL, Sunny, 82°F";
-    }
-
-    function getLocationAndWeather() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    getWeather(position.coords.latitude, position.coords.longitude);
-                },
-                (error) => {
-                    console.warn("Geolocation denied or error:", error);
-                    setMiamiWeather(); // Fallback if geolocation fails or is denied
-                }
-            );
-        } else {
-            console.warn("Geolocation not supported by this browser.");
-            setMiamiWeather(); // Fallback
-        }
-    }
-
+    const formasAIgnorar = ["SHRUB", "TREE", "STK", "PATIO", "COLUMN", "DWF", "SD", "STD", "MULTI", "TOP"];
 
     async function loadData() {
         try {
-            const [resP, resH] = await Promise.all([fetch('plantas.json'), fetch('home.json')]);
-            plantDB = await resP.json();
-            suggestionsDB = await resH.json();
-            
-            const vendors = [...new Set(plantDB.map(i => i.company))].filter(Boolean).sort();
-            vendorFilter.innerHTML = '<option value="any">Any Vendor</option>' + vendors.map(v => `<option value="${v}">${v}</option>`).join('');
-            
+            const [resPlantas, resHome] = await Promise.all([
+                fetch('plantas.json'),
+                fetch('home.json')
+            ]);
+            plantDB = await resPlantas.json();
+            suggestionsDB = await resHome.json();
             plantInput.disabled = false;
-        } catch (e) { plantInput.placeholder = "Error loading..."; }
+            plantInput.placeholder = "Enter Name or SKU...";
+        } catch (error) {
+            plantInput.placeholder = "Error loading data.";
+        }
     }
 
-    function procesarAbreviacion(texto) {
-        let soloNombre = texto.split('(')[0].trim();
-        const comillasMatch = soloNombre.match(/'(.*?)'/);
-        let primera = soloNombre.split(' ')[0].substring(0, 3);
+    loadData();
 
+    function limpiarInput(texto) { return texto.replace(/[.*+?^${}()|[\]\\]/g, ""); }
+
+    function procesarAbreviacion(texto) {
+        let limpio = texto.replace(/\(.*?\)/g, '').trim();
+        const comillasMatch = limpio.match(/'(.*?)'/g);
+        let primeraPalabra = limpio.split(' ')[0].substring(0, 3);
+        
         if (comillasMatch) {
-            let dentro = comillasMatch[1].trim().split(/\s+/);
-            if (dentro.length >= 2) return `${primera} ${dentro[0][0]} ${dentro[dentro.length-1].substring(0,4)}`.toLowerCase();
-            return `${primera} ${dentro[0].substring(0,4)}`.toLowerCase();
+            let contenido = comillasMatch[0].replace(/'/g, '').trim().split(' ');
+            if (contenido.length >= 2) {
+                return `${primeraPalabra} ${contenido[0].substring(0, 2)} ${contenido[contenido.length-1].substring(0, 3)}`.toLowerCase();
+            }
+            return `${primeraPalabra} ${contenido[0].substring(0, 3)}`.toLowerCase();
+        } else {
+            let palabras = limpio.split(' ').filter(p => {
+                return p.length > 0 && isNaN(p) && !formasAIgnorar.includes(p.toUpperCase());
+            });
+            if (palabras.length > 1) {
+                return `${primeraPalabra} ${palabras[palabras.length - 1].substring(0, 3)}`.toLowerCase();
+            }
+            return primeraPalabra.toLowerCase();
         }
-        let palabras = soloNombre.split(/\s+/).filter(p => !formasAIgnorar.includes(p.toUpperCase()));
-        if (palabras.length > 1) return `${primera} ${palabras[palabras.length-1].substring(0,4)}`.toLowerCase();
-        return soloNombre.substring(0, 8).toLowerCase();
     }
 
     plantInput.addEventListener('input', () => {
-        let val = plantInput.value.toUpperCase().trim();
+        let val = limpiarInput(plantInput.value).toUpperCase().trim();
+        
         if (val.length >= 2) {
-            const matches = suggestionsDB.filter(s => s.display_name.toUpperCase().includes(val));
+            const isSearchingSKU = /^\d+$/.test(val);
+            const queryWords = val.split(/\s+/); // Divide la búsqueda en palabras
+
+            let matches = suggestionsDB.filter(s => {
+                const name = (s.display_name || "").toUpperCase();
+                const sku = (s.variantes || "").toUpperCase();
+                // Búsqueda progresiva: cada palabra escrita debe estar en el nombre o sku
+                return queryWords.every(word => name.includes(word) || sku.includes(word));
+            });
+
             if (matches.length > 0) {
-                sugBox.innerHTML = matches.slice(0, 15).map(m => {
-                    const safe = m.display_name.replace(/'/g, "&#39;");
-                    return `<div class="suggestion-item" onmousedown="applySug('${safe}')">${m.display_name}</div>`;
-                }).join('');
+                sugBox.innerHTML = matches.slice(0, 15).map(m => `
+                    <div class="suggestion-item" onclick="applySug('${m.display_name}')">
+                        <span class="sug-botanic">${m.display_name}</span>
+                        ${isSearchingSKU ? `<span class="sug-common">${m.variantes}</span>` : ''}
+                    </div>
+                `).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
         } else { sugBox.style.display = "none"; }
         
-        // Remove performSearch() from here, it will be called by applySug or when input is cleared
-        // This ensures applySug has a chance to run before search is triggered by input
+        performSearch(); 
     });
 
-    function applySug(nombre) {
-        const nombreLimpio = nombre.replace(/&#39;/g, "'");
-        preview.innerText = nombreLimpio;
-        preview.style.color = "var(--neon-green)";
-        plantInput.value = procesarAbreviacion(nombreLimpio);
+    function applySug(nombreSeleccionado) {
+        plantInput.value = procesarAbreviacion(nombreSeleccionado);
         sugBox.style.display = "none";
         performSearch();
-        // Removed the setTimeout for blur and color reset.
-        // The color can reset on subsequent interaction or when a new search clears the preview.
+        plantInput.focus();
     }
 
     function performSearch() {
-        const q = plantInput.value.toUpperCase().trim();
-        const v = vendorFilter.value;
-        const s = sizeFilter.value;
-        if (!q && v === "any" && s === "any") { resultsBody.innerHTML = ""; resultsHeader.style.display = "none"; return; }
+        const queryText = limpiarInput(plantInput.value).toUpperCase().trim();
+        const sizeQuery = sizeFilter.value;
+
+        // Si no hay texto ni filtro de tamaño, limpiar resultados
+        if (!queryText && sizeQuery === "any") {
+            resultsBody.innerHTML = "";
+            resultsHeader.style.display = "none";
+            return;
+        }
 
         resultsHeader.style.display = "grid";
-        const queryWords = q.split(/\s+/).filter(Boolean);
+        const queryWords = queryText.split(/\s+/).filter(w => w.length > 0);
+
         const filtered = plantDB.filter(item => {
-            // Simplified condition if q is empty, it should match all names for other filters
-            const mN = q === "" || queryWords.every(w => item.name.toUpperCase().includes(w));
-            const mV = v === "any" || item.company === v;
-            const mS = s === "any" || item.size.toUpperCase().includes(s.toUpperCase());
-            return mN && mV && mS;
+            const itemName = (item.name || "").toUpperCase();
+            const itemSizeField = (item.size || "").toUpperCase();
+            
+            // Si hay palabras en el buscador, aplicar lógica progresiva (AND)
+            const matchText = queryWords.length === 0 || queryWords.every(w => itemName.includes(w) || itemSizeField.includes(w));
+            
+            // Filtro de tamaño
+            const matchSize = sizeQuery === 'any' || itemSizeField.includes(sizeQuery);
+            
+            return matchText && matchSize;
         });
 
-        resultsBody.innerHTML = filtered.slice(0, 100).map(i => `
+        resultsBody.innerHTML = filtered.slice(0, 100).map(item => `
             <div class="row">
-                <div>${i.company}</div>
-                <div>${i.name}</div>
-                <div>${i.size}</div>
-            </div>`).join('');
+                <div class="vendor">${item.company || '---'}</div>
+                <div class="plant-name-cell">${item.name}</div>
+                <div class="size-val">${item.size}</div>
+            </div>
+        `).join('');
     }
 
     function resetSearch() {
-        plantInput.value = ""; vendorFilter.value = "any"; sizeFilter.value = "any";
-        sugBox.style.display = "none"; preview.innerText = "Waiting for selection...";
-        preview.style.color = "var(--text-dim)"; // Reset the preview color
-        performSearch(); // Trigger a search to clear results
+        plantInput.value = "";
+        sizeFilter.value = "any";
+        sugBox.style.display = "none";
+        performSearch();
     }
-
-    // Add an event listener to the plantInput to handle clearing the search field directly
-    plantInput.addEventListener('keyup', (e) => {
-        if (e.key === 'Escape' || plantInput.value.length < 2) {
-            sugBox.style.display = "none";
-        }
-        performSearch(); // Perform search on every keyup (except when clearing suggestions)
+    
+    document.addEventListener('click', (e) => { 
+        if (e.target !== plantInput) sugBox.style.display = "none"; 
     });
-
-    document.addEventListener('mousedown', (e) => {
-        // Check if the click is outside the plantInput and suggestions box
-        if (!sugBox.contains(e.target) && e.target !== plantInput) {
-            sugBox.style.display = "none";
-        }
-    });
-
-    loadData();
-    getLocationAndWeather(); // Call this to get weather on load
 </script>
+
 </body>
 </html>
