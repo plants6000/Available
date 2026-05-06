@@ -23,7 +23,7 @@
         }
 
         .credit { position: absolute; top: 15px; left: 20px; font-size: 0.7rem; color: var(--text-dim); font-weight: 600; letter-spacing: 1px; }
-        .container { max-width: 1000px; margin: 50px auto; }
+        .container { max-width: 1000px; margin: 50px auto; display: flex; flex-direction: column; }
 
         .search-panel {
             background: var(--card-bg);
@@ -32,6 +32,7 @@
             border: 2px solid var(--neon-green); 
             box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
             margin-bottom: 30px;
+            order: 2; /* El panel de búsqueda es lo principal */
         }
 
         .search-area { display: flex; gap: 25px; align-items: flex-start; }
@@ -49,11 +50,14 @@
         }
         #plantInput:focus { border-color: var(--neon-green); outline: none; }
 
+        /* CAMBIO CLAVE: Sugerencias hacia ARRIBA */
         #suggestions {
-            position: absolute; top: calc(100% + 5px); left: 0; width: 100%; 
+            position: absolute; 
+            bottom: calc(100% + 5px); /* Aparece arriba del input */
+            left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 1001; max-height: 300px; overflow-y: auto; display: none;
-            border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 1001; max-height: 250px; overflow-y: auto; display: none;
+            border-radius: 10px; box-shadow: 0 -10px 25px rgba(0,0,0,0.5);
         }
         .suggestion-item { 
             padding: 12px 15px; cursor: pointer; border-bottom: 1px solid #333; 
@@ -73,7 +77,7 @@
         
         select.active-filter { border-color: var(--neon-green); box-shadow: 0 0 8px rgba(57, 255, 20, 0.3); }
 
-        .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); }
+        .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); order: 3; }
         .header { background: var(--botanical-green); color: white; display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; font-weight: 700; font-size: 0.85rem; }
         .row { display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; border-bottom: 1px solid #1a1a1a; font-size: 0.9rem; align-items: center; }
         .row:hover { background: #0a0a0a; }
@@ -86,6 +90,26 @@
         .btn-new { 
             background: transparent; color: var(--text-dim); border: 1px solid var(--border-color); 
             padding: 8px 18px; border-radius: 8px; cursor: pointer; margin-bottom: 15px; font-weight: 600;
+            order: 1; align-self: flex-start;
+        }
+
+        /* RESPONSIVE: Ajustes para teléfono */
+        @media (max-width: 768px) {
+            .search-area {
+                flex-direction: column; /* Apila buscador y filtros */
+            }
+            .filters-column {
+                flex-direction: row; /* Selectores uno al lado del otro */
+                width: 100%;
+            }
+            .btn-new {
+                order: 4; /* El botón de "New Search" se va al final para no estorbar arriba */
+                width: 100%;
+                margin-top: 10px;
+            }
+            .container {
+                margin: 40px auto;
+            }
         }
     </style>
 </head>
@@ -94,6 +118,7 @@
 <div class="credit">PROJECT BY "Henry P"</div>
 
 <div class="container">
+    <!-- El orden visual cambiará por el 'order' en CSS y el flex-direction -->
     <button class="btn-new" onclick="resetSearch()">New Search</button>
 
     <div class="search-panel">
@@ -102,12 +127,13 @@
                 <div class="input-group">
                     <label>Search Botanic Name or SKU</label>
                     <input type="text" id="plantInput" placeholder="Cargando datos..." disabled autocomplete="off">
+                    <!-- Ahora este aparecerá hacia arriba -->
                     <div id="suggestions"></div>
                 </div>
             </div>
 
             <div class="filters-column">
-                <div class="input-group">
+                <div class="input-group" style="flex: 1;">
                     <label>Size</label>
                     <select id="sizeFilter">
                         <option value="any">Any Size</option>
@@ -118,7 +144,7 @@
                         <option value="36">36"</option>
                     </select>
                 </div>
-                <div class="input-group">
+                <div class="input-group" style="flex: 1;">
                     <label>Form</label>
                     <select id="formFilter">
                         <option value="any">Any Form</option>
@@ -147,7 +173,7 @@
 </div>
 
 <script>
-    // Variables globales para almacenar los datos cargados
+    // Tu lógica se mantiene idéntica
     let plantDB = [];
     let suggestionsDB = [];
 
@@ -158,7 +184,6 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
 
-    // CARGA DE ARCHIVOS JSON
     async function loadData() {
         try {
             const [resPlantas, resHome] = await Promise.all([
@@ -178,7 +203,6 @@
         }
     }
 
-    // Iniciar carga
     loadData();
 
     function limpiarInput(texto) { return texto.replace(/[.*+?^${}()|[\]\\]/g, ""); }
