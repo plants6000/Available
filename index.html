@@ -19,85 +19,66 @@
             font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background: var(--bg-dark); 
             color: var(--text-main); 
-            margin: 0; padding: 20px; 
+            margin: 0; padding: 15px; 
         }
 
         .credit { position: absolute; top: 15px; left: 20px; font-size: 0.7rem; color: var(--text-dim); font-weight: 600; letter-spacing: 1px; }
-        .container { max-width: 1000px; margin: 50px auto; display: flex; flex-direction: column; }
+        .container { max-width: 1100px; margin: 40px auto; display: flex; flex-direction: column; }
 
-        /* Panel de selección suave arriba del buscador */
         .selected-info {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            font-style: italic;
-            margin-bottom: 8px;
-            min-height: 1.2em;
-            transition: all 0.3s ease;
-            font-weight: 500;
+            font-size: 0.9rem; color: var(--text-dim); font-style: italic;
+            margin-bottom: 8px; min-height: 1.2em;
         }
 
         .search-panel {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 20px;
-            border: 2px solid var(--neon-green); 
-            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
-            margin-bottom: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+            background: var(--card-bg); padding: 20px; border-radius: 20px;
+            border: 2px solid var(--neon-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
+            margin-bottom: 25px; display: flex; flex-direction: column; gap: 15px;
         }
 
-        .search-area { display: flex; gap: 25px; align-items: flex-end; }
-        .main-search-box { flex: 3; position: relative; }
+        .search-area { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px; align-items: flex-end; }
+        .main-search-box { position: relative; }
         
         .input-group label { 
-            font-size: 0.8rem; color: var(--neon-green); 
-            font-weight: 700; margin-bottom: 8px; display: block;
+            font-size: 0.75rem; color: var(--neon-green); 
+            font-weight: 700; margin-bottom: 8px; display: block; text-transform: uppercase;
         }
         
-        #plantInput {
-            width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 12px;
-            font-size: 1.1rem; background: #000; color: #fff;
-            transition: all 0.3s ease; box-sizing: border-box;
-            text-transform: lowercase;
+        #plantInput, select {
+            width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 10px;
+            font-size: 1rem; background: #000; color: #fff; box-sizing: border-box;
         }
 
         #suggestions {
-            position: absolute; 
-            top: calc(100% + 5px); 
-            left: 0; width: 100%; 
+            position: absolute; top: calc(100% + 5px); left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 1001; max-height: 250px; overflow-y: auto; display: none;
-            border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        .suggestion-item { 
-            padding: 12px 15px; cursor: pointer; border-bottom: 1px solid #333; 
-            display: flex; flex-direction: column; gap: 2px;
-        }
-        .suggestion-item:hover { background: #2a2a2a; border-left: 4px solid var(--neon-green); }
-        
-        .sug-botanic { font-weight: 700; font-size: 0.9rem; color: #fff; }
-
-        .filters-column { flex: 1; }
-        select { 
-            background: #222; color: white; border: 2px solid var(--border-color); 
-            padding: 14px; border-radius: 8px; font-size: 0.9rem; cursor: pointer; width: 100%;
+            z-index: 2000; max-height: 250px; overflow-y: auto; display: none;
+            border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.8);
         }
 
-        .results-container { border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-color); }
-        .header { background: var(--botanical-green); color: white; display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; font-weight: 700; font-size: 0.85rem; }
-        .row { display: grid; grid-template-columns: 1fr 2.5fr 1.5fr; padding: 14px; border-bottom: 1px solid #1a1a1a; font-size: 0.9rem; align-items: center; }
+        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; }
+        .suggestion-item:hover { background: #2a2a2a; color: var(--neon-green); }
+
+        /* Contenedor de resultados con scroll */
+        .results-wrapper {
+            border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);
+            background: #000; max-height: 60vh; overflow-y: auto;
+        }
+
+        .header { 
+            background: var(--botanical-green); color: white; display: grid; 
+            grid-template-columns: 1.2fr 2fr 1fr; padding: 12px; font-weight: 700; position: sticky; top: 0;
+        }
+        .row { display: grid; grid-template-columns: 1.2fr 2fr 1fr; padding: 12px; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem; }
 
         .btn-new { 
             background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
-            padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600;
-            width: fit-content; transition: 0.3s; margin-bottom: 10px;
+            padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; width: fit-content;
         }
-        .btn-new:hover { background: rgba(57, 255, 20, 0.1); }
 
         @media (max-width: 768px) {
-            .search-area { flex-direction: column; align-items: stretch; }
+            .search-area { grid-template-columns: 1fr; }
+            .header, .row { grid-template-columns: 1fr 1.5fr 0.8fr; font-size: 0.75rem; }
         }
     </style>
 </head>
@@ -108,43 +89,49 @@
 <div class="container">
     <div class="search-panel">
         <button class="btn-new" onclick="resetSearch()">New Search</button>
-        
-        <!-- Panel que muestra el nombre completo seleccionado -->
         <div id="selectionPreview" class="selected-info">Waiting for selection...</div>
 
         <div class="search-area">
+            <!-- Buscador principal -->
             <div class="main-search-box">
                 <div class="input-group">
-                    <label>Search Botanic Name or SKU</label>
-                    <input type="text" id="plantInput" placeholder="Loading data..." disabled autocomplete="off">
+                    <label>Botanic Name / SKU</label>
+                    <input type="text" id="plantInput" placeholder="Loading..." disabled autocomplete="off">
                     <div id="suggestions"></div>
                 </div>
             </div>
 
-            <div class="filters-column">
-                <div class="input-group">
-                    <label>Size</label>
-                    <select id="sizeFilter" onchange="performSearch()">
-                        <option value="any">Any Size</option>
-                        <option value="01">01G</option>
-                        <option value="02">02G</option>
-                        <option value="03">03G</option>
-                        <option value="05">05G</option>
-                        <option value="07">07G</option>
-                        <option value="10">10G</option>
-                        <option value="15">15G</option>
-                        <option value="24">24"</option>
-                        <option value="25">25G</option>
-                        <option value="36">36"</option>
-                    </select>
-                </div>
+            <!-- Filtro Vendor -->
+            <div class="input-group">
+                <label>Vendor</label>
+                <select id="vendorFilter" onchange="performSearch()">
+                    <option value="any">Any Vendor</option>
+                </select>
+            </div>
+
+            <!-- Filtro Size -->
+            <div class="input-group">
+                <label>Size</label>
+                <select id="sizeFilter" onchange="performSearch()">
+                    <option value="any">Any Size</option>
+                    <option value="01">01G</option>
+                    <option value="02">02G</option>
+                    <option value="03">03G</option>
+                    <option value="05">05G</option>
+                    <option value="07">07G</option>
+                    <option value="10">10G</option>
+                    <option value="15">15G</option>
+                    <option value="24">24"</option>
+                    <option value="25">25G</option>
+                    <option value="36">36"</option>
+                </select>
             </div>
         </div>
     </div>
 
-    <div class="results-container">
+    <div class="results-wrapper">
         <div id="resultsHeader" class="header" style="display: none;">
-            <div>VENDOR</div><div>BOTANIC NAME</div><div>SIZE / INFO</div>
+            <div>VENDOR</div><div>BOTANIC NAME</div><div>SIZE</div>
         </div>
         <div id="resultsBody"></div>
     </div>
@@ -155,150 +142,119 @@
     let suggestionsDB = [];
 
     const plantInput = document.getElementById('plantInput');
-    const preview = document.getElementById('selectionPreview');
+    const vendorFilter = document.getElementById('vendorFilter');
     const sizeFilter = document.getElementById('sizeFilter');
     const sugBox = document.getElementById('suggestions');
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
-
-    const formasAIgnorar = ["PREMIUM", "ASSORTED", "STD", "MULT", "PATIO", "ON", "POLE", "BOWL", "GARDEN", "CLAY", "SHRUB", "TREE", "STK", "COLUMN", "DWF", "SD", "MULTI", "TOP"];
+    const preview = document.getElementById('selectionPreview');
 
     async function loadData() {
         try {
             const [resPlantas, resHome] = await Promise.all([
-                fetch('plantas.json'),
-                fetch('home.json')
+                fetch('plantas.json'), fetch('home.json')
             ]);
             plantDB = await resPlantas.json();
             suggestionsDB = await resHome.json();
+            
+            populateVendors();
             plantInput.disabled = false;
-            plantInput.placeholder = "Enter Name or SKU...";
-        } catch (error) {
-            plantInput.placeholder = "Error loading data.";
-        }
+            plantInput.placeholder = "Type to search...";
+        } catch (e) { plantInput.placeholder = "Error loading data."; }
     }
 
-    loadData();
-
-    function procesarAbreviacion(textoCompleto) {
-        let soloNombre = textoCompleto.split('(')[0].trim();
-        const comillasMatch = soloNombre.match(/'(.*?)'/);
-        let primeraPalabra = soloNombre.split(' ')[0].substring(0, 3);
-
-        if (comillasMatch) {
-            let dentro = comillasMatch[1].trim().split(/\s+/);
-            if (dentro.length >= 2) {
-                let inicial = dentro[0].substring(0, 1);
-                let ultima = dentro[dentro.length - 1].substring(0, 4);
-                return `${primeraPalabra} ${inicial} ${ultima}`.toLowerCase();
-            } else {
-                return `${primeraPalabra} ${dentro[0].substring(0, 4)}`.toLowerCase();
-            }
-        }
-
-        let palabras = soloNombre.split(/\s+/).filter(p => {
-            let limpia = p.toUpperCase().replace(/[^A-Z]/g, "");
-            return limpia.length > 0 && !formasAIgnorar.includes(limpia);
+    function populateVendors() {
+        const vendors = [...new Set(plantDB.map(item => item.company))].filter(Boolean).sort();
+        vendors.forEach(v => {
+            const opt = document.createElement('option');
+            opt.value = v; opt.textContent = v;
+            vendorFilter.appendChild(opt);
         });
-
-        if (palabras.length === 1) return palabras[0].substring(0, 5).toLowerCase();
-        if (palabras.length > 1) {
-            let ultima = palabras[palabras.length - 1].substring(0, 4);
-            return `${primeraPalabra} ${ultima}`.toLowerCase();
-        }
-        return soloNombre.substring(0, 10).toLowerCase();
     }
+
+    // Cerrar sugerencias al presionar Enter
+    plantInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            sugBox.style.display = 'none';
+            plantInput.blur(); // Cierra el teclado en móvil
+        }
+    });
 
     plantInput.addEventListener('input', () => {
+        // RESET de filtros al escribir en el buscador
+        vendorFilter.value = "any";
+        sizeFilter.value = "any";
+
         let val = plantInput.value.toUpperCase().trim();
-        
         if (val.length >= 2) {
             const queryWords = val.split(/\s+/);
-            let matches = suggestionsDB.filter(s => {
+            const matches = suggestionsDB.filter(s => {
                 const name = (s.display_name || "").toUpperCase();
-                const sku = (s.variantes || "").toUpperCase();
-                return queryWords.every(word => name.includes(word) || sku.includes(word));
+                return queryWords.every(word => name.includes(word));
             });
 
             if (matches.length > 0) {
-                sugBox.innerHTML = matches.slice(0, 15).map(m => {
-                    // Reemplazamos comillas simples por entidad HTML para que no rompa el onclick
-                    const safeName = m.display_name.replace(/'/g, "&#39;");
-                    return `
-                        <div class="suggestion-item" onclick="applySug('${safeName}')">
-                            <span class="sug-botanic">${m.display_name}</span>
-                        </div>
-                    `;
-                }).join('');
+                sugBox.innerHTML = matches.slice(0, 15).map(m => `
+                    <div class="suggestion-item" onmousedown="applySug('${m.display_name.replace(/'/g, "&#39;")}')">
+                        ${m.display_name}
+                    </div>
+                `).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
         } else { sugBox.style.display = "none"; }
-        
-        performSearch(); 
+        performSearch();
     });
 
-    function applySug(nombreSeleccionado) {
-        // Decodificar el nombre (convertir &#39; de nuevo a comilla)
-        const decoder = document.createElement('textarea');
-        decoder.innerHTML = nombreSeleccionado;
-        const nombreLimpio = decoder.value;
-
-        // 1. Mostrar nombre COMPLETO arriba del buscador
+    function applySug(nombre) {
+        const nombreLimpio = nombre.replace(/&#39;/g, "'");
         preview.innerText = nombreLimpio;
-        preview.style.color = "var(--neon-green)";
-
-        // 2. Colocar la ABREVIACIÓN en el cuadro de búsqueda
-        plantInput.value = procesarAbreviacion(nombreLimpio);
-        
+        plantInput.value = nombreLimpio; // O usa tu función de abreviación aquí
         sugBox.style.display = "none";
         performSearch();
-        plantInput.focus();
-
-        // Estética: volver el color a gris después de 1 segundo
-        setTimeout(() => { preview.style.color = "var(--text-dim)"; }, 1000);
     }
 
     function performSearch() {
-        const queryText = plantInput.value.toUpperCase().trim();
+        const query = plantInput.value.toUpperCase().trim();
+        const vendorQuery = vendorFilter.value;
         const sizeQuery = sizeFilter.value;
 
-        if (!queryText && sizeQuery === "any") {
-            resultsBody.innerHTML = "";
-            resultsHeader.style.display = "none";
-            return;
+        if (!query && vendorQuery === "any" && sizeQuery === "any") {
+            resultsBody.innerHTML = ""; resultsHeader.style.display = "none"; return;
         }
 
         resultsHeader.style.display = "grid";
-        const queryWords = queryText.split(/\s+/).filter(w => w.length > 0);
+        const queryWords = query.split(/\s+/).filter(Boolean);
 
         const filtered = plantDB.filter(item => {
-            const itemName = (item.name || "").toUpperCase();
-            const itemSizeField = (item.size || "").toUpperCase();
-            const matchText = queryWords.length === 0 || queryWords.every(w => itemName.includes(w) || itemSizeField.includes(w));
-            const matchSize = sizeQuery === 'any' || itemSizeField.includes(sizeQuery);
-            return matchText && matchSize;
+            const nameMatch = queryWords.every(w => item.name.toUpperCase().includes(w));
+            const vendorMatch = vendorQuery === "any" || item.company === vendorQuery;
+            const sizeMatch = sizeQuery === "any" || item.size.includes(sizeQuery);
+            return nameMatch && vendorMatch && sizeMatch;
         });
 
-        resultsBody.innerHTML = filtered.slice(0, 100).map(item => `
+        resultsBody.innerHTML = filtered.slice(0, 150).map(item => `
             <div class="row">
-                <div class="vendor">${item.company || '---'}</div>
-                <div class="plant-name-cell">${item.name}</div>
-                <div class="size-val">${item.size}</div>
+                <div>${item.company}</div>
+                <div>${item.name}</div>
+                <div>${item.size}</div>
             </div>
         `).join('');
     }
 
     function resetSearch() {
-        plantInput.value = "";
-        preview.innerText = "Waiting for selection...";
-        sizeFilter.value = "any";
-        sugBox.style.display = "none";
+        plantInput.value = ""; vendorFilter.value = "any"; sizeFilter.value = "any";
+        sugBox.style.display = "none"; preview.innerText = "Waiting for selection...";
         performSearch();
     }
-    
-    document.addEventListener('click', (e) => { 
-        if (e.target !== plantInput) sugBox.style.display = "none"; 
+
+    // Evitar que el cuadro se cierre al hacer clic en el scroll
+    document.addEventListener('mousedown', (e) => {
+        if (!sugBox.contains(e.target) && e.target !== plantInput) {
+            sugBox.style.display = "none";
+        }
     });
+
+    loadData();
 </script>
 
 </body>
