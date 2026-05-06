@@ -22,8 +22,30 @@
             margin: 0; padding: 15px; 
         }
 
-        .credit { position: absolute; top: 15px; left: 20px; font-size: 0.7rem; color: var(--text-dim); font-weight: 600; letter-spacing: 1px; }
-        .container { max-width: 1100px; margin: 40px auto; display: flex; flex-direction: column; }
+        /* Header de Bienvenida y Clima */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto 10px auto;
+            padding: 0 10px;
+        }
+        .welcome-msg { font-size: 1.2rem; font-weight: bold; color: var(--neon-green); }
+        .weather-info { font-size: 0.9rem; color: var(--text-dim); }
+
+        .credit { font-size: 0.7rem; color: var(--text-dim); font-weight: 600; letter-spacing: 1px; margin-bottom: 20px; text-align: center; }
+        
+        .container { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; position: relative; }
+
+        /* Filtro Vendor arriba a la derecha */
+        .vendor-top-right {
+            position: absolute;
+            top: 65px;
+            right: 20px;
+            z-index: 10;
+            width: 180px;
+        }
 
         .selected-info {
             font-size: 0.9rem; color: var(--text-dim); font-style: italic;
@@ -31,12 +53,12 @@
         }
 
         .search-panel {
-            background: var(--card-bg); padding: 20px; border-radius: 20px;
+            background: var(--card-bg); padding: 25px; border-radius: 20px;
             border: 2px solid var(--neon-green); box-shadow: 0 0 15px rgba(57, 255, 20, 0.2); 
             margin-bottom: 25px; display: flex; flex-direction: column; gap: 15px;
         }
 
-        .search-area { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px; align-items: flex-end; }
+        .search-area { display: grid; grid-template-columns: 1fr 150px; gap: 15px; align-items: flex-end; }
         .main-search-box { position: relative; }
         
         .input-group label { 
@@ -45,24 +67,26 @@
         }
         
         #plantInput, select {
-            width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 10px;
+            width: 100%; padding: 14px; border: 2px solid var(--border-color); border-radius: 10px;
             font-size: 1rem; background: #000; color: #fff; box-sizing: border-box;
         }
 
         #suggestions {
             position: absolute; top: calc(100% + 5px); left: 0; width: 100%; 
             background: #222; border: 1px solid var(--botanical-green);
-            z-index: 2000; max-height: 250px; overflow-y: auto; display: none;
+            z-index: 2000; max-height: 280px; overflow-y: auto; display: none;
             border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.8);
         }
 
-        .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #333; }
+        .suggestion-item { 
+            padding: 14px; cursor: pointer; border-bottom: 1px solid #333; 
+            color: #fff; font-weight: 500;
+        }
         .suggestion-item:hover { background: #2a2a2a; color: var(--neon-green); }
 
-        /* Contenedor de resultados con scroll */
         .results-wrapper {
             border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);
-            background: #000; max-height: 60vh; overflow-y: auto;
+            background: #000; max-height: 55vh; overflow-y: auto;
         }
 
         .header { 
@@ -73,10 +97,11 @@
 
         .btn-new { 
             background: transparent; color: var(--neon-green); border: 1px solid var(--neon-green); 
-            padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; width: fit-content;
+            padding: 8px 15px; border-radius: 8px; cursor: pointer; font-weight: 600; width: fit-content; margin-bottom: 10px;
         }
 
         @media (max-width: 768px) {
+            .vendor-top-right { position: static; width: 100%; margin-bottom: 15px; }
             .search-area { grid-template-columns: 1fr; }
             .header, .row { grid-template-columns: 1fr 1.5fr 0.8fr; font-size: 0.75rem; }
         }
@@ -84,15 +109,29 @@
 </head>
 <body>
 
+<div class="top-bar">
+    <div class="welcome-msg">Bienvenido, Henry P</div>
+    <div class="weather-info" id="weather">Loading Weather...</div>
+</div>
+
 <div class="credit">PROJECT BY "Henry P"</div>
 
 <div class="container">
+    <!-- Vendor movido arriba a la derecha (fuera o dentro del panel según diseño) -->
+    <div class="vendor-top-right">
+        <div class="input-group">
+            <label>Vendor</label>
+            <select id="vendorFilter" onchange="performSearch()">
+                <option value="any">Any Vendor</option>
+            </select>
+        </div>
+    </div>
+
     <div class="search-panel">
         <button class="btn-new" onclick="resetSearch()">New Search</button>
         <div id="selectionPreview" class="selected-info">Waiting for selection...</div>
 
         <div class="search-area">
-            <!-- Buscador principal -->
             <div class="main-search-box">
                 <div class="input-group">
                     <label>Botanic Name / SKU</label>
@@ -101,15 +140,6 @@
                 </div>
             </div>
 
-            <!-- Filtro Vendor -->
-            <div class="input-group">
-                <label>Vendor</label>
-                <select id="vendorFilter" onchange="performSearch()">
-                    <option value="any">Any Vendor</option>
-                </select>
-            </div>
-
-            <!-- Filtro Size -->
             <div class="input-group">
                 <label>Size</label>
                 <select id="sizeFilter" onchange="performSearch()">
@@ -140,6 +170,7 @@
 <script>
     let plantDB = [];
     let suggestionsDB = [];
+    const formasAIgnorar = ["PREMIUM", "ASSORTED", "STD", "MULT", "PATIO", "ON", "POLE", "BOWL", "GARDEN", "CLAY", "SHRUB", "TREE", "STK", "COLUMN", "DWF", "SD", "MULTI", "TOP"];
 
     const plantInput = document.getElementById('plantInput');
     const vendorFilter = document.getElementById('vendorFilter');
@@ -149,6 +180,15 @@
     const resultsHeader = document.getElementById('resultsHeader');
     const preview = document.getElementById('selectionPreview');
 
+    // Función Clima
+    function updateWeather() {
+        // Ejemplo estático, podrías conectar una API real aquí
+        const now = new Date();
+        const temp = "78°F";
+        document.getElementById('weather').innerText = `Hoy: Soleado, ${temp} | ${now.toLocaleDateString()}`;
+    }
+    updateWeather();
+
     async function loadData() {
         try {
             const [resPlantas, resHome] = await Promise.all([
@@ -156,7 +196,6 @@
             ]);
             plantDB = await resPlantas.json();
             suggestionsDB = await resHome.json();
-            
             populateVendors();
             plantInput.disabled = false;
             plantInput.placeholder = "Type to search...";
@@ -172,19 +211,31 @@
         });
     }
 
-    // Cerrar sugerencias al presionar Enter
-    plantInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            sugBox.style.display = 'none';
-            plantInput.blur(); // Cierra el teclado en móvil
+    // Reglas de Abreviación
+    function procesarAbreviacion(textoCompleto) {
+        let soloNombre = textoCompleto.split('(')[0].trim();
+        const comillasMatch = soloNombre.match(/'(.*?)'/);
+        let palabrasBase = soloNombre.split(/\s+/);
+        let primeraPalabra = palabrasBase[0].substring(0, 3);
+
+        if (comillasMatch) {
+            let dentro = comillasMatch[1].trim().split(/\s+/);
+            if (dentro.length >= 2) {
+                return `${primeraPalabra} ${dentro[0][0]} ${dentro[dentro.length-1].substring(0,4)}`.toLowerCase();
+            }
+            return `${primeraPalabra} ${dentro[0].substring(0,4)}`.toLowerCase();
         }
-    });
+
+        let palabrasFiltradas = palabrasBase.filter(p => !formasAIgnorar.includes(p.toUpperCase()));
+        if (palabrasFiltradas.length > 1) {
+            return `${primeraPalabra} ${palabrasFiltradas[palabrasFiltradas.length-1].substring(0,4)}`.toLowerCase();
+        }
+        return soloNombre.substring(0, 8).toLowerCase();
+    }
 
     plantInput.addEventListener('input', () => {
-        // RESET de filtros al escribir en el buscador
         vendorFilter.value = "any";
         sizeFilter.value = "any";
-
         let val = plantInput.value.toUpperCase().trim();
         if (val.length >= 2) {
             const queryWords = val.split(/\s+/);
@@ -194,31 +245,48 @@
             });
 
             if (matches.length > 0) {
-                sugBox.innerHTML = matches.slice(0, 15).map(m => `
-                    <div class="suggestion-item" onmousedown="applySug('${m.display_name.replace(/'/g, "&#39;")}')">
-                        ${m.display_name}
-                    </div>
-                `).join('');
+                sugBox.innerHTML = matches.slice(0, 15).map(m => {
+                    const safeName = m.display_name.replace(/'/g, "&#39;");
+                    return `<div class="suggestion-item" onmousedown="applySug('${safeName}')">${m.display_name}</div>`;
+                }).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
         } else { sugBox.style.display = "none"; }
         performSearch();
     });
 
+    // Esta función ahora sí traslada el texto con las reglas
     function applySug(nombre) {
         const nombreLimpio = nombre.replace(/&#39;/g, "'");
         preview.innerText = nombreLimpio;
-        plantInput.value = nombreLimpio; // O usa tu función de abreviación aquí
+        preview.style.color = "var(--neon-green)";
+        
+        // Aplicamos la abreviación al cuadro de búsqueda
+        plantInput.value = procesarAbreviacion(nombreLimpio);
+        
         sugBox.style.display = "none";
         performSearch();
+        
+        // Ocultar teclado en móvil tras seleccionar
+        setTimeout(() => { 
+            plantInput.blur();
+            preview.style.color = "var(--text-dim)"; 
+        }, 300);
     }
+
+    plantInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            sugBox.style.display = 'none';
+            plantInput.blur();
+        }
+    });
 
     function performSearch() {
         const query = plantInput.value.toUpperCase().trim();
-        const vendorQuery = vendorFilter.value;
-        const sizeQuery = sizeFilter.value;
+        const vQ = vendorFilter.value;
+        const sQ = sizeFilter.value;
 
-        if (!query && vendorQuery === "any" && sizeQuery === "any") {
+        if (!query && vQ === "any" && sQ === "any") {
             resultsBody.innerHTML = ""; resultsHeader.style.display = "none"; return;
         }
 
@@ -226,13 +294,14 @@
         const queryWords = query.split(/\s+/).filter(Boolean);
 
         const filtered = plantDB.filter(item => {
-            const nameMatch = queryWords.every(w => item.name.toUpperCase().includes(w));
-            const vendorMatch = vendorQuery === "any" || item.company === vendorQuery;
-            const sizeMatch = sizeQuery === "any" || item.size.includes(sizeQuery);
-            return nameMatch && vendorMatch && sizeMatch;
+            const n = item.name.toUpperCase();
+            const nameMatch = queryWords.every(w => n.includes(w));
+            const vMatch = vQ === "any" || item.company === vQ;
+            const sMatch = sQ === "any" || item.size.toUpperCase().includes(sQ.toUpperCase());
+            return nameMatch && vMatch && sMatch;
         });
 
-        resultsBody.innerHTML = filtered.slice(0, 150).map(item => `
+        resultsBody.innerHTML = filtered.slice(0, 100).map(item => `
             <div class="row">
                 <div>${item.company}</div>
                 <div>${item.name}</div>
@@ -247,7 +316,7 @@
         performSearch();
     }
 
-    // Evitar que el cuadro se cierre al hacer clic en el scroll
+    // Cerrar si se toca fuera
     document.addEventListener('mousedown', (e) => {
         if (!sugBox.contains(e.target) && e.target !== plantInput) {
             sugBox.style.display = "none";
