@@ -101,7 +101,7 @@
             <div class="main-search-box">
                 <div class="input-group">
                     <label>Search Botanic Name or SKU</label>
-                    <input type="text" id="plantInput" placeholder="Enter Name or SKU..." autocomplete="off">
+                    <input type="text" id="plantInput" placeholder="Cargando datos..." disabled autocomplete="off">
                     <div id="suggestions"></div>
                 </div>
             </div>
@@ -146,11 +146,11 @@
     </div>
 </div>
 
-<!-- ARCHIVOS CARGADOS LOCALMENTE PARA GITHUB -->
-<script src="plantas.js"></script>
-<script src="home.js"></script>
-
 <script>
+    // Variables globales para almacenar los datos cargados
+    let plantDB = [];
+    let suggestionsDB = [];
+
     const plantInput = document.getElementById('plantInput');
     const sizeFilter = document.getElementById('sizeFilter');
     const formFilter = document.getElementById('formFilter');
@@ -158,11 +158,30 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
 
-    function limpiarInput(texto) { return texto.replace(/[.*+?^${}()|[\]\\]/g, ""); }
-    
-    function extraerNombreBase(texto) {
-        return texto.split('(')[0].trim().toUpperCase();
+    // CARGA DE ARCHIVOS JSON
+    async function loadData() {
+        try {
+            const [resPlantas, resHome] = await Promise.all([
+                fetch('plantas.json'),
+                fetch('home.json')
+            ]);
+            
+            plantDB = await resPlantas.json();
+            suggestionsDB = await resHome.json();
+            
+            plantInput.disabled = false;
+            plantInput.placeholder = "Enter Name or SKU...";
+            console.log("Datos cargados correctamente");
+        } catch (error) {
+            console.error("Error cargando los archivos JSON:", error);
+            plantInput.placeholder = "Error al cargar datos.";
+        }
     }
+
+    // Iniciar carga
+    loadData();
+
+    function limpiarInput(texto) { return texto.replace(/[.*+?^${}()|[\]\\]/g, ""); }
 
     function matchesForm(itemText, itemSize, selectedForm) {
         if (selectedForm === 'any') return true;
@@ -183,24 +202,21 @@
         let val = limpiarInput(plantInput.value).toUpperCase().trim();
         
         if (val.length >= 2) {
-            // Verifica que suggestionsDB exista (cargado desde home.js)
-            if (typeof suggestionsDB !== 'undefined') {
-                let matches = suggestionsDB.filter(s => {
-                    const nameMatch = s.display_name.toUpperCase().includes(val);
-                    const skuMatch = s.variantes.toUpperCase().includes(val);
-                    return nameMatch || skuMatch;
-                });
+            let matches = suggestionsDB.filter(s => {
+                const nameMatch = (s.display_name || "").toUpperCase().includes(val);
+                const skuMatch = (s.variantes || "").toUpperCase().includes(val);
+                return nameMatch || skuMatch;
+            });
 
-                if (matches.length > 0) {
-                    sugBox.innerHTML = matches.slice(0, 10).map(m => `
-                        <div class="suggestion-item" onclick="applySug('${m.display_name}')">
-                            <span class="sug-botanic">${m.display_name}</span>
-                            <span class="sug-common">${m.variantes}</span>
-                        </div>
-                    `).join('');
-                    sugBox.style.display = "block";
-                } else { sugBox.style.display = "none"; }
-            }
+            if (matches.length > 0) {
+                sugBox.innerHTML = matches.slice(0, 10).map(m => `
+                    <div class="suggestion-item" onclick="applySug('${m.display_name}')">
+                        <span class="sug-botanic">${m.display_name}</span>
+                        <span class="sug-common">${m.variantes}</span>
+                    </div>
+                `).join('');
+                sugBox.style.display = "block";
+            } else { sugBox.style.display = "none"; }
         } else { sugBox.style.display = "none"; }
         
         performSearch(); 
@@ -224,9 +240,6 @@
             resultsHeader.style.display = "none";
             return;
         }
-
-        // Verifica que plantDB exista (cargado desde plantas.js)
-        if (typeof plantDB === 'undefined') return;
 
         resultsHeader.style.display = "grid";
 
