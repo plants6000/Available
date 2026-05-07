@@ -74,7 +74,6 @@
         .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.75rem; position: sticky; top: 0; }
         .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.8rem; }
 
-        /* CUADRO DE DETALLE AL FINAL */
         #plantDetailCard {
             background: #111; border-top: 3px solid var(--botanical-green);
             border-radius: 10px; padding: 15px; margin-top: auto; 
@@ -105,7 +104,7 @@
                 <div class="vendor-box">
                     <div class="input-group">
                         <label>Vendor</label>
-                        <select id="vendorFilter" onchange="handleVendorChange()"></select>
+                        <select id="vendorFilter" onchange="handleFilterChange()"></select>
                     </div>
                 </div>
             </div>
@@ -114,15 +113,15 @@
 
             <div class="main-search-row">
                 <div class="input-group">
-                    <label>Botanic Name / SKU</label>
+                    <label>Botanical Name / SKU</label>
                     <input type="text" id="plantInput" placeholder="Type name or (sku)..." autocomplete="off">
                     <div id="suggestions"></div>
                 </div>
                 <div class="input-group">
                     <label>Size</label>
-                    <select id="sizeFilter" onchange="performSearch()">
+                    <select id="sizeFilter" onchange="handleFilterChange()">
                         <option value="any">Any</option>
-                        <option value="01">01G</option>
+                        <option value="01">01G / 2Q</option>
                         <option value="02">02G</option>
                         <option value="03">03G</option>
                         <option value="05">05G</option>
@@ -136,7 +135,6 @@
             </div>
         </div>
 
-        <!-- TABLA DE RESULTADOS (VENDEDORES) -->
         <div class="results-wrapper">
             <div id="resultsHeader" class="header" style="display: none;">
                 <div>VENDOR</div><div>NAME</div><div>SIZE</div>
@@ -144,7 +142,6 @@
             <div id="resultsBody"></div>
         </div>
 
-        <!-- FICHA TÉCNICA (AL FINAL DE TODO) -->
         <div id="plantDetailCard"></div>
     </div>
 
@@ -165,8 +162,9 @@
 
     function setDate() {
         const now = new Date();
-        const days = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
-        document.getElementById('currentDate').innerText = `${days[now.getDay()]} ${now.toLocaleDateString()}`;
+        const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+        // Formato USA: Wed, May 6, 2026
+        document.getElementById('currentDate').innerText = now.toLocaleDateString('en-US', options);
     }
     setDate();
 
@@ -215,14 +213,21 @@
                 }).join('');
                 sugBox.style.display = "block";
             } else { sugBox.style.display = "none"; }
-        } else { sugBox.style.display = "none"; performSearch(); }
+        } else { 
+            sugBox.style.display = "none"; 
+            if(val === "") {
+                detailCard.style.display = "none";
+                preview.innerText = "Waiting for selection...";
+                preview.style.color = "var(--text-dim)";
+            }
+            performSearch(); 
+        }
     });
 
     function applySelection(nombreLimpio) {
         preview.innerText = nombreLimpio;
         preview.style.color = "var(--neon-green)";
         
-        // MOSTRAR FICHA TÉCNICA AL FINAL (Basado en home.json)
         const plantaInfo = suggestionsDB.find(s => s.display_name === nombreLimpio);
         if (plantaInfo && plantaInfo.variantes) {
             const listaVariantes = plantaInfo.variantes.split('|').map(v => {
@@ -231,13 +236,20 @@
             
             detailCard.innerHTML = `<div class="detail-title">Plant Specs: ${nombreLimpio}</div>${listaVariantes}`;
             detailCard.style.display = "block";
-            // Auto-scroll suave hacia el detalle si es necesario
-            detailCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         const abreviacion = procesarAbreviacion(nombreLimpio);
         plantInput.value = abreviacion;
         sugBox.style.display = "none";
+        performSearch();
+    }
+
+    // Nueva función para manejar cambios en combos y ocultar ficha técnica
+    function handleFilterChange() {
+        // Al cambiar de vendedor o tamaño manualmente, ocultamos la ficha de planta específica
+        detailCard.style.display = "none";
+        preview.innerText = "Browsing Catalog...";
+        preview.style.color = "var(--text-dim)";
         performSearch();
     }
 
@@ -257,9 +269,21 @@
         
         const filtered = plantDB.filter(item => {
             const itemName = item.name.toUpperCase();
+            const itemSize = item.size.toUpperCase();
+            
             const mN = q === "" || queryWords.every(w => itemName.includes(w));
             const mV = v === "any" || item.company === v;
-            const mS = s === "any" || item.size.toUpperCase().includes(s.toUpperCase());
+            
+            // Lógica Especial: Si busca 01, incluir también 2Q
+            let mS = false;
+            if (s === "any") {
+                mS = true;
+            } else if (s === "01") {
+                mS = itemSize.includes("01") || itemSize.includes("2Q");
+            } else {
+                mS = itemSize.includes(s.toUpperCase());
+            }
+            
             return mN && mV && mS;
         });
 
@@ -271,28 +295,25 @@
                     <div>${i.size}</div>
                 </div>`).join('');
         } else {
-            resultsBody.innerHTML = `<div style="padding:20px; text-align:center; color:var(--text-dim);">No active vendor stock found. Check specs below.</div>`;
+            resultsBody.innerHTML = `<div style="padding:20px; text-align:center; color:var(--text-dim);">No active vendor stock found.</div>`;
         }
     }
 
-    function handleVendorChange() {
-        plantInput.value = "";
-        sizeFilter.value = "any";
-        preview.innerText = "Waiting for selection...";
-        preview.style.color = "var(--text-dim)";
-        detailCard.style.display = "none";
-        performSearch();
-    }
-
     function resetSearch() {
+        // Limpiar controles
         plantInput.value = ""; 
         vendorFilter.value = "any"; 
         sizeFilter.value = "any";
+        
+        // Limpiar Previews y Fichas
         preview.innerText = "Waiting for selection...";
         preview.style.color = "var(--text-dim)";
         detailCard.style.display = "none";
+        
+        // Limpiar Tabla
         resultsBody.innerHTML = "";
         resultsHeader.style.display = "none";
+        
         plantInput.focus();
     }
 
