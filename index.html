@@ -21,7 +21,6 @@
             margin: 0; padding: 5px; 
         }
 
-        /* Crédito discreto arriba de todo */
         .project-credit {
             text-align: center;
             font-size: 0.6rem;
@@ -30,7 +29,6 @@
             margin-top: 2px;
         }
 
-        /* Encabezado compacto en una sola linea */
         .header-meta { 
             display: flex; 
             justify-content: space-between; 
@@ -81,6 +79,7 @@
         }
         .suggestion-item { padding: 12px; cursor: pointer; border-bottom: 1px solid #222; font-size: 0.85rem; color: #fff; }
         .suggestion-item:hover, .suggestion-item.selected { background: #333; color: var(--neon-green); }
+        .sug-sku { font-size: 0.7rem; color: var(--text-dim); display: block; }
 
         .results-wrapper { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #000; max-height: 55vh; overflow-y: auto; }
         .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.75rem; }
@@ -118,7 +117,7 @@
             <div class="main-search-row">
                 <div class="input-group">
                     <label>Botanic Name / SKU</label>
-                    <input type="text" id="plantInput" placeholder="Type name or (sku)..." autocomplete="off">
+                    <input type="text" id="plantInput" placeholder="Type name or SKU..." autocomplete="off">
                     <div id="suggestions"></div>
                 </div>
                 <div class="input-group">
@@ -193,13 +192,25 @@
         return soloNombre.substring(0, 8).toLowerCase();
     }
 
+    // BUSCADOR MEJORADO (Nombre + SKU)
     plantInput.addEventListener('input', function() {
         let val = this.value.toUpperCase().trim();
         if (val.length >= 2) {
-            const matches = suggestionsDB.filter(s => s.display_name.toUpperCase().includes(val));
+            const queryWords = val.split(/\s+/);
+            
+            const matches = suggestionsDB.filter(s => {
+                const name = (s.display_name || "").toUpperCase();
+                const sku = (s.variantes || "").toUpperCase(); // Campo de SKU en home.json
+                return queryWords.every(word => name.includes(word) || sku.includes(word));
+            });
+
             if (matches.length > 0) {
                 sugBox.innerHTML = matches.slice(0, 100).map((m, idx) => {
-                    return `<div class="suggestion-item" data-name="${m.display_name.replace(/"/g, '&quot;')}" onclick="applySelection(this.getAttribute('data-name'))">${m.display_name}</div>`;
+                    const skuDisplay = m.variantes ? `<span class="sug-sku">SKU: ${m.variantes}</span>` : "";
+                    return `<div class="suggestion-item" data-name="${m.display_name.replace(/"/g, '&quot;')}" onclick="applySelection(this.getAttribute('data-name'))">
+                        ${m.display_name}
+                        ${skuDisplay}
+                    </div>`;
                 }).join('');
                 sugBox.style.display = "block";
                 currentFocus = 0;
@@ -218,19 +229,9 @@
     plantInput.addEventListener('keydown', function(e) {
         let x = sugBox.getElementsByClassName("suggestion-item");
         if (!x.length) return;
-
-        if (e.keyCode == 40) { // Down
-            currentFocus++;
-            addActive(x);
-        } else if (e.keyCode == 38) { // Up
-            currentFocus--;
-            addActive(x);
-        } else if (e.keyCode == 13) { // Enter
-            e.preventDefault();
-            if (currentFocus > -1 && x[currentFocus]) {
-                x[currentFocus].click();
-            }
-        }
+        if (e.keyCode == 40) { currentFocus++; addActive(x); } 
+        else if (e.keyCode == 38) { currentFocus--; addActive(x); } 
+        else if (e.keyCode == 13) { e.preventDefault(); if (currentFocus > -1 && x[currentFocus]) x[currentFocus].click(); }
     });
 
     function addActive(x) {
