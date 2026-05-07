@@ -30,11 +30,11 @@
         .welcome-title { color: var(--neon-green); font-size: 0.9rem; font-weight: 800; }
         .current-date { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; }
 
-        .container { max-width: 1100px; margin: 0 auto; }
+        .container { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; min-height: 90vh; }
 
         .search-panel {
             background: var(--card-bg); padding: 12px; border-radius: 15px;
-            border: 2px solid var(--neon-green); margin-bottom: 15px;
+            border: 2px solid var(--neon-green); margin-bottom: 10px;
         }
 
         .top-controls { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 10px; gap: 10px; }
@@ -69,11 +69,19 @@
         }
         .suggestion-item { padding: 10px 12px; cursor: pointer; border-bottom: 1px solid #222; font-size: 0.85rem; color: #fff; }
         .suggestion-item:hover, .suggestion-item.selected { background: #333; color: var(--neon-green); }
-        .sug-sku-list { font-size: 0.65rem; color: var(--text-dim); display: block; margin-top: 2px; font-style: italic; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-        .results-wrapper { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #000; max-height: 55vh; overflow-y: auto; }
-        .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.75rem; }
+        .results-wrapper { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: #000; max-height: 40vh; overflow-y: auto; margin-bottom: 20px; }
+        .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.75rem; position: sticky; top: 0; }
         .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.8rem; }
+
+        /* CUADRO DE DETALLE AL FINAL */
+        #plantDetailCard {
+            background: #111; border-top: 3px solid var(--botanical-green);
+            border-radius: 10px; padding: 15px; margin-top: auto; 
+            display: none; box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+        }
+        .detail-title { color: var(--neon-green); font-size: 1rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .detail-item { font-size: 0.85rem; color: #fff; margin-bottom: 6px; padding-left: 5px; border-left: 2px solid var(--botanical-green); }
 
         @media (max-width: 600px) {
             .vendor-box { width: 130px; }
@@ -128,12 +136,16 @@
             </div>
         </div>
 
+        <!-- TABLA DE RESULTADOS (VENDEDORES) -->
         <div class="results-wrapper">
             <div id="resultsHeader" class="header" style="display: none;">
                 <div>VENDOR</div><div>NAME</div><div>SIZE</div>
             </div>
             <div id="resultsBody"></div>
         </div>
+
+        <!-- FICHA TÉCNICA (AL FINAL DE TODO) -->
+        <div id="plantDetailCard"></div>
     </div>
 
 <script>
@@ -149,6 +161,7 @@
     const resultsBody = document.getElementById('resultsBody');
     const resultsHeader = document.getElementById('resultsHeader');
     const preview = document.getElementById('selectionPreview');
+    const detailCard = document.getElementById('plantDetailCard');
 
     function setDate() {
         const now = new Date();
@@ -171,7 +184,6 @@
         let soloNombre = texto.split('(')[0].trim();
         const comillasMatch = soloNombre.match(/'(.*?)'/);
         let primera = soloNombre.split(' ')[0].substring(0, 3);
-
         if (comillasMatch) {
             let dentro = comillasMatch[1].trim().split(/\s+/);
             if (dentro.length >= 2) return `${primera} ${dentro[0][0]} ${dentro[dentro.length-1].substring(0,4)}`.toLowerCase();
@@ -182,84 +194,50 @@
         return soloNombre.substring(0, 8).toLowerCase();
     }
 
-    // BÚSQUEDA ACUMULATIVA / PROGRESIVA RESTAURADA
     plantInput.addEventListener('input', function() {
         let val = this.value.toUpperCase().trim();
         if (val.length >= 2) {
             const queryWords = val.split(/\s+/).filter(w => w.length > 0);
-            
             const matches = suggestionsDB.filter(s => {
                 const name = (s.display_name || "").toUpperCase();
                 const skuInfo = (s.variantes || "").toUpperCase();
-                
-                // Lógica Progresiva: Todas las palabras del input deben estar en el Nombre o SKU
                 return queryWords.every(word => {
-                    // Si es un número largo de SKU (4+ dígitos), validamos exactitud en el bloque de variantes
-                    if (/^\d{4,}$/.test(word)) {
-                        return skuInfo.includes(`(${word})`);
-                    }
-                    // Búsqueda fluida en nombre O variantes
+                    if (/^\d{4,}$/.test(word)) return skuInfo.includes(`(${word})`);
                     return name.includes(word) || skuInfo.includes(word);
                 });
             });
 
             if (matches.length > 0) {
                 sugBox.innerHTML = matches.slice(0, 100).map((m) => {
-                    let displaySku = m.variantes ? m.variantes.split('|')[0].substring(0, 45) + "..." : "";
                     return `<div class="suggestion-item" data-name="${m.display_name.replace(/"/g, '&quot;')}" onclick="applySelection(this.getAttribute('data-name'))">
-                        <div>${m.display_name}</div>
-                        <div class="sug-sku-list">${displaySku}</div>
+                        ${m.display_name}
                     </div>`;
                 }).join('');
                 sugBox.style.display = "block";
-                currentFocus = 0;
-                addActive(sugBox.getElementsByClassName("suggestion-item"));
-            } else { 
-                sugBox.style.display = "none"; 
-                currentFocus = -1;
-            }
-        } else { 
-            sugBox.style.display = "none";
-            currentFocus = -1;
-            performSearch(); 
-        }
+            } else { sugBox.style.display = "none"; }
+        } else { sugBox.style.display = "none"; performSearch(); }
     });
-
-    plantInput.addEventListener('keydown', function(e) {
-        let x = sugBox.getElementsByClassName("suggestion-item");
-        if (!x.length) return;
-        if (e.keyCode == 40) { currentFocus++; addActive(x); }
-        else if (e.keyCode == 38) { currentFocus--; addActive(x); }
-        else if (e.keyCode == 13) { e.preventDefault(); if (currentFocus > -1 && x[currentFocus]) x[currentFocus].click(); }
-    });
-
-    function addActive(x) {
-        if (!x) return false;
-        removeActive(x);
-        if (currentFocus >= x.length) currentFocus = 0;
-        if (currentFocus < 0) currentFocus = (x.length - 1);
-        x[currentFocus].classList.add("selected");
-        x[currentFocus].scrollIntoView({ block: "nearest" });
-    }
-
-    function removeActive(x) {
-        for (let i = 0; i < x.length; i++) x[i].classList.remove("selected");
-    }
 
     function applySelection(nombreLimpio) {
         preview.innerText = nombreLimpio;
         preview.style.color = "var(--neon-green)";
+        
+        // MOSTRAR FICHA TÉCNICA AL FINAL (Basado en home.json)
+        const plantaInfo = suggestionsDB.find(s => s.display_name === nombreLimpio);
+        if (plantaInfo && plantaInfo.variantes) {
+            const listaVariantes = plantaInfo.variantes.split('|').map(v => {
+                return `<div class="detail-item">${v.trim()}</div>`;
+            }).join('');
+            
+            detailCard.innerHTML = `<div class="detail-title">Plant Specs: ${nombreLimpio}</div>${listaVariantes}`;
+            detailCard.style.display = "block";
+            // Auto-scroll suave hacia el detalle si es necesario
+            detailCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
         const abreviacion = procesarAbreviacion(nombreLimpio);
         plantInput.value = abreviacion;
         sugBox.style.display = "none";
-        performSearch();
-    }
-
-    function handleVendorChange() {
-        plantInput.value = "";
-        sizeFilter.value = "any";
-        preview.innerText = "Waiting for selection...";
-        preview.style.color = "var(--text-dim)";
         performSearch();
     }
 
@@ -279,19 +257,31 @@
         
         const filtered = plantDB.filter(item => {
             const itemName = item.name.toUpperCase();
-            // La tabla de abajo también debe ser progresiva para encontrar la abreviatura
             const mN = q === "" || queryWords.every(w => itemName.includes(w));
             const mV = v === "any" || item.company === v;
             const mS = s === "any" || item.size.toUpperCase().includes(s.toUpperCase());
             return mN && mV && mS;
         });
 
-        resultsBody.innerHTML = filtered.slice(0, 100).map(i => `
-            <div class="row">
-                <div>${i.company}</div>
-                <div>${i.name}</div>
-                <div>${i.size}</div>
-            </div>`).join('');
+        if(filtered.length > 0) {
+            resultsBody.innerHTML = filtered.slice(0, 100).map(i => `
+                <div class="row">
+                    <div>${i.company}</div>
+                    <div>${i.name}</div>
+                    <div>${i.size}</div>
+                </div>`).join('');
+        } else {
+            resultsBody.innerHTML = `<div style="padding:20px; text-align:center; color:var(--text-dim);">No active vendor stock found. Check specs below.</div>`;
+        }
+    }
+
+    function handleVendorChange() {
+        plantInput.value = "";
+        sizeFilter.value = "any";
+        preview.innerText = "Waiting for selection...";
+        preview.style.color = "var(--text-dim)";
+        detailCard.style.display = "none";
+        performSearch();
     }
 
     function resetSearch() {
@@ -300,6 +290,7 @@
         sizeFilter.value = "any";
         preview.innerText = "Waiting for selection...";
         preview.style.color = "var(--text-dim)";
+        detailCard.style.display = "none";
         resultsBody.innerHTML = "";
         resultsHeader.style.display = "none";
         plantInput.focus();
