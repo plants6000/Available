@@ -171,14 +171,28 @@
     }
     setDate();
 
+    // FUNCIÓN CARGAR DATOS CON ROMPE-CACHÉ ACTUALIZADO
     async function loadData() {
         try {
-            const [resP, resH] = await Promise.all([fetch('plantas.json'), fetch('home.json')]);
+            // Creamos un número único basado en la hora para forzar la actualización
+            const v = new Date().getTime();
+            
+            const [resP, resH] = await Promise.all([
+                fetch(`plantas.json?v=${v}`), 
+                fetch(`home.json?v=${v}`)
+            ]);
+
             plantDB = await resP.json();
             suggestionsDB = await resH.json();
+
             const vendors = [...new Set(plantDB.map(i => i.company))].filter(Boolean).sort();
             vendorFilter.innerHTML = '<option value="any">Any Vendor</option>' + vendors.map(v => `<option value="${v}">${v}</option>`).join('');
-        } catch (e) { console.error("Error loading files"); }
+            
+            console.log("Database updated successfully: " + v);
+        } catch (e) { 
+            console.error("Error loading files");
+            resultsBody.innerHTML = `<div style="padding:20px; text-align:center; color:var(--text-dim);">Error loading inventory. Please check GitHub files.</div>`;
+        }
     }
 
     function procesarAbreviacion(texto) {
@@ -195,24 +209,15 @@
         return soloNombre.substring(0, 8).toLowerCase();
     }
 
-    // MODIFICADO: Búsqueda desde la 2da letra y protección contra símbolos
     plantInput.addEventListener('input', function() {
-        // Protección: Solo permite letras, números y espacios
         let rawVal = this.value.toUpperCase();
         let cleanVal = rawVal.replace(/[^A-Z0-9\s]/g, "");
-        
-        // Actualiza el input si había símbolos
-        if (this.value.toUpperCase() !== cleanVal) {
-            this.value = cleanVal;
-        }
+        if (this.value.toUpperCase() !== cleanVal) { this.value = cleanVal; }
 
         let val = cleanVal.trim();
 
         if (val.length >= 2) {
-            // Activa la búsqueda en la tabla mientras escribes
             performSearch();
-
-            // Lógica de sugerencias (mantenida intacta)
             const queryWords = val.split(/\s+/).filter(w => w.length > 0);
             const matches = suggestionsDB.filter(s => {
                 const name = (s.display_name || "").toUpperCase();
@@ -282,8 +287,8 @@
         const queryWords = q.split(/\s+/).filter(Boolean);
         
         const filtered = plantDB.filter(item => {
-            const itemName = item.name.toUpperCase();
-            const itemSize = item.size.toUpperCase();
+            const itemName = (item.name || "").toUpperCase();
+            const itemSize = (item.size || "").toUpperCase();
             const mN = q === "" || queryWords.every(w => itemName.includes(w));
             const mV = v === "any" || item.company === v;
             let mS = (s === "any") ? true : (s === "01" ? (itemSize.includes("01") || itemSize.includes("2Q")) : itemSize.includes(s.toUpperCase()));
