@@ -171,10 +171,8 @@
     }
     setDate();
 
-    // FUNCIÓN CARGAR DATOS CON ROMPE-CACHÉ ACTUALIZADO
     async function loadData() {
         try {
-            // Creamos un número único basado en la hora para forzar la actualización
             const v = new Date().getTime();
             
             const [resP, resH] = await Promise.all([
@@ -185,10 +183,33 @@
             plantDB = await resP.json();
             suggestionsDB = await resH.json();
 
-            const vendors = [...new Set(plantDB.map(i => i.company))].filter(Boolean).sort();
-            vendorFilter.innerHTML = '<option value="any">Any Vendor</option>' + vendors.map(v => `<option value="${v}">${v}</option>`).join('');
+            // Obtenemos proveedores únicos y ordenamos alfabéticamente primero
+            let vendors = [...new Set(plantDB.map(i => i.company))].filter(Boolean).sort();
             
-            console.log("Database updated successfully: " + v);
+            // --- LÓGICA DE ORDENAMIENTO POR PREFIJOS ---
+            
+            // 1. Matsudas siempre al principio (Prefijo "MATS")
+            const matsudas = vendors.filter(v => v.toUpperCase().startsWith("MATS"));
+            
+            // 2. Belmon, Franza y Norman al final (Prefijos de 4 letras)
+            const lastPrefixes = ["BELM", "FRAN", "NORM"];
+            const lasts = vendors.filter(v => 
+                lastPrefixes.some(pref => v.toUpperCase().startsWith(pref))
+            );
+
+            // 3. El resto de proveedores
+            const middle = vendors.filter(v => 
+                !v.toUpperCase().startsWith("MATS") && 
+                !lastPrefixes.some(pref => v.toUpperCase().startsWith(pref))
+            );
+
+            // Unimos todo en el orden deseado
+            const finalVendorOrder = [...matsudas, ...middle, ...lasts];
+
+            vendorFilter.innerHTML = '<option value="any">Any Vendor</option>' + 
+                finalVendorOrder.map(v => `<option value="${v}">${v}</option>`).join('');
+            
+            console.log("Database and Vendors updated");
         } catch (e) { 
             console.error("Error loading files");
             resultsBody.innerHTML = `<div style="padding:20px; text-align:center; color:var(--text-dim);">Error loading inventory. Please check GitHub files.</div>`;
