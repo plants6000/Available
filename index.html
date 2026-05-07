@@ -69,7 +69,6 @@
         .suggestion-item { padding: 10px 12px; cursor: pointer; border-bottom: 1px solid #222; font-size: 0.85rem; color: #fff; }
         .suggestion-item:hover { background: #333; color: var(--neon-green); }
 
-        /* La tabla ahora crece si no hay ficha de detalles */
         .results-wrapper { 
             border: 1px solid var(--border); border-radius: 10px; 
             overflow: hidden; background: #000; flex-grow: 1; 
@@ -78,11 +77,10 @@
         .header { background: var(--botanical-green); display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; font-weight: bold; font-size: 0.75rem; position: sticky; top: 0; }
         .row { display: grid; grid-template-columns: 1fr 2fr 1fr; padding: 10px; border-bottom: 1px solid #1a1a1a; font-size: 0.8rem; }
 
-        /* FICHA TÉCNICA - Sin espacio reservado */
         #plantDetailCard {
             background: #111; border-top: 3px solid var(--botanical-green);
             border-radius: 10px; padding: 15px; 
-            display: none; /* No ocupa espacio hasta activarse */
+            display: none; 
             margin-top: 5px;
             box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
         }
@@ -197,9 +195,24 @@
         return soloNombre.substring(0, 8).toLowerCase();
     }
 
+    // MODIFICADO: Búsqueda desde la 2da letra y protección contra símbolos
     plantInput.addEventListener('input', function() {
-        let val = this.value.toUpperCase().trim();
+        // Protección: Solo permite letras, números y espacios
+        let rawVal = this.value.toUpperCase();
+        let cleanVal = rawVal.replace(/[^A-Z0-9\s]/g, "");
+        
+        // Actualiza el input si había símbolos
+        if (this.value.toUpperCase() !== cleanVal) {
+            this.value = cleanVal;
+        }
+
+        let val = cleanVal.trim();
+
         if (val.length >= 2) {
+            // Activa la búsqueda en la tabla mientras escribes
+            performSearch();
+
+            // Lógica de sugerencias (mantenida intacta)
             const queryWords = val.split(/\s+/).filter(w => w.length > 0);
             const matches = suggestionsDB.filter(s => {
                 const name = (s.display_name || "").toUpperCase();
@@ -246,7 +259,6 @@
         performSearch();
     }
 
-    // AJUSTE: Limpia el cuadro de búsqueda al cambiar Vendor o Size
     function handleComboChange() {
         plantInput.value = ""; 
         detailCard.style.display = "none";
