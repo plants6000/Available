@@ -41,8 +41,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "_Lodge Poles 10'x2\" (Order in ple of 300)",
-    "size": "10'(Mlt-270)"
+    "name": "_Lodge Poles 10'x2\" (Order in multiple of 300)",
+    "size": "10'(270)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -1361,8 +1361,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "GRASS-DESCHAMPSIA 'CITOSA'",
-    "size": "01G(Esp-424-Prime)"
+    "name": "GRASS-DESCHAMPSIA 'CESPITOSA'",
+    "size": "01G(424-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -1771,23 +1771,23 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "HEMEROCALLIS 'WINTER ASURE'",
-    "size": "01G(Std-186-PrimeBudBloom)"
+    "name": "HEMEROCALLIS 'WINTER TREASURE'",
+    "size": "01G(186-PrimeBudBloom)"
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "HERALOE 'PARVIFLORA'",
-    "size": "01G(Esp-460-Small), 05G(Esp-570-Prime)"
+    "name": "HESPERALOE 'PARVIFLORA'",
+    "size": "01G(460-Small), 05G(570-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "HIBISCUS  FIESTA",
-    "size": "10\"(Bsh-1-PrimeBudBloom)"
+    "name": "HIBISCUS BUSH FIESTA",
+    "size": "10\"(1-PrimeBudBloom)"
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "HIBISCUS  TEQUILA YELLOW",
-    "size": "10\"(Bsh-1-PrimeBudBloom)"
+    "name": "HIBISCUS BUSH TEQUILA YELLOW",
+    "size": "10\"(1-PrimeBudBloom)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -2207,17 +2207,17 @@
   {
     "company": "Matsudas 5-12_XLS",
     "name": "HP-FICUS AUDREY",
+    "size": "10\"(Col-185-Prime)"
+  },
+  {
+    "company": "Matsudas 5-12_XLS",
+    "name": "HP-FICUS AUDREY",
     "size": "10\"(Std-37-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
     "name": "HP-FICUS AUDREY",
     "size": "02G(Std-20-Ready)"
-  },
-  {
-    "company": "Matsudas 5-12_XLS",
-    "name": "HP-FICUS AUDREY COLUMN",
-    "size": "10\"(185-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -2236,8 +2236,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "HP-FICUS ELASTICA TINEKE .",
-    "size": "02G(Std-15-Prime)"
+    "name": "HP-FICUS ELASTICA TINEKE STD.",
+    "size": "02G(15-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -2253,6 +2253,11 @@
     "company": "Matsudas 5-12_XLS",
     "name": "HP-FICUS LYRATA",
     "size": "14\"(Bsh-34-Prime)"
+  },
+  {
+    "company": "Matsudas 5-12_XLS",
+    "name": "HP-FICUS LYRATA",
+    "size": "10\"(Col-128-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -2273,11 +2278,6 @@
     "company": "Matsudas 5-12_XLS",
     "name": "HP-FICUS LYRATA",
     "size": "07S-G(Std-34-Prime)"
-  },
-  {
-    "company": "Matsudas 5-12_XLS",
-    "name": "HP-FICUS LYRATA COLUMN",
-    "size": "10\"(128-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -2951,8 +2951,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "Lagerstroemia COLOR.TM 'SCARLET' . (SUN)",
-    "size": "05G(Std-398-Ready)"
+    "name": "Lagerstroemia COLOR.TM 'SCARLET' STD. (SUN)",
+    "size": "05G(Mlt-398-Ready)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -3181,8 +3181,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "NANDINA D. 'GULF SAM'",
-    "size": "01G(Std-1448-Prime), 02G(Std-901-Prime), 05G(Std-1558-Prime)"
+    "name": "NANDINA D. 'GULF STREAM'",
+    "size": "01G(1448-Prime), 02G(901-Prime), 05G(1558-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -3746,8 +3746,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PER-COLEUS MAIN ST. 'BOURBON ST'",
-    "size": "QTM(Std-56-Ready)"
+    "name": "PER-COLEUS MAIN ST. 'BOURBON STREET'",
+    "size": "QTM(56-Ready)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -4001,8 +4001,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PER-ECHINACEA S. S AMIGOS",
-    "size": "01G(Std-413-Small)"
+    "name": "PER-ECHINACEA S. TRES AMIGOS",
+    "size": "01G(413-Small)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -4031,8 +4031,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PER-EUPHORBIA 'TINY ASURES'",
-    "size": "01G(Std-215-Small)"
+    "name": "PER-EUPHORBIA 'TINY TREASURES'",
+    "size": "01G(215-Small)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -4851,8 +4851,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PERPW-RUDBECKIA 'ASURE TROVE' (PW)",
-    "size": "01PW(Std-256-Prime)"
+    "name": "PERPW-RUDBECKIA 'TREASURE TROVE' (PW)",
+    "size": "01PW(256-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -4881,18 +4881,18 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PERPW-THUNBERGIA COCONUT SLICE A PEEL  (PW)",
-    "size": "01PW(Stk-70-Ready)"
+    "name": "PERPW-THUNBERGIA COCONUT SLICE A PEEL STK (PW)",
+    "size": "01PW(70-Ready)"
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PERPW-THUNBERGIA ORANGE SLICE A PEEL  (PW)",
-    "size": "01PW(Stk-337-Ready)"
+    "name": "PERPW-THUNBERGIA ORANGE SLICE A PEEL STK (PW)",
+    "size": "01PW(337-Ready)"
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "PERPW-THUNBERGIA TANGERINE SLICE A PEEL  (PW)",
-    "size": "01PW(Stk-647-ReadyBudBloom)"
+    "name": "PERPW-THUNBERGIA TANGERINE SLICE A PEEL STK (PW)",
+    "size": "01PW(647-ReadyBudBloom)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -5511,8 +5511,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "ROSA H.T. 'BARBARA SISAND'",
-    "size": "05G(Std-15-PrimeBudBloom)"
+    "name": "ROSA H.T. 'BARBARA STREISAND'",
+    "size": "05G(15-PrimeBudBloom)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -5631,8 +5631,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "SLITZIA NICOLAI",
-    "size": "05G(Std-142-Prime), 15G(Std-64-Prime)"
+    "name": "STRELITZIA NICOLAI",
+    "size": "05G(142-Prime), 15G(64-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -5741,8 +5741,8 @@
   },
   {
     "company": "Matsudas 5-12_XLS",
-    "name": "SUC-CRASSULA 'HORN '",
-    "size": "QTB(Std-136-Prime)"
+    "name": "SUC-CRASSULA 'HORNTREE '",
+    "size": "QTB(136-Prime)"
   },
   {
     "company": "Matsudas 5-12_XLS",
@@ -6463,6 +6463,161 @@
     "company": "Matsudas Fruit 05-12_XLS",
     "name": "GA-FT-FRUIT SALAD COMBO (H) SR-P-CF-F-PG",
     "size": "07(52-$PRIME)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Abelia Suntastic ' Radiance'",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Elaeagnus 'Olive Martini",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Hosta (See Availability)",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "PER-Penstemon M.T. ( See Availability)",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Phormium T. ( See Availability )",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "PER-Dianthus .S.S. Neon Star",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "PER-Saxifraga X A. (See Availability)",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "PER- Osteosp ASST (excludes PW)",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "PER-Verbena T. 'Blue Violet' IMP",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "SUC-Agave 'Blue Flame'",
+    "size": "01G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "PER-Garvine (See Availability)",
+    "size": "01T(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Nandina (SUNSET)",
+    "size": "02T(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "FERN-Blechnum G. 'Silver Lady'",
+    "size": "02G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "FERN-Cyrtomium 'Falcatum'",
+    "size": "02G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "FERN-Dryopteris E. 'Brilliance'",
+    "size": "02G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "FERN-Polystichum 'Munitum'",
+    "size": "02G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "FERN-Polystichum 'Polyblepharum'",
+    "size": "02G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Phormium T. (See Availability )",
+    "size": "03G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Distylium' Cast in Bronze' (SUN)",
+    "size": "03T(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Cistus (See Availability )",
+    "size": "05G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Nandina D. Firepower",
+    "size": "05G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Nandina D. Gulf Stream",
+    "size": "05G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Strelitzia Nicolai",
+    "size": "05G(HotBuy), 15G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Elaeagnus 'Olive Martini'",
+    "size": "15G(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Picea P. 'Glauca Globosa'",
+    "size": "15S(HotBuy), 18\"PRB(HotBuy), 18\"PRB(Std-HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "DECO-Garvinea Sweet MIX",
+    "size": "10\"D(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "DECO- Coleus D.T. (See Availability)",
+    "size": "10\"D(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Hanging Baskets (See Availability)",
+    "size": "10\"HB(HotBuy), 12\"HB(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Effective 5/8/2026",
+    "size": ""
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": "Not subject to further discounts.",
+    "size": "PG 1 OF 1(HotBuy)"
+  },
+  {
+    "company": "Matsudas Hot 5-12",
+    "name": ".",
+    "size": "."
   },
   {
     "company": "Matsudas Rosa 5-12_XLS",
@@ -16545,577 +16700,577 @@
     "size": "05G"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Blueberry Biloxi",
     "size": "02G(117-Fruit)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Blueberry Emerald",
     "size": "02G(168)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Blueberry Jewel",
     "size": "02G(80)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Blueberry Misty",
     "size": "02G(30)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Blueberry Sharpblue",
     "size": "02G(15)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Blueberry Sunshine",
     "size": "02G(131)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Berries Black Satin Blackberry",
     "size": "02G(15)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Berries Canby Red Raspberry",
     "size": "02G(86)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Berries Fall Gold Raspberry",
     "size": "02G(111)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Berries Meeker Red Raspberry",
     "size": "02G(92)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Berries Triple Crown Blackberry",
     "size": "02G(64)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Grapefruit Semi Dwarf Melogold",
     "size": "05G(303), 10G(45-Bloom), 20G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Grapefruit Semi Dwarf Oroblanco",
     "size": "05G(170), 07G(21-Bloom), 10G(42-Bloom), 20G(3)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Kumquat Semi Dwarf Indio Mandarinquat",
     "size": "05G(30)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Kumquat Semi Dwarf Nagami",
     "size": "05G(43)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Buddha's Hand",
     "size": "05G(23), 07G(3), 10G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Genoa (Italian)",
     "size": "05G(223)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Improved Meyer",
     "size": "05G(215)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Lisbon",
     "size": "05G(19)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Ponderosa",
     "size": "05G(7)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lime Semi Dwarf Australian Finger",
     "size": "05G(84), 07G(2), 10G(6-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lime Semi Dwarf Bearss Seedless",
     "size": "05G(229)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Clementine",
     "size": "05G(157), 07G(30)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Clementine De Nules",
     "size": "05G(520-Bloom), 07G(64), 10G(1)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Clementine Nour",
     "size": "05G(147)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Lee X Nova",
     "size": "05G(142-Bloom), 07G(32), 20G(1)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Cara Cara Navel",
     "size": "05G(238)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Lane Late Navel",
     "size": "05G(373)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Moro Blood",
     "size": "05G(169)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Robertson Navel",
     "size": "05G(100)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Smith Red",
     "size": "05G(75), 07G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Trovita",
     "size": "05G(231), 07G(13)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Washington Navel",
     "size": "05G(72)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Tangelo Semi Dwarf Minneola",
     "size": "05G(227-Bloom), 07G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Kumquat Semi Dwarf Centennial Variegated",
     "size": "07G(6), 20G(3)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf New Zealand",
     "size": "07G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lime Semi Dwarf Thornless Mexican",
     "size": "07G(3)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf California Honey",
     "size": "07G(20)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Dancy",
     "size": "07G(9), 10G(17), 20G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Gold Nugget",
     "size": "07G(155-Fruit)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Kinnow",
     "size": "07G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Page",
     "size": "07G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf W. Murcott (Afourer)",
     "size": "07G(6), 20G(1)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Newhall",
     "size": "07G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Sanguinelli Blood",
     "size": "07G(7)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Valencia",
     "size": "07G(27)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Grapefruit Semi Dwarf Chandler Pummelo",
     "size": "10G(37), 20G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lime Semi Dwarf Kieffer (Thai)",
     "size": "10G(17)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lime Semi Dwarf Mill Sweet Limetta",
     "size": "10G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Royal",
     "size": "10G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Tahoe Gold",
     "size": "10G(5), 20G(3)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Yosemite Gold",
     "size": "10G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Akcay Sweet",
     "size": "10G(1)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Midknight Valencia",
     "size": "10G(4-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Orange Semi Dwarf Tarocco Blood",
     "size": "10G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Calamondin Semi Dwarf Calamansi",
     "size": "20G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Eureka",
     "size": "20G(7)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Santa Teresa",
     "size": "20G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Lemon Semi Dwarf Variegated Pink",
     "size": "20G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Owari Satsuma",
     "size": "20G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Semi Dwarf Shiranui",
     "size": "20G(4)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Mandarin Pat. Semi Dwarf Tango",
     "size": "07G(8), 10G(14-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Fig Black Mission",
     "size": "05G(295)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Fig Brown Turkey",
     "size": "05G(330), 20G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Fig Chicago Hardy",
     "size": "05G(31)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Genetic Dwarf Garden Delight Mini Nectarine",
     "size": "05G(61-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Genetic Dwarf Garden Gold Mini Peach",
     "size": "05G(172-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Genetic Dwarf Necta Zee Mini Nectarine",
     "size": "05G(123-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Genetic Dwarf Pix Zee Mini Peach",
     "size": "05G(141-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Guava Lemon",
     "size": "03G(79)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Jujube GA 866",
     "size": "07G(12-Dormant)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Jujube Honey Jar",
     "size": "07G(1-Dormant)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Jujube Li",
     "size": "07G(8-Dormant)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Jujube Shanxi",
     "size": "07G(5-Dormant)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Multi Cherry",
     "size": "07G(41)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Multi Fruit Salad",
     "size": "07G(55)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Multi Plum",
     "size": "07G(8)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Arbequina",
     "size": "05G(219)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Arbosana",
     "size": "05G(21)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Koroneiki",
     "size": "05G(224)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Leccino",
     "size": "05G(186)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Manzanilla",
     "size": "05G(97)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Maurino",
     "size": "05G(59)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Mission",
     "size": "05G(141)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Nocellara",
     "size": "05G(63)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Pendolino",
     "size": "05G(61)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Olive Taggiasca",
     "size": "05G(10)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pomegranate Desertnyi",
     "size": "05G(177-Dormant), 10G(29-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pomegranate Wonderful",
     "size": "05G(163), 10G(19-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pomegranate Ambrosia",
     "size": "10G(13-Bloom)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pomegranate Sweet",
     "size": "10G(5)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Passion Fruit Vine 'Frederick'",
     "size": "03G(168)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Passion Fruit Vine 'Nancy Garrison'",
     "size": "03G(20)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Apple Fuji",
     "size": "05G(18)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Apple Gala",
     "size": "05G(27)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Apple Honeycrisp",
     "size": "05G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Cherry Bing",
     "size": "05G(28)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Cherry Lapins",
     "size": "05G(88)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Cherry Montmorency",
     "size": "05G(12)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Cherry Rainier",
     "size": "05G(31)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Cherry Stella",
     "size": "05G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pear 20th Century Asian",
     "size": "05G(12)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pear Hosui Asian",
     "size": "05G(6)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pear Shinseiki Asian",
     "size": "05G(13)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Plum Burgundy",
     "size": "05G(2)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Plum Elephant Heart",
     "size": "05G(22)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Plum Santa Rosa",
     "size": "05G(7)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Plum Satsuma",
     "size": "05G(7)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Peach Babcock",
     "size": "05G(21)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Peach Donut \"Stark Saturn\"",
     "size": "05G(50)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Peach Elberta",
     "size": "05G(14)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Peach Redhaven Yellow",
     "size": "05G(28)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Apricot Blenhiem",
     "size": "05G(23)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pluot Dapple Dandy",
     "size": "05G(1)"
   },
   {
-    "company": "Four Winds 4-20_XLS",
+    "company": "Four Winds 04-20_XLS",
     "name": "Pluot Flavor Queen",
     "size": "05G(10)"
   },
@@ -40535,3822 +40690,3822 @@
     "size": "15G"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Abelia x 'edward goucher'",
     "size": "01G(Ready), 05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Abelia x g 'kaleidoscope'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Abelia x grandiflora -white flower",
     "size": "01G(<250-Ready), 05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acacia cognata 'cousin itt'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer buergerianum natural",
     "size": "24G(Nstd-5Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer buergerianum std",
     "size": "05G(Std-PRIME), 15G(Std-PRIME)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Acer circinatum",
+    "company": "Western May 26_XLS",
+    "name": "Acer circinatum vine maple",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Acer p 'sango kaku'",
+    "company": "Western May 26_XLS",
+    "name": "Acer p 'sango kaku' coral bark",
     "size": "15G(Prime), 24G(32Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer p atropurpureum 'bloodgood'",
     "size": "15G(Prime), 24G(15Ready), 36G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer p atropurpureum 'emperor 1'",
     "size": "15G(Ready), 24G(9Ready), 36G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer p dissectum 'crimson queen'",
     "size": "15G(Prime), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer p dissectum 'inaba shidare'",
     "size": "15G(<50-Ready), 24G(2Prime)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Acer p dissectum 'seiryu'",
+    "company": "Western May 26_XLS",
+    "name": "Acer p dissectum 'seiryu' sun tolerant lace leaf",
     "size": "15G(Ready), 24G(17Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer p dissectum 'tamukeyama'",
     "size": "15G(Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer p dissectum 'viridis'",
-    "size": "15G(<50-Prime), 24G(1Ready)"
+    "size": "24G(? 1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer palmatum natural japanese maple",
     "size": "15G(Nstd-Prime), 24G(Nstd-20Prime), 24G(Nstd-40Ready), 36G(Nstd-6Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer palmatum std",
     "size": "15G(Std-<50-READY), 24G(Std-9PRIME)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer platanoides 'princeton gold'",
     "size": "15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer rubrum october glory® 'pni 0268'",
     "size": "05G(Prime), 05G(Ready), 15G(Ready), 24G(37Ready), 36G(4Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer rubrum red sunset® 'franksred'",
     "size": "05G(Prime), 05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(18Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer tataricum hot wings® 'garann'",
     "size": "15G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer trunc x plat pacific sunset® 'warrenred'",
     "size": "05G(Prime), 15G(Prime), 24G(9Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer x freemanii 'armstrong' (rubrum x saccharinum)",
     "size": "05G(Prime), 05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acer x freemanii 'autumn blaze'®",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 15G(Ready), 24G(21Ready), 36G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Achillia m 'moonshine' yellow",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Acorus gramineus 'ogon'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Aegopodium podagraria 'variegatum'",
     "size": "01G(<250-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus a 'white'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus africanus 'blue'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus x 'peter pan blue'",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus x 'queen anne blue'",
     "size": "05G(<100-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus x 'queen anne white'",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus x 'storm cloud' dark blue",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus x 'tinkerbell' dwarf, variegated leaf",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Agapanthus x' peter pan white'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Albizia julibrissin std. silk mimosa tree",
     "size": "01G(Std-Ready), 24G(Std-1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Anigozanthus x 'jump® orange'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Anigozanthus x 'jump® yellow'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Anigozanthus x 'kanga® burgundy'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arbutus 'marina' multi",
     "size": "24G(Mul-11Ready), 36G(Mul-1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arbutus 'marina' natural",
     "size": "24G(Nstd-11Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arbutus 'marina' std",
     "size": "15G(Std-<50-READY), 24G(Std-20READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arbutus u 'compacta'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arbutus unedo multi",
     "size": "01G(Mul-<250-Ready), 05G(Mul-<100-Ready), 15G(Mul-<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arbutus unedo std",
     "size": "15G(Std-<50-PRIME), 24G(Std-5READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arctostaphylos densiflora 'howard mcminn'",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arctostaphylos uvaursi 'massachusetts'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arctostaphylos uvaursi 'point reyes'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arctostaphylos x 'austin griffiths'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Arctostaphylos x 'emerald carpet'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Artemisia 'powis castle'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Aster novae-angliae 'purple dome'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Aucuba japonica 'gold spot'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea ri 'red bird' or 'red ruffles' red",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea rutherfordiana i 'alaska' white",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea si 'formosa' or 'phoenicia' purple",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea si 'george tabor' light pink",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea si 'pink lace' pink",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea si 'pride of dorking' brilliant red",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea si 'white lace' white",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Azalea southern i 'brillant' reddish pink",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Baccharis pilularis 'twin peaks'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Bamboo-bambusa bambusa multiplex 'golden goddess'",
     "size": "15G(Mul-<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Bamboo-bambusa multiplex 'alphonse karr'",
     "size": "15G(Mul-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Bamboo-bambusa phyllostachys nigra",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Berberis t 'aurea'",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Berberis t 'crimson pygmy'",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Berberis t 'orange rocket' pp18411",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Berberis t a 'rose glow'",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Berberis thunbergii atropurpurea",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Betula jacq 'multi' (3n1)",
     "size": "15G(Mul-Prime), 24G(Mul-5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Betula jacq 'std'",
     "size": "05G(Std-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Betula jacquemontii single",
     "size": "15G(Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Betula nigra 'dura heat'® single",
     "size": "05G(Ready), 15G(Ready), 24G(23Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Betula pendula 'alba' multi (3n1)",
     "size": "24G(Mul-1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Betula pendula 'alba' single",
     "size": "05G(Prime), 15G(Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Bougainvillea spectabilis 'royal purple'",
     "size": "01G(Stk-<250-ReadyBloomingstk), 05G(Stk-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Bougainvillea x 'barbara karst'",
     "size": "05G(Stk-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Bougainvillea x 'san diego red'",
     "size": "01G(Stk-<250-ReadyBloomingstk), 05G(Stk-<100-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Brunnera macrophylla 'silver heart'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja davidii 'black knight'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja davidii 'nanho blue'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja davidii 'pink charm'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja davidii 'royal red'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja davidii nanhoensis petite plum® 'monum'",
     "size": "01G(Ready), 05G(Ready), 05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja x 'grand cascade' pp30868",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buddleja x cran razz® 'boscranz' pp25730",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buxus m j koreana 'winter gem'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buxus microphylla jap. 'green beauty'",
     "size": "01G(<250-Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buxus sempervirens 'suffruticosa'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buxus sempervirens 3ball tier",
     "size": "15G(Prime 3-tier)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Buxus x 'green mountain'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Calamagrostis x acutiflora 'overdam'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Calamagrostis x acutifora 'karl foerster'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Callistemon cit 'jeffersii' dark lavender pink",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Callistemon citrinus",
     "size": "05G(Ready), 15G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Callistemon viminalis hyb 'little john'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming), 15G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Calocedrus decurrens",
     "size": "05G(<100-Ready), 15G(Ready), 24G(15Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia j 'debutante' light pink",
     "size": "05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia j 'kramer's supreme' red",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia j 'kumasaka' rose pink",
     "size": "01G(Prime), 05G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia j 'nuccio's pearl' pale pink",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia s 'kanjiro' rose pink, upright",
     "size": "01G(Prime), 05G(Esp-Primeesp), 05G(Prime), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia s 'setsugekka' white, upright",
     "size": "01G(Prime), 05G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia s 'shishi gashira' rose red, spreading",
     "size": "01G(Ready), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia s 'yuletide' bright red, upright",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Camellia sasanqua 'bonanza' red, low growing",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Campsis x tagliabuana 'madame galen'",
     "size": "01G(Stk-Readystk), 05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carex divulsa european grey sedge",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carex flacca 'blue zinger'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carex morrowii 'ice dancer'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carex oshminensis 'evergold'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carex testacea",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carex tumulicola california foothill sedge",
     "size": "01G(Mul-Prime), 01G(Mul-ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Carpinus betulus 'fastigiata'",
     "size": "15G(Prime), 24G(11Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Caryopteris x clandonensis 'longwood blue'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ceanothus griseus horizontalis 'carmel creeper'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ceanothus x 'frosty blue'",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ceanothus x 'joyce coulter'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ceanothus x 'victoria'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cedrus a 'glauca pendula' serpentine",
     "size": "24G(5Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cedrus atlantica 'glauca'",
     "size": "15G(<50-Prime), 15G(Ready), 24G(4Prime), 24G(30Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cedrus deodara",
     "size": "05G(Ready), 15G(Ready), 24G(3Prime), 24G(5Ready), 36G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ceratostigma plumbaginoides",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c 'forest pansy' natural",
     "size": "05G(Nstd-Prime), 05G(Nstd-Ready), 15G(Nstd-Prime), 24G(Nstd-5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c 'forest pansy' std",
     "size": "15G(Std-<50-READY), 24G(Std-9READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c carolina sweetheart® 'nccc1' pp27712",
     "size": "05G(<100-Ready), 15G(Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c flame thrower® 'nc20162' pp31260",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c multi",
     "size": "05G(Mul-<100-Ready), 15G(Mul-Prime), 24G(Mul-3Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c texensis 'oklahoma'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(16Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis c texensis 'oklahoma' std",
     "size": "15G(Std-<50-READY), 24G(Std-10READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis canadensis std.",
     "size": "05G(Std-READY), 15G(Std-READY), 24G(Std-4Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cercis x 'merlot' pp22297",
     "size": "05G(Ready), 15G(Prime), 24G(26Prime), 24G(6Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Chaenomeles 'cameo' -dwf apricot",
     "size": "01G(Prime), 01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Chaenomeles 'jet trail'white flwr, low growing",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Chaenomeles 'scarff's red' crimson red flwr",
     "size": "01G(Prime), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Chaenomeles 'texas scarlet' low red",
     "size": "01G(Ready), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Chaenomeles 'toyo nishiki'white, pink & red flwrs",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Chitalpa tashkentensis 'pink dawn'",
     "size": "15G(ReadyBlooming), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Choisya ternata",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cistus ladanifer or maculatus",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cistus purpureus",
     "size": "01G(<250-Ready), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cistus salviifolius 'prostratus'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cistus skanbergii",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cistus x hybridus or corbariensis",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cistus x pulverulentus 'sunset'",
     "size": "01G(ReadyBlooming), 01G(Ready), 05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'bearss' multi",
     "size": "15G(Mul-<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'dancy'",
     "size": "05G(Prime), 15G(Prime), 24G(5Prime), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'fukumoto early navel'",
     "size": "05G(Ready), 15G(<50-Prime), 24G(1Prime3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'fukushu'",
     "size": "15G(<50-Ready), 24G(1Prime), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'gold nugget' pp15462",
     "size": "05G(Ready), 15G(Prime), 24G(1Prime), 24G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'improved meyer'",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'improved meyer' multi",
     "size": "15G(Mul-<50-Ready), 24G(Mul-12Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'mexican' or 'key'",
     "size": "05G(Ready), 15G(<50-Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'mexican' or 'key' multi",
     "size": "05G(Mul-<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'owari satsuma'",
     "size": "05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(7Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'pixie'",
     "size": "05G(<100-Ready), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'shasta gold'",
     "size": "05G(Prime), 15G(Prime), 24G(4Prime), 24G(17Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'star ruby'",
     "size": "05G(<100-Ready), 15G(<50-Ready), 24G(8Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'tahoe gold' pp15703",
     "size": "05G(Ready), 15G(Prime), 24G(5Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'tango'",
     "size": "05G(Ready), 15G(Prime), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'tarocco' blood orange",
     "size": "05G(Ready), 15G(Prime), 24G(3Prime), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'valencia'",
     "size": "05G(Prime), 15G(Prime), 24G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus 'washington navel'",
     "size": "05G(<100-Prime), 05G(Ready), 15G(Prime), 24G(2Prime), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus grapefruit 'oro blanco'",
     "size": "05G(Prime), 15G(Prime), 24G(4Prime), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus lemon'eureka'",
     "size": "05G(Prime), 15G(Ready), 24G(2Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus lime'bearss'",
     "size": "05G(<100-Ready), 15G(<50-Prime), 15G(Ready), 24G(3Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus mandarin(tangerine)'clementine'",
     "size": "05G(Ready), 15G(Prime), 24G(3Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus orange'cara cara' pink navel orange",
     "size": "05G(Ready), 15G(<50-Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Citrus tangelo'minneola'",
     "size": "05G(Prime), 15G(Prime), 24G(3Prime), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Clematis armandii -evergreen",
     "size": "01G(Stk-Primestk), 05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Clematis montana rubens",
     "size": "05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Clematis superba 'jackmanii'",
     "size": "01G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing 'cecile brunner' pink",
     "size": "01G(Stk-ReadyBloomingstk), 05G(Stk-ReadyBloomingstk), 15G(Stk-Primestk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing 'don juan' red",
     "size": "05G(Stk-PrimeBloomingstk), 15G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing 'joseph's coat' red+orange+pink+yellow",
     "size": "05G(Stk-PrimeBloomingstk), 15G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing 'salley holmes' white",
     "size": "05G(Stk-PrimeBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing arborose® 'quicksilver' lavender",
     "size": "15G(Stk-<50-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing b 'lutea' yellow",
     "size": "01G(<250-Ready), 15G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing banksiae 'alba' white",
     "size": "01G(Stk-Readystk), 05G(Stk-Readystk), 15G(Stk-Primestk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing blaze improved 'demokracie' red",
     "size": "05G(Stk-PrimeBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Climbing eden climber® 'meiviolin' pp6892 pink",
     "size": "05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Clytostoma callistegiodes (bignonia violac.)-lavender",
     "size": "01G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Convolvulus mauritanicus or sabatius blue bindweed",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cordyline x 'electric pink' pp19213",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cordyline x 'salsa' pp26154",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Coreopsis auriculata 'nana'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Coreopsis grandiflora 'early sunrise'",
     "size": "01G(<250-PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Coreopsis verticillata 'moonbeam'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Coreopsis verticillata 'zagreb'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus alba 'elegantissima'",
     "size": "01G(Prime), 01G(ReadyCutback), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus capitata 'mountain moon' evergreen",
     "size": "24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus k 'radiant rose'®",
     "size": "15G(ReadyBlooming), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus k 'satomi'",
     "size": "24G(38Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus k scarlet fire® 'rutpink' pp28311",
     "size": "15G(ReadyBlooming), 24G(13ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus kousa",
     "size": "15G(Prime), 24G(19Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus sericea 'bud's yellow'",
     "size": "05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus sericea or stolonifera 'baileyi'",
     "size": "01G(Prime), 05G(Prime), 05G(Ready), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus x 'eddie's white wonder'",
     "size": "15G(Ready), 24G(33Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cornus x 'venus' pp16309",
     "size": "15G(<50-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cortaderia s 'pumila' dwarf white",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cortaderia s 'white'",
     "size": "01G(Ready), 05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cortaderia selloana 'rosae'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cotinus cogg 'royal purple' std",
     "size": "15G(Std-<50-READYBLOOMING), 24G(Std-9READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cotinus coggygria 'royal purple' bush",
     "size": "01G(Prime), 05G(Ready), 15G(<50-Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cotoneaster d 'coral beauty'",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cotoneaster dammeri 'lowfast'",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cupressocyparis leylandii (x hesperotropsis)",
     "size": "01G(Esp-Readyog), 05G(Esp-Ready), 15G(Esp-Ready), 24G(Esp-12Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cupressus m 'gold crest'",
     "size": "01G(<250-Ready), 05G(<100-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cupressus semp 'glauca compacta'",
     "size": "05G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cupressus semp 'glauca'",
     "size": "01G(Ready), 05G(Ready), 15G(Prime), 15G(Ready), 24G(2Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cupressus sempervirens",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Cytisus praecox 'allgold' -gold",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Daphne odora 'marginata'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Delosperma x 'hot pink wonder'",
     "size": "01G(<250-PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Dianella tasmanica 'variegata' flax lily",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Dianthus 'crimson rose'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Diosma p 'golden sunset'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Diosma p 'mb rose'",
     "size": "01G(Readyog)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Distictis buccinatoria (bignonia cherere) -red",
     "size": "05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Dodonaea viscosa 'purpurea' bush",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Dymondia margaretae 'silver carpet'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Echibeckia x 'summering yellow'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Elaeagnus pungens 'fruitlandii'",
     "size": "05G(<100-ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Elaeagnus x ebbingei 'gilt edge'",
     "size": "01G(Ready), 05G(<100-Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Epilobium canum (zauschneria californica)",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Erigeron karvinskianus",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Erysimum 'bowles mauve'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Escallonia x 'compacta'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Escallonia x exoniensis 'fradesii'",
     "size": "01G(Ready), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Eucalyptus polyanthemos silver dollar gum",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Euonymus alatus 'compactus'",
+    "company": "Western May 26_XLS",
+    "name": "Euonymus alatus 'compactus' burning bush",
     "size": "01G(Prime), 05G(Prime), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus f 'emerald 'n gold'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus fortunei 'emerald gaiety'",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus j 'green spire'",
     "size": "01G(Ready), 05G(<100-Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus j 'microphyllus variegatus'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus j 'microphyllus'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus j 'silver king'",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus j 'silver queen'",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euonymus japonicus 'aureomarginata'",
     "size": "01G(Prime), 01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euphorbia characias 'tasmanian tiger'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euphorbia x miner's merlot 'kmmm024'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Euryops pectinatus 'viridis'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fatsia japonica",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Feijoa sellowiana bush",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Feijoa sellowiana std",
-    "size": "15G(Std-<50-READY), 24G(Std-7Ready)"
+    "size": "24G(Std-7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila asparagus densiflorus 'myersii'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila asparagus densiflorus 'sprengeri'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila athyrium filixfemina",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila dicksonia antarctica",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila dryopteris erythrosora",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila matteuccia struthiopteris",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila polystichum munitum",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ferns----alsophila rumohra adiantiformis",
     "size": "01G(Prime), 01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Festuca o glauca 'beyond blue'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Festuca o glauca 'elijah blue'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ficus repens or pumila",
     "size": "01G(Ready), 05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Forsythia x 'lynwood gold'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fragaria x 'lipstick'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fraxinus americana 'autumn purple'",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 15G(Ready), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fraxinus oxycarpa 'raywood'",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 15G(Ready), 24G(12Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'bartlett",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'bing'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(17Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'black tartarian'",
     "size": "15G(Prime), 15G(Ready), 24G(18Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'blueray' northern highbush",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'bosc'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'brown turkey' improved",
     "size": "24G(9Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'elberta'",
     "size": "05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(40Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'elephant heart'",
     "size": "15G(Prime), 24G(6Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'fantasia'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(26Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'frost'",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'fuji'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(17Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'fuyu'",
     "size": "05G(Ready), 15G(Ready), 24G(17Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'gala'",
     "size": "15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'golden delicious'",
     "size": "05G(Ready), 15G(Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'granny smith'",
     "size": "15G(Ready), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'gravenstein'",
     "size": "05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'hachiya'",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'honeycrisp'",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'jubilee' southern highbush",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'kadota'",
     "size": "24G(12Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'lapins'",
     "size": "05G(Ready), 15G(Prime), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'misty' southern highbush",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'moorpark'",
     "size": "05G(Ready), 15G(<50-Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'nectar' white",
     "size": "05G(Prime), 15G(Prime), 24G(10Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'o'henry'",
     "size": "15G(Prime), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'pink lady'",
     "size": "05G(Ready), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'rainier'",
     "size": "05G(Ready), 15G(Ready), 24G(29Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'red baron'",
     "size": "15G(<50-Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'red delicious'",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 15G(Ready), 24G(13Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'redhaven'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(41Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'rio oso gem'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'santa rosa'",
     "size": "05G(<100-Ready), 15G(Prime), 24G(13Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'satsuma'",
     "size": "05G(Prime), 15G(Prime), 24G(9Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'sensation red bartlett'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'stark saturn' white donut",
     "size": "15G(<50-Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'stella'",
     "size": "05G(<100-Ready), 15G(Prime), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'thompson seedless'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'tilton'",
     "size": "05G(Ready), 15G(Prime), 24G(12Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit 'warren' resistant to fireblight",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit almond 'all in one' genetic semidwarf",
     "size": "05G(Ready), 15G(Prime), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit applecombo",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit apricot'royal blenheim'",
     "size": "05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(23Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit asian '20th century'",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit blue berries 'bluecrop' northern highbush",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit cherrycombo",
     "size": "15G(Ready), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit fig'black mission'",
     "size": "24G(11Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit grape'flame seedless'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit nectarine'gold mine' white",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(13Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit peach'babcock' white",
     "size": "05G(Ready), 15G(Prime), 24G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit pearasian 'hosui'",
     "size": "05G(Ready), 15G(Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit pearcombo",
     "size": "15G(Ready), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit persimmon'chocolate'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit plum'burgundy'",
     "size": "15G(Ready), 24G(4Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit pluot'flavor king'",
     "size": "05G(Ready), 15G(Prime), 24G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Fruit walnut'chandler'",
     "size": "15G(<50-Prime), 24G(3Prime), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gaillardia x grandiflora 'arizona sun'",
     "size": "01G(<250-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gaillardia x grandiflora 'goblin'",
     "size": "01G(<250-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Galium odoratum",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gardenia j 'mystery'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gardenia j 'radicans'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gardenia j 'veitchii'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gardenia j first love® or 'aimee'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gardenia jasminoides 'august beauty'",
     "size": "01G(<250-ReadyBlooming), 05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gaura l 'red'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gaura l 'siskiyou pink'",
     "size": "01G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gaura l 'white'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gaura lindheimeri 'passionate rainbow'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gazania linearis 'colorado gold®'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Gelsemium sempervirens",
     "size": "05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Geranium x 'johnson's blue'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Geranium x cantabrigiense 'biokovo'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ginkgo b 'fairmont'",
     "size": "05G(Ready), 15G(<50-Ready), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ginkgo b 'princeton sentry'",
     "size": "05G(Prime), 15G(Ready), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ginkgo b 'saratoga'",
     "size": "05G(Ready), 15G(Prime), 15G(Ready), 24G(5Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ginkgo biloba 'autumn gold'",
-    "size": "05G(<100-Ready), 15G(Ready), 24G(1Ready)"
+    "size": "15G(Ready), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Grevillea lanigera 'coastal gem'",
     "size": "01G(Ready), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Grevillea lanigera 'mt tamboritha'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Grevillea x 'canberra gem'",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Grevillea x 'noellii'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Groundcover/spreading prostrata 'double red'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Groundcover/spreading prostrata 'pink'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Groundcover/spreading prostrata 'red'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Groundcover/spreading prostrata 'white'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Groundcover/spreading prostrata 'yellow'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Groundcover/spreading red ribbons™ 'kortemma' double red",
     "size": "01G(ReadyBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hakonechloa m 'aureola'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Helictotrichon sempervirens",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'astolat' -white",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'aztec gold' dark yellow",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'bell orange' dwf evergreen orange",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'bitone' red",
     "size": "01G(PrimeBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'cranberry baby' dwf bright maroon",
     "size": "01G(ReadyBlooming), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'flying saucer bright yellow",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'grapette' red grape purple",
     "size": "01G(ReadyBlooming), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'james marsh' red",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'lemon yellow' dwf evergreen",
     "size": "01G(PrimeBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'little miss sunshine evergreen yellow",
     "size": "01G(PrimeBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'midnight purple'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'orange flasher' bright orange",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'prairie blue eyes' pastel purple",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'red chalice' evergreen dwf dark red",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'rosey chipper' light pink",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'stella de oro' dwarf yellow",
     "size": "01G(PrimeBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hemerocallis x 'summer wine' burgundy pink",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hesperaloe parviflora red false yucca",
     "size": "05G(Esp-<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Heuchera x 'forever® red' pp29644",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Heuchera x brizoides 'bressingham'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'arden's purple' purple",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'banner' white",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'blushing bride' double pink",
     "size": "01G(Ready), 05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'diana std",
     "size": "05G(Std-READY), 15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'diana' single white",
     "size": "01G(<250-Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'hollandia' lavender w/ red eye",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'hollandia' std",
     "size": "05G(Std-READY), 15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'minerva' blue",
     "size": "01G(Prime), 05G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'red heart' std",
     "size": "05G(Std-READY), 15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus s 'red heart' white w/ red center",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hibiscus syriacus 'aphrodiite' -pink",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'fire & ice' -white inner, green outer",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'francee' green inner, thin white margin",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'frances williams' bue/green inner, lime edge",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'great expectations' lime inner, blue/green outer",
     "size": "01G(Prime), 01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'halcyon' blue",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'patriot' green inner, white margin",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hosta x 'serendipity' blue/green",
     "size": "01G(<250-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'henry fonda' yellow",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'mr lincoln' red",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'neptune' lavender",
     "size": "05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'over the moon' apricot",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'perfect moment' yellow+red",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'perfume delight' pink",
     "size": "05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hybrid 'sugar moon' white",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea m 'glowing embers' red",
     "size": "01G(ReadyBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea m 'lacecap pink'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea m 'lacecap variegata'",
     "size": "05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea m 'nikko blue'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea m 'together'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea m 'white'",
     "size": "01G(PrimeBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea paniculata 'phantom'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea paniculata 'phantom' std",
     "size": "05G(Std-<100-READY), 15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hydrangea quercifolia 'snow queen'",
     "size": "05G(Ready), 15G(<50-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hypericum calycinum",
     "size": "01G(Ready), 01G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Hypericum moserianum",
     "size": "01G(Ready), 01G(ReadyCutback), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ilex crenata 'sky pencil'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ilex vomitoria 'nana'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ilex x altaclerensis 'wilsonii' bush",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Imperata cylindrica 'rubra'",
     "size": "01G(Prime), 01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ipomoea indica 'blue dawn'",
     "size": "01G(Stk-<250-Readystk), 05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Iris germanica assorted mix (bearded)",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Jasminum polyanthum",
     "size": "01G(Stk-Readystk), 05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Juncus inflexus 'blue arrows'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Juniperus chinensis 'old gold'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Juniperus conferta 'blue pacific'",
     "size": "01G(Ready), 05G(<100-Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Juniperus procumbens nana 'green mound'",
     "size": "05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Kniphofia u 'flamenco'",
     "size": "01G(ReadyBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Kniphofia uvaria",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'catawba' (purple)",
     "size": "01G(Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'centennial spirit' (red)",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(25Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'centennial spirit' std (red)",
     "size": "05G(Std-<100-READY), 15G(Std-<50-Ready), 24G(Std-10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'cherokee' (watermelon red)",
     "size": "01G(Ready), 05G(Ready), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'cherokee' std (watermelon red)",
     "size": "05G(Std-<100-READY), 15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'dynamite'® (dark red)",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Ready), 24G(4Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'dynamite'® std (dark red)",
     "size": "24G(Std-2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'muskogee' (lavender)",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Prime), 15G(Ready), 24G(9Prime), 24G(10Ready), 36G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'muskogee' std (lavender)",
     "size": "05G(Std-READY), 15G(Std-Ready), 24G(Std-25Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'natchez' (white)",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'natchez' std (white)",
     "size": "05G(Std-READY), 15G(Std-<50-Ready), 24G(Std-34Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'red rocket'® (bright red)",
     "size": "05G(Ready), 15G(Ready), 24G(18Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'red rocket'® std (bright red)",
     "size": "24G(Std-5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'tuscarora' (coral red)",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Prime), 15G(Ready), 15G(), 24G(28Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'tuscarora' std (coral red)",
     "size": "05G(Std-READY), 15G(Std-<50-Prime), 15G(Std-Ready), 24G(Std-39READY), 36G(Std-1READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'twilight' (purple)",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Ready), 24G(16Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'twilight' std (purple)",
     "size": "05G(Std-READY), 15G(Std-<50-Ready), 24G(Std-26READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'zuni' (lavender)",
     "size": "05G(<100-Ready), 15G(<50-Ready), 24G(18Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lagerstroemia x 'zuni' std (lavender)",
     "size": "05G(Std-READY), 15G(Std-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lantana montevidensis alba white",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lantana montevidensis purple",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lantana x 'confetti'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lantana x 'dallas red'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lantana x 'gold mound'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lantana x 'radiation'",
     "size": "01G(ReadyBlooming), 01G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Laurus n 'saratoga' bush",
     "size": "24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Laurus n 'saratoga' std",
     "size": "24G(Std-24READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Laurus nobilis bush",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Laurus nobilis std. mediterranean bay laurel",
     "size": "24G(Std-9READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lavandula a 'munstead'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lavandula angustifolia 'hidcote'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lavandula stoechas 'otto quast'",
     "size": "01G(<250-ReadyBlooming), 05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lavandula x i 'grosso'",
     "size": "05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lavandula x i 'provence'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lavandula x i phenomenal™ 'niko' pp24193",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Leucadendron 'ebony'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Leucanthemum x 'silver princess'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Leucophyllum frutescens 'compacta'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ligustrum j 'texanum' column",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ligustrum japonicum 'texanum' bush",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liquidambar s 'burgundy blush' seedless",
     "size": "05G(<100-Prime), 15G(<50-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liquidambar s 'festival'",
     "size": "05G(Prime), 15G(Prime), 24G(14Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liquidambar s 'palo alto'",
     "size": "05G(Prime), 15G(Prime), 24G(6Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liquidambar styraciflua 'burgundy'",
     "size": "05G(Prime), 15G(Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liriodendron tulipifera",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 24G(3Prime), 24G(11Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liriope m 'gold band'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liriope m 'silvery sunproof'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Liriope muscari 'big blue'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lithodora diffusa 'grace ward'",
     "size": "01G(<250-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lomandra longifolia 'breeze' pp15420",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lonicera j 'purpurea'",
     "size": "01G(Stk-Readystk), 01G(Ready), 05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lonicera japonica 'halliana'",
     "size": "01G(Stk-ReadyBloomingstk), 05G(Stk-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lonicera x brownii 'dropmore scarlet'",
     "size": "01G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lonicera x heckrottii 'goldflame'",
     "size": "05G(Stk-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Loropetalum c 'cerise charm' dwarf,red flwr,darkplum leaf",
     "size": "15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Loropetalum c 'majestic purple' pink flwr, burgundy leaf",
     "size": "01G(Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Loropetalum c 'razzleberri' red flwr, redgreen leaf",
     "size": "01G(Ready), 05G(<100-Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Loropetalum chinense -white flwr,green leaf",
     "size": "01G(Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Lysimachia nummularia 'aurea' creeping jenny",
     "size": "01G(Mul-<250-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia g 'little gem' espalier",
     "size": "24G(Esp-5Primeesp)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia g 'little gem' natural",
     "size": "15G(Nstd-Ready), 24G(Nstd-2Ready), 36G(Nstd-3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia g 'little gem' std",
     "size": "24G(Std-9READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia g 'samuel sommer' std",
     "size": "15G(Std-<50-Ready), 24G(Std-1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia g 'st mary's' std",
     "size": "15G(Std-<50-Ready), 24G(Std-3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia grandiflora std.",
     "size": "05G(Std-Prime), 15G(Std-Ready), 24G(Std-2Readyog), 24G(Std-11Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia soulangeana 'alexandrina'",
     "size": "15G(<50-Ready), 24G(4Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia x 'vulcan'",
     "size": "15G(Prime), 24G(3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Magnolia x 'yellow bird'",
     "size": "05G(Ready), 15G(<50-Prime), 24G(13Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Mahonia aquifolium oregon grape",
     "size": "01G(Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Mahonia repens",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Malus floribunda japanese crabapple",
     "size": "15G(Prime), 15G(Ready), 24G(28Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Malus x 'prairifire' pinkish red flower",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Malus x 'spring snow' fruitless, fire blight resistant",
     "size": "05G(Ready), 15G(Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Melinis nerviglumis 'pink crystals' ruby grass",
     "size": "01G(PrimeBlooming), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Miscanthus s 'gracillimus'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Miscanthus s 'morning light'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Miscanthus s 'variegatus'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Miscanthus s 'yakushima'",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Miscanthus sinensis 'cabaret'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Moraea bicolor (dietes bicolor)",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Moraea iridioides (dietes vegeta)",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Morus alba 'striblingi'",
     "size": "05G(<100-Prime), 05G(Ready), 15G(Ready), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Muhlenbergia capillaris pink muhly",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Muhlenbergia dubia pine muhly",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Muhlenbergia rigens deer grass",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Myoporum parv 'white'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Myoporum parvifolium 'pink'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Myrica californica (morella) pacific wax myrtle",
     "size": "05G(<100-Ready), 15G(Ready), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Myrsine africana african boxwood",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Myrtus communis 'compacta variegata'",
     "size": "01G(ReadyCutback), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Myrtus communis 'compacta'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina d 'compacta'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina d 'firepower' fruitless",
     "size": "01G(Ready), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina d 'gulf stream' fruitless",
     "size": "01G(Ready), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina d 'harbor dwarf'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina d 'moon bay'",
     "size": "01G(Prime), 01G(Ready), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina d 'nana purpurea' fruitless",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nandina domestica",
     "size": "01G(Ready), 05G(Ready), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nepeta x f 'walker's low'",
     "size": "01G(<250-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nepeta x faassenii 'dropmore'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nerium o 'hardy pink'",
     "size": "01G(Ready), 05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nerium o 'hardy red'",
     "size": "01G(ReadyCutback), 05G(PrimeBlooming), 15G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nerium o 'little red'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nerium o 'sister agnes' white",
     "size": "05G(ReadyBlooming), 15G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nerium o 'white sands' white",
     "size": "05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nerium oleander 'cherry ripe'",
     "size": "01G(Ready), 01G(ReadyCutback), 05G(PrimeBlooming), 05G(ReadyCutback), 15G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Nyssa sylvatica",
     "size": "05G(Ready), 15G(Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'arbequina' std",
     "size": "15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'arizona' fruitless",
     "size": "24G(2Ready), 36G(11Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'arizona' std",
     "size": "24G(Std-1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'arizona' std low head 23' trunk",
     "size": "24G(Std-8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'compacta' dwarf, fruitless",
     "size": "01G(<250-Ready), 05G(Ready), 15G(Ready), 24G(20Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'compacta' patio",
     "size": "15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'frantoio' fruiting",
     "size": "24G(4Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'manzanillo' fruiting",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Ready), 24G(24Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'manzanillo' std",
     "size": "05G(Std-READY), 15G(Std-READY), 24G(Std-2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'mission' fruiting",
     "size": "05G(Ready), 15G(Ready), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'mission' std",
     "size": "05G(Std-READY), 15G(Std-READY), 24G(Std-5READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'royal fruitless' multi fruitless",
     "size": "15G(Mul-Ready), 24G(Mul-20Ready), 36G(Mul-3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea 'royal fruitless' std",
     "size": "15G(Std-<50-READY), 24G(Std-4READY), 36G(Std-1READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Olea europaea 'arbequina' -fruiting",
     "size": "24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ophiopogon j 'dwarf'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Osmanthus fragrans",
     "size": "05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Osmanthus heterophyllus 'goshiki'",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Palms-- butia capitata",
     "size": "15G(<50-Ready), 24G(4Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Palms-- chamaerops humilis",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Palms-- syagrus romanzoffiana queen palm",
     "size": "24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Palms-- trachycarpus fortunei multi",
     "size": "24G(Mul-8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Palms-- trachycarpus fortunei single",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(6Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Palms-- washingtonia robusta",
     "size": "05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Parthenocissus tricuspidata",
     "size": "05G(Stk-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pennisetum a 'little bunny'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pennisetum alopecuroides 'hameln'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pennisetum orientale 'karley rose'",
     "size": "01G(ReadyBlooming), 01G()"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pennisetum s 'fireworks'® pp18504",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pennisetum s 'rubrum'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Penstemon strictus tahoe native",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Penstemon x 'midnight'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Perovskia a 'little spire'®",
+    "company": "Western May 26_XLS",
+    "name": "Perovskia a 'little spire'® dwarf",
     "size": "01G(Ready), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Perovskia atriplicifolia 'blue spire'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Philadelphus x 'minnesota snowflake'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Philodendron selloum",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phlox s 'redwings'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phormium tenax 'jack spratt'",
     "size": "01G(<250-Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phormium tenax 'rubrum'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phormium x 'maori queen'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phormium x 'rainbow warrior'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phormium x 'sundowner'",
     "size": "05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Phormium x 'yellow wave'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Photinia f column",
     "size": "24G(14Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Photinia f std",
     "size": "05G(Std-Ready), 15G(Std-Ready), 24G(Std-18Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Photinia fraseri bush",
     "size": "01G(Ready), 05G(Ready), 15G(ReadyPrime), 15G(Ready), 24G(21Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Physocarpus 'diabolo' ninebark",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Picea globosa glauca nana",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Picea pungens 'fat albert' colorado blue spruce",
     "size": "15G(Ready), 24G(43Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pieris jap. 'mountain fire'",
     "size": "01G(Ready), 05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pinus flexilis 'vanderwolf'",
     "size": "15G(Ready), 24G(46Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pinus mugo mughus 'tyrolean'",
     "size": "05G(Prime), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pinus thunbergii 'thunderhead'",
     "size": "15G(Ready), 24G(27Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pistacia c 'keith davey'",
     "size": "15G(<50-Ready), 36G(11Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pistacia chinensis",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pistacia x 'red push'",
     "size": "05G(<100-Prime), 05G(Ready), 15G(Prime), 15G(Ready), 24G(7Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum t 'cream de mint' compact variegated",
     "size": "01G(Prime), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum t 'variegata'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum t 'wheeler's dwarf' compact green",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum ten 'golf ball' pp15329",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum ten 'silver sheen' bush",
     "size": "01G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum ten 'variegata' (marjorie channon)",
     "size": "05G(<100-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum tenufolium 'beach ball'",
     "size": "01G(Prime), 05G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum tenuifolium bush",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pittosporum tobira",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Platanus racemosa",
+    "company": "Western May 26_XLS",
+    "name": "Platanus racemosa western sycamore",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Platanus x a 'columbia'",
     "size": "05G(<100-Ready), 15G(<50-Prime), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Platanus x a 'yarwood'",
     "size": "24G(4Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Platanus x a exclamation!® 'morton circle'",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Platanus x acerifolia 'bloodgood'",
     "size": "05G(<100-Ready), 24G(7Prime), 24G(13Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Plumbago auriculata 'imperial blue'",
     "size": "01G(Ready), 05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Podocarpus elongata 'blue frost'",
     "size": "05G(<100-Ready), 15G(Ready), 24G(14Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Podocarpus gracilior column",
     "size": "01G(Ready), 05G(Ready), 24G(4Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Podocarpus gracilior std",
     "size": "24G(Std-1READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Podocarpus henkelii",
     "size": "05G(Ready), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Podocarpus m maki",
     "size": "05G(Ready), 15G(Ready), 24G(1Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Podocarpus macrophyllus yew pine",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Polygala fruticosa 'petite butterfly'",
     "size": "01G(<250-Ready), 05G(<100-PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Populus fremontii 'nevadaii'",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Populus tremuloides",
+    "company": "Western May 26_XLS",
+    "name": "Populus tremuloides quaking aspen",
     "size": "05G(Mul-Prime), 15G(Mul-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Populus x canadensis 'siouxland'",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Prunus blireiana",
+    "company": "Western May 26_XLS",
+    "name": "Prunus blireiana double flower",
     "size": "05G(Ready), 15G(Ready), 24G(7Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus caroliniana 'compacta' column",
     "size": "01G(Ready), 05G(Ready), 15G(Ready), 24G(19Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Prunus caroliniana 'compacta' std",
+    "company": "Western May 26_XLS",
+    "name": "Prunus caroliniana 'compacta' std wow",
     "size": "15G(Std-READY), 24G(Std-6READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus caroliniana column",
     "size": "01G(Ready), 24G(32Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus caroliniana std",
     "size": "15G(Std-READY), 24G(Std-28READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus cer 'purple pony' fruitless",
     "size": "05G(Prime), 05G(Ready), 15G(Ready), 24G(20Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus cer 'thundercloud'",
     "size": "05G(Prime), 15G(<50-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus cerasifera 'krauter vesuvius' high head",
     "size": "05G(Prime), 15G(Prime), 24G(6Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus cerasifera 'krauter vesuvius' low head",
     "size": "05G(Prime), 15G(Prime), 24G(25Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus cistena",
     "size": "01G(Prime), 05G(Prime), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus laur column",
     "size": "15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus laur std",
     "size": "15G(Std-<50-READY), 24G(Std-10PRIME)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus laurocerasus bush english laurel",
     "size": "01G(<250-Ready), 05G(<100-Ready), 15G(<50-Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus serr 'mt fuji'",
     "size": "15G(Ready), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus serr 'snow fountain' weeping white",
     "size": "15G(Prime), 15G(Ready), 24G(29Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus serrulata 'kwanzan'",
     "size": "05G(Prime), 05G(Ready), 15G(Prime), 15G(Ready), 24G(43Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus subhirtella 'pendula' weeping double pink",
     "size": "15G(Ready), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus virg 'red select' std",
     "size": "05G(Std-PRIME), 15G(Std-PRIME)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Prunus virginiana 'red select' multi",
+    "company": "Western May 26_XLS",
+    "name": "Prunus virginiana 'red select' multi choke cherry",
     "size": "01G(Mul-ReadyCutback), 05G(Mul-ReadyCutback), 15G(Mul-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Prunus x yedoensis 'akebono'",
     "size": "05G(Prime), 05G(Ready), 15G(Ready), 24G(6Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Punica g 'wonderful' bush pomegranate",
     "size": "05G(ReadyBlooming), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Punica g 'wonderful' std",
     "size": "05G(Std-READY), 15G(Std-READYBLOOMING), 24G(Std-17Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Punica granatum 'nana'",
     "size": "01G(Ready), 05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pyracantha fortuneana 'graberi'",
     "size": "05G(Stk-<100-Readystk)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Pyracantha koidzumii 'santa cruz'",
+    "company": "Western May 26_XLS",
+    "name": "Pyracantha koidzumii 'santa cruz' dwarf",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pyrus betulaefolia 'dancer' -fireblight resistant",
     "size": "15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pyrus c 'chanticleer'",
     "size": "05G(Prime), 15G(Prime), 24G(15Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pyrus c 'new bradford'",
     "size": "05G(Prime), 15G(Prime), 24G(9Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pyrus calleryana 'aristocrat'",
     "size": "05G(Prime), 15G(Prime), 24G(18Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Pyrus kawakamii",
     "size": "05G(Prime), 15G(Prime), 24G(22Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus agrifolia natural coastal live oak",
     "size": "15G(Nstd-<50-Ready), 24G(Nstd-6Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus agrifolia std",
     "size": "24G(Std-6READY), 36G(Std-1READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus coccinea scarlet oak",
     "size": "15G(<50-Prime), 15G(Ready), 24G(25Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus douglasii blue oak",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Quercus ilex natural holly oak",
+    "company": "Western May 26_XLS",
+    "name": "Quercus ilex natural holly oak lower branches",
     "size": "05G(Nstd-Ready), 15G(Nstd-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus ilex std",
     "size": "05G(Std-<100-READY), 15G(Std-READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus lobata valley oak",
     "size": "05G(<100-Ready), 15G(Ready), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus phellos willow oak",
     "size": "15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus rubra red oak",
     "size": "05G(Prime), 15G(Prime), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus shumardii swamp red oak",
     "size": "05G(Ready), 15G(Prime), 24G(8Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus suber cork oak",
     "size": "01G(Ready), 05G(<100-Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Quercus wislizeni interior live oak",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rhamnus alaternus 'john edwards' bush",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rhamnus californica 'eve case'",
     "size": "01G(<250-Ready), 05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rhaphiolepis i 'clara' white flower",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rhaphiolepis i 'pinkie'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rhaphiolepis umbellata minor",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rhaphiolepis x 'majestic beauty'® std",
     "size": "05G(Std-READY), 15G(Std-<50-PRIME), 24G(Std-3Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Robinia x a. 'purple robe'",
     "size": "05G(Ready), 15G(Prime), 24G(10Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rosmarinus o 'huntington carpet'",
     "size": "01G(ReadyBlooming), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rosmarinus o 'irene'",
     "size": "01G(<250-Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rosmarinus o 'lockwood de forest'",
     "size": "05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rosmarinus o 'prostratus'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rosmarinus o 'tuscan blue'",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Rubus pentalobus or calycinoides 'emerald carpet'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Salix babylonica",
+    "company": "Western May 26_XLS",
+    "name": "Salix babylonica weeping willow",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Salix purpurea 'nana'",
+    "company": "Western May 26_XLS",
+    "name": "Salix purpurea 'nana' artic willow",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salix x int 'hakuro nishiki'",
     "size": "01G(Prime), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia apiana white sage",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia chamaedryoides",
     "size": "01G(Ready), 05G(<100-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia g 'furman's red'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia g 'lipstick'",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia leuc 'santa barbara' dwarf",
     "size": "01G(Ready), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia leucantha",
     "size": "01G(Ready), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia nemarosa 'marcus'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia sylvestris 'may night'",
     "size": "01G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia x 'hot lips' white+red flower",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Salvia x 'mesa azure'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sarcococca ruscifolia",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Scabiosa columbaria 'butterfly blue'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Scaevola albida 'mauve clusters'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Schinus molle std.",
     "size": "15G(Std-READY), 24G(Std-6READY)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sedum reflexum 'blue spruce'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sedum rupestre 'angelina'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sedum spurium 'tricolor'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sedum x 'autumn joy'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sedum x rubrotinctum 'pork & beans'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sequoia semp 'soquel'",
     "size": "15G(Prime), 24G(5Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sequoia sempervirens 'aptos blue'",
     "size": "01G(Stk-Readystk), 05G(Ready), 15G(Prime), 15G(Ready), 24G(68Ready), 36G(2Prime), 36G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Sequoiadendron giganteum",
+    "company": "Western May 26_XLS",
+    "name": "Sequoiadendron giganteum ca native",
     "size": "01G(Ready), 15G(Ready), 24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sesleria autumnalis autumn moor grass",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Sesleria x 'greenlee'",
     "size": "01G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Shrub/bush 'burgundy iceberg' purple/red burgundy",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Shrub/bush 'iceberg' white",
     "size": "01G(<250-ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Solanum jasminoides",
     "size": "01G(Stk-Readystk), 05G(Stk-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea densiflora 'summer song'",
     "size": "05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea j 'gold mound'",
     "size": "05G(<100-PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea j 'goldflame'",
     "size": "01G(ReadyBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea j 'limemound'®",
     "size": "01G(<250-ReadyBlooming), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea j 'little princess'",
     "size": "05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea j 'neon flash'",
     "size": "01G(<250-PrimeBlooming), 05G(<100-PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea japonica 'anthony waterer'",
     "size": "01G(ReadyBlooming), 01G(ReadyCutback), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea nipponica tosaensis 'snowmound'",
     "size": "01G(Ready), 05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Spiraea x vanhouttei",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Stachys monieri 'hummelo'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Stachys x 'helen von stein'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Strelitzia nicolai - giant bird of paradise",
     "size": "05G(Prime), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Strelitzia reginae bird of paradise",
+    "company": "Western May 26_XLS",
+    "name": "Strelitzia reginae bird of paradise orange flower",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Symphoricarpos x chenaultii 'hancock'",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Syringa pub. patula 'miss kim' -pale lavender to pink",
     "size": "05G(PrimeBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Syringa v 'madame lemoine' white",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Syringa v 'president grevy' dbl lavender blue",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Syringa v 'sensation' rosey purple, white margin",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Syringa vulgaris lilac purple",
     "size": "01G(Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Taxus baccata 'stricta'",
     "size": "15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Teucrium cham 'compacta compact bush germander",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Teucrium chamaedrys or lucidrys",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Teucrium cossonii majoricum",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Teucrium fruticans 'azureum'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Thuja occidentallis 'emerald green'",
     "size": "01G(Ready), 15G(Ready), 24G(18Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Thuja orientalis 'aurea nana'",
     "size": "05G(<100-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Thuja x 'green giant'",
     "size": "01G(Ready), 15G(Ready), 24G(13Prime), 36G(2Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Thymus p 'coccineus' red creeping thyme",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Thymus pseudolanuginosus 'wooly'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Trachelospermum asiaticum",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Trachelospermum jas espalier",
     "size": "15G(Esp-Readybesp)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Trachelospermum jas staked",
     "size": "01G(Stk-ReadyBloomingstk), 05G(Stk-ReadyBloomingstk), 15G(Stk-ReadyBloomingstk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Trachelospermum jasminoides bush",
     "size": "01G(<250-ReadyBlooming), 05G(ReadyBlooming), 15G(<50-ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'brandy' apricot",
     "size": "05G(Std-<100-READYBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'burgundy ice' purple/red burgundy",
     "size": "05G(Std-PRIMEBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'double delight' crème+red",
     "size": "05G(Std-PRIMEBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'grande dame' pink",
     "size": "05G(Std-PRIMEBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'iceberg pink'",
     "size": "05G(Std-<100-PRIME)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'livin' easy' orange",
     "size": "05G(Std-PRIMEBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'mister lincoln' deep red",
     "size": "05G(Std-PRIMEBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tree 'sunsprite' yellow",
     "size": "05G(Std-PRIMEBLOOMING)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tulbaghia v variegata",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Tulbaghia violacea",
     "size": "01G(ReadyBlooming), 05G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ulmus parvifolia 'drake'",
     "size": "24G(2Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Ulmus x p 'frontier'",
     "size": "05G(Prime), 15G(Prime), 24G(21Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Upright/column chinensis 'spartan'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Upright/column scopulorum 'moonglow'",
     "size": "01G(Ready), 05G(Ready), 15G(<50-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Upright/column scopulorum 'skyrocket'",
     "size": "15G(Prime), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Upright/column virginiana 'blue arrow'",
     "size": "01G(Ready), 05G(Prime), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Verbena c 'homestead purple'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Viburnum davidii -evergreen",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Viburnum opulus 'roseum'",
     "size": "05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Viburnum plicatum tomentosa 'mariesii'",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Viburnum tinus 'spring bouquet' evergreen",
     "size": "01G(Ready), 05G(Ready), 15G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca major",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca major 'variegata'",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca minor 'blue'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca minor 'bowles mauve'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca minor 'illumination' yellow leaf center",
     "size": "01G(<250-Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca minor 'variegata'/'sterling silver'",
     "size": "01G(ReadyBlooming)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vinca minor 'white'",
     "size": "01G(<250-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Vitex agnus-castus",
     "size": "01G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Weigela x 'minuet'",
     "size": "01G(Prime), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Weigela x 'red prince'",
     "size": "05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Weigela x 'variegata'",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Westringia f 'morning light' variegated, white flwr",
     "size": "01G(Ready), 05G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Westringia f 'wynyabbie gem' blue flwr",
     "size": "01G(Ready), 05G(ReadyCutback)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Westringia fruticosa or rosmariniformis-whiteflwr",
     "size": "05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Wisteria f. 'longissima alba'",
     "size": "05G(Prime), 05G(Stk-Readystk), 15G(Stk-Primestk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Wisteria sinensis 'caroline'",
     "size": "05G(Stk-Readystk), 15G(Stk-Primestk)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Xylosma congestum",
     "size": "01G(Prime), 05G(Ready), 15G(<50-Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Xylosma congestum 'compacta'",
     "size": "01G(Ready), 05G(Ready)"
   },
   {
-    "company": "Western May26_XLS",
-    "name": "Zelkova serrata 'musashino'",
+    "company": "Western May 26_XLS",
+    "name": "Zelkova serrata 'musashino' columnar form",
     "size": "05G(Prime), 15G(Prime)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Zelkova serrata 'village green'",
     "size": "05G(Prime), 15G(Prime), 24G(7Ready)"
   },
   {
-    "company": "Western May26_XLS",
+    "company": "Western May 26_XLS",
     "name": "Zephyranthes candida 'white'",
     "size": "01G(Ready)"
   }
